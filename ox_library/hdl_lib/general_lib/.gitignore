@@ -1,0 +1,6 @@
+# testbench outputs
+*.out
+*.vcd
+
+# vim swap files
+*.swp

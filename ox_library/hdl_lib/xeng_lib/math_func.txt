@@ -1,0 +1,25 @@
+`ifndef ISE
+`define ISE
+`endif
+
+`ifdef ISE
+
+ifndef log2
+define log2(p) log2_func(p)
+
+function integer log2_func;
+  input integer value;
+  begin
+    value = value-1;
+    for (log2_func=0; value>0; log2_func=log2_func+1)
+      value = value>>1;
+  end
+endfunction
+
+`else
+
+`ifndef log2
+`define log2(p) $clog2(p)
+`endif
+
+`endif
