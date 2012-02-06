@@ -30,7 +30,7 @@ munge_block(myname);
 
 % create SPI ports if interface enabled
 if use_spi == 1
-    try
+   % try
         add_block(['built-in/inport'],[myname,'/sdata'],'Position', [510 190 540 210],   'Port', '19');
         add_block(['built-in/inport'],[myname,'/spi_strb' ],'Position', [510 270 540 290],   'Port', '20');
 
@@ -53,9 +53,9 @@ if use_spi == 1
 
         add_line(myname,'user_sdata/1','sdata_term/1');
         add_line(myname,'user_spi_strb/1' ,'spi_strb_term/1');
-    end
-%else %else delete the SPI ports
-else
+    %end
+
+else %delete the SPI ports
     try
         delete_line(myname, 'sdata/1', 'sdata_conv/1');
         delete_line(myname, 'spi_strb/1' , 'spi_strb_conv/1');
@@ -66,19 +66,19 @@ else
         delete_line(myname, [strrep([myname, '_user_sdata'], '/', '_'), '/1'], 'sdata_term/1');
         delete_line(myname, [strrep([myname, '_user_spi_strb'], '/', '_'), '/1'], 'spi_strb_term/1');
     end
-%    try
-%        delete_block([myname,'/sdata']);
-%        delete_block([myname,'/spi_strb']);
-%
-%        delete_block([myname,'/user_sdata']);
-%        delete_block([myname,'/user_spi_strb']);
-%
-%        delete_block([myname,'/sdata_conv']);
-%        delete_block([myname,'/spi_strb_conv']);
-%
-%        delete_block([myname,'/sdata_term']);
-%        delete_block([myname,'/spi_strb_term']);
-%    end
+    try
+        delete_block([myname,'/sdata']);
+        delete_block([myname,'/spi_strb']);
+
+        delete_block([myname,'/user_sdata']);
+        delete_block([myname,'/user_spi_strb']);
+
+        delete_block([myname,'/sdata_conv']);
+        delete_block([myname,'/spi_strb_conv']);
+
+        delete_block([myname,'/sdata_term']);
+        delete_block([myname,'/spi_strb_term']);
+    end
 end
 
 clean_blocks(myname);
