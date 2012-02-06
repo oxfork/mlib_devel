@@ -66,7 +66,7 @@ for i=1:length(multipliers),
             'ox_lib/xeng/dualdsp_cmult*','noprompt');
     elseif use_ded_mult==6,
         replace_block(get_param(multipliers{i},'Parent'),'Name',get_param(multipliers{i},'Name'),...
-            'ox_lib/xeng/bunton_cmult*','noprompt');
+            'ox_lib/xeng/quad_cmult*','noprompt');
     else,
         replace_block(get_param(multipliers{i},'Parent'),'Name',get_param(multipliers{i},'Name'),...
             'casper_library_multipliers/cmult_4bit_sl*','noprompt');
