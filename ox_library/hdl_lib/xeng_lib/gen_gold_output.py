@@ -16,7 +16,7 @@ INPUT_FILE = 'golden_inputs.dat'
 OUTPUT_FILE = 'golden_outputs.dat'
 output_width = 18 #output bitwidth
 
-output_mask = 2**18-1 #AND output with this to make a uint
+output_mask = 2**19-1 #AND output with this to make a uint
 
 try:
     f = open(INPUT_FILE,'r')

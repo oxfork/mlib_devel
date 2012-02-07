@@ -1,5 +1,7 @@
 //\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/xeng_top.v"
 
+`define DEBUG
+
 module tb_xeng_top();
     
     localparam PERIOD = 10;
@@ -23,7 +25,7 @@ module tb_xeng_top();
     localparam N_TAPS = N_ANTS/2 + 1;                                                   //number of taps (including auto)
     localparam CORRECTION_ACC_WIDTH = P_FACTOR_BITS+SERIAL_ACC_LEN_BITS+BITWIDTH+1+1;   //width of correlation correction factors
     localparam SERIAL_ACC_LEN = (1<<SERIAL_ACC_LEN_BITS);                               //Serial accumulation length
-    localparam ANT_BITS = `log2(N_ANTS);
+    localparam ANT_BITS = $clog2(N_ANTS);
 
     
     reg clk;                          //clock input
@@ -135,6 +137,12 @@ module tb_xeng_top();
     end
 
     always @(posedge(clk)) begin
+        if(sync_in) begin
+            $display("SYNC IN at clock %d", clk_counter);
+        end
+        if(sync_out) begin
+            $display("SYNC OUT at clock %d", clk_counter);
+        end
         if(vld_out) begin
             $display("%d %d (%d,%d) %d(%d)\t%d(%d)\t%d(%d)\t%d(%d)\t%d(%d)\t%d(%d)\t%d(%d)\t%d(%d)",
                     clk_counter,buf_sel, ant_a_sel, ant_b_sel,

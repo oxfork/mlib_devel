@@ -47,7 +47,7 @@ module baseline_tap(
     a_end_out
     );
     
-    `include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/math_func.txt"
+    `include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func.txt"
     parameter SERIAL_ACC_LEN_BITS = 7;  //Serial accumulation length (2^?)
     parameter P_FACTOR_BITS = 0;        //Number of samples to accumulate in parallel (2^?)
     parameter BITWIDTH = 4;             //bitwidth of each real/imag part of a single sample

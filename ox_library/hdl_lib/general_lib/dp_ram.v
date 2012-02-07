@@ -22,20 +22,28 @@ module bram_tdp #(
 // Shared memory
 reg [DATA-1:0] mem [(2**ADDR)-1:0];
 
+//Initialise ram contents
+integer k;
+initial begin
+    for(k=0; k<(2**ADDR); k=k+1) begin
+        mem[k][DATA-1:0] = {DATA{1'b0}};
+    end
+end
+
 // Port A
+// read before write
 always @(posedge a_clk) begin
     a_dout      <= mem[a_addr];
     if(a_wr) begin
-        a_dout      <= a_din;
         mem[a_addr] <= a_din;
     end
 end
 
 // Port B
+// read before write
 always @(posedge b_clk) begin
     b_dout      <= mem[b_addr];
     if(b_wr) begin
-        b_dout      <= b_din;
         mem[b_addr] <= b_din;
     end
 end

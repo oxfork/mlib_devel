@@ -62,7 +62,7 @@ module xeng_top(
     localparam INPUT_WIDTH = 2*BITWIDTH*2*(1<<P_FACTOR_BITS);                           //width of complex in/out bus (dual pol)
     localparam ACC_WIDTH = 4*2*((2*BITWIDTH+1)+P_FACTOR_BITS+SERIAL_ACC_LEN_BITS);      //width of complex acc in/out bus (4 stokes)
     localparam N_TAPS = N_ANTS/2 + 1;                                                   //number of taps (including auto)
-    localparam CORRECTION_ACC_WIDTH = P_FACTOR_BITS+SERIAL_ACC_LEN_BITS+BITWIDTH+1+1;   //width of correlation correction factors
+    localparam CORRECTION_ACC_WIDTH = P_FACTOR_BITS+SERIAL_ACC_LEN_BITS+BITWIDTH+1+1+1; //width of correlation correction factors -- see the component_tracker block for reasoning
     localparam SERIAL_ACC_LEN = (1<<SERIAL_ACC_LEN_BITS);                               //Serial accumulation length
     
     input clk;                          //clock input
@@ -71,7 +71,7 @@ module xeng_top(
     input [INPUT_WIDTH-1:0] din;        //data input should be {{X_real, X_imag}*parallel samples, {Y_real, Y_imag}*parallel samples} 
     input vld;                          //data in valid flag -- should be held high for whole window
     input [MCNT_WIDTH-1:0] mcnt;        //mcnt timestamp
-    output [ACC_WIDTH+8-1:0] dout;      //accumulation output (all 4 stokes)
+    output [ACC_WIDTH+8+8-1:0] dout;      //accumulation output (all 4 stokes) 
     output [ACC_WIDTH-1:0] dout_uncorr;      //accumulation output (all 4 stokes) with uint convert uncorrected
     output sync_out;                    //sync output
     output vld_out;                     //data output valid flag
@@ -242,7 +242,6 @@ module xeng_top(
         .SERIAL_ACC_LEN_BITS(SERIAL_ACC_LEN_BITS),
         .P_FACTOR_BITS(P_FACTOR_BITS),
         .N_ANTS(N_ANTS),
-        .PLATFORM("VIRTEX5"),
         .VALID_DELAY(VALID_WIN_DELAY)
         ) comp_tracker_inst (
         .clk(clk),
@@ -265,14 +264,14 @@ module xeng_top(
     // Slice out the correlator accumulation values
     wire [ACC_WIDTH-1:0] acc_out_uint = acc_out_int[N_TAPS*ACC_WIDTH-1:(N_TAPS-1)*ACC_WIDTH];
     
-    wire [ACC_WIDTH/8 -1 : 0] acc_out_xx_r = acc_out_uint[8*(ACC_WIDTH/8)-1:7*(ACC_WIDTH/8)];
-    wire [ACC_WIDTH/8 -1 : 0] acc_out_xx_i = acc_out_uint[7*(ACC_WIDTH/8)-1:6*(ACC_WIDTH/8)];
-    wire [ACC_WIDTH/8 -1 : 0] acc_out_xy_r = acc_out_uint[6*(ACC_WIDTH/8)-1:5*(ACC_WIDTH/8)];
-    wire [ACC_WIDTH/8 -1 : 0] acc_out_xy_i = acc_out_uint[5*(ACC_WIDTH/8)-1:4*(ACC_WIDTH/8)];
-    wire [ACC_WIDTH/8 -1 : 0] acc_out_yx_r = acc_out_uint[4*(ACC_WIDTH/8)-1:3*(ACC_WIDTH/8)];
-    wire [ACC_WIDTH/8 -1 : 0] acc_out_yx_i = acc_out_uint[3*(ACC_WIDTH/8)-1:2*(ACC_WIDTH/8)];
-    wire [ACC_WIDTH/8 -1 : 0] acc_out_yy_r = acc_out_uint[2*(ACC_WIDTH/8)-1:1*(ACC_WIDTH/8)];
-    wire [ACC_WIDTH/8 -1 : 0] acc_out_yy_i = acc_out_uint[1*(ACC_WIDTH/8)-1:0*(ACC_WIDTH/8)];
+    wire [ACC_WIDTH/8 -1 : 0] acc_out_xx_r = {acc_out_uint[8*(ACC_WIDTH/8)-1:7*(ACC_WIDTH/8)]};
+    wire [ACC_WIDTH/8 -1 : 0] acc_out_xx_i = {acc_out_uint[7*(ACC_WIDTH/8)-1:6*(ACC_WIDTH/8)]};
+    wire [ACC_WIDTH/8 -1 : 0] acc_out_xy_r = {acc_out_uint[6*(ACC_WIDTH/8)-1:5*(ACC_WIDTH/8)]};
+    wire [ACC_WIDTH/8 -1 : 0] acc_out_xy_i = {acc_out_uint[5*(ACC_WIDTH/8)-1:4*(ACC_WIDTH/8)]};
+    wire [ACC_WIDTH/8 -1 : 0] acc_out_yx_r = {acc_out_uint[4*(ACC_WIDTH/8)-1:3*(ACC_WIDTH/8)]};
+    wire [ACC_WIDTH/8 -1 : 0] acc_out_yx_i = {acc_out_uint[3*(ACC_WIDTH/8)-1:2*(ACC_WIDTH/8)]};
+    wire [ACC_WIDTH/8 -1 : 0] acc_out_yy_r = {acc_out_uint[2*(ACC_WIDTH/8)-1:1*(ACC_WIDTH/8)]};
+    wire [ACC_WIDTH/8 -1 : 0] acc_out_yy_i = {acc_out_uint[1*(ACC_WIDTH/8)-1:0*(ACC_WIDTH/8)]};
     
     subtractor #(
         .A_WIDTH(ACC_WIDTH/8),

@@ -24,7 +24,7 @@
 
 module bl_order_gen_tb;
 
-    `include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/math_func.txt"
+    `include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func.txt"
     localparam N_ANTS = 8;
     localparam ANT_BITS = log2(N_ANTS);
     

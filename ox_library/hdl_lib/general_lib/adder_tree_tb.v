@@ -26,9 +26,9 @@
 
 module adder_tree_tb;
 
-    parameter PARALLEL_SAMPLE_BITS = 3; //Number of parallel inputs to tree (2^?)
+    parameter PARALLEL_SAMPLE_BITS = 0; //Number of parallel inputs to tree (2^?)
     parameter INPUT_WIDTH = 4;          //Input width of single sample
-    parameter REGISTER_OUTPUTS = "FALSE";
+    parameter REGISTER_OUTPUTS = "TRUE";
     parameter IS_SIGNED = "TRUE";
 
     localparam PARALLEL_SAMPLES = 1<<PARALLEL_SAMPLE_BITS;
@@ -41,7 +41,7 @@ module adder_tree_tb;
     reg [INPUT_WIDTH-1:0] test_val;
 
 	// Outputs
-	wire [6:0] dout;
+	wire [3:0] dout;
 	wire sync_out;
 
 	// Instantiate the Unit Under Test (UUT)
@@ -80,6 +80,7 @@ module adder_tree_tb;
     
     always @(posedge(clk)) begin
         test_val <= test_val + 1;
+        $display("input: %d, \toutput: %d", din,dout);
     end
 
 

@@ -27,7 +27,7 @@ module edgepos(
     output dout
     );
     
-    reg din_z;
+    reg din_z=0;
     always @(posedge(clk)) begin
         din_z <= din;
     end

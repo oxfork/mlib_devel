@@ -29,7 +29,7 @@ module bram_delay_top2(
     dout
     );
     
-    `include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/math_func.txt"
+    `include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func.txt"
     parameter WIDTH = 128; //Interface width in bits
     parameter DELAY = 128; //Delay to implement in clocks
     parameter LATENCY = 2; //bram latency (1 or 2)

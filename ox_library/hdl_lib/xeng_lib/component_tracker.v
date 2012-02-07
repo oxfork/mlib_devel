@@ -42,7 +42,7 @@ module component_tracker(
     im_correction_yy
     );
     
-    `include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/math_func.txt"
+    `include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func.txt"
    
     parameter SERIAL_ACC_LEN_BITS = 7;  //Serial accumulation length (2^?)
     parameter P_FACTOR_BITS = 2;        //Number of samples to accumulate in parallel (2^?)
@@ -53,7 +53,7 @@ module component_tracker(
     
     localparam P_FACTOR = 1 << P_FACTOR_BITS;
     localparam INPUT_WIDTH = 2*2*BITWIDTH*P_FACTOR;
-    localparam CORRECTION_ACC_WIDTH = P_FACTOR_BITS+SERIAL_ACC_LEN_BITS+BITWIDTH+1+1;
+    localparam CORRECTION_ACC_WIDTH = P_FACTOR_BITS+SERIAL_ACC_LEN_BITS+BITWIDTH+1+1+1;
     localparam ANT_BITS = `log2(N_ANTS);
     localparam SERIAL_ACC_LEN = 1<<SERIAL_ACC_LEN_BITS;
     localparam N_TAPS = N_ANTS/2 + 1;           //number of taps (including auto)
@@ -102,70 +102,85 @@ module component_tracker(
     wire [1:0] adder_tree_sync_v;
     wire adder_tree_sync = adder_tree_sync_v[0];
     
-    adder_tree #(
-        .PARALLEL_SAMPLE_BITS(P_FACTOR_BITS),
-        .INPUT_WIDTH(BITWIDTH),
-        .REGISTER_OUTPUTS("TRUE"),
-        .IS_SIGNED("TRUE") //only the imag inputs are signed
-    ) adder_tree_i_inst [1:0](
-        .clk(clk),
-        .sync(sync),
-        .din({x_im,y_im}),
-        .dout({x_im_sum,y_im_sum}),
-        .sync_out(adder_tree_sync_v)
-    );
+    generate
+        if (P_FACTOR_BITS != 0) begin : adder_tree_en //only construct adder tree if there is more than one simultaneous input
+            adder_tree #(
+                .PARALLEL_SAMPLE_BITS(P_FACTOR_BITS),
+                .INPUT_WIDTH(BITWIDTH),
+                .REGISTER_OUTPUTS("TRUE"),
+                .IS_SIGNED("TRUE") //only the imag inputs are signed
+            ) adder_tree_i_inst [1:0](
+                .clk(clk),
+                .sync(sync),
+                .din({x_im,y_im}),
+                .dout({x_im_sum,y_im_sum}),
+                .sync_out(adder_tree_sync_v)
+            );
 
-    adder_tree #(
-        .PARALLEL_SAMPLE_BITS(P_FACTOR_BITS),
-        .INPUT_WIDTH(BITWIDTH),
-        .REGISTER_OUTPUTS("TRUE"),
-        .IS_SIGNED("FALSE") //only the imag inputs are signed
-    ) adder_tree_r_inst [1:0](
-        .clk(clk),
-        .sync(sync),
-        .din({x_re,y_re}),
-        .dout({x_re_sum,y_re_sum}),
-        .sync_out()
-    );
+            adder_tree #(
+                .PARALLEL_SAMPLE_BITS(P_FACTOR_BITS),
+                .INPUT_WIDTH(BITWIDTH),
+                .REGISTER_OUTPUTS("TRUE"),
+                .IS_SIGNED("FALSE") //only the imag inputs are signed
+            ) adder_tree_r_inst [1:0](
+                .clk(clk),
+                .sync(sync),
+                .din({x_re,y_re}),
+                .dout({x_re_sum,y_re_sum}),
+                .sync_out()
+            );
+        end else begin : adder_tree_bypass
+            assign x_re_sum = x_re;
+            assign y_re_sum = y_re;
+            assign x_im_sum = x_im;
+            assign y_im_sum = y_im;
+            assign adder_tree_sync_v = {sync,sync};
+        end //adder tree bypass
+    endgenerate
     
     ///////////////////////////////////////////////////////////////////////////////
     
     // calculate the re+/- imag sums
-    wire [ADD_TREE_O_WIDTH+1 -1 : 0] x_re_p_im;
-    wire [ADD_TREE_O_WIDTH+1 -1 : 0] x_re_m_im;
-    wire [ADD_TREE_O_WIDTH+1 -1 : 0] y_re_p_im;
-    wire [ADD_TREE_O_WIDTH+1 -1 : 0] y_re_m_im;
+    // Convert the real parts to signed binary, for sanity
+    wire [ADD_TREE_O_WIDTH+1 - 1:0] x_re_sum_signed = {1'b0, x_re_sum};
+    wire [ADD_TREE_O_WIDTH+1 - 1:0] y_re_sum_signed = {1'b0, y_re_sum};
+
+    wire [ADD_TREE_O_WIDTH+1+1 -1 : 0] x_re_p_im; //+1 for conversion of real parts to signed, +1 for bit growth in add
+    wire [ADD_TREE_O_WIDTH+1+1 -1 : 0] x_re_m_im;
+    wire [ADD_TREE_O_WIDTH+1+1 -1 : 0] y_re_p_im;
+    wire [ADD_TREE_O_WIDTH+1+1 -1 : 0] y_re_m_im;
     
     adder #(
-        .A_WIDTH(ADD_TREE_O_WIDTH),
+        .A_WIDTH(ADD_TREE_O_WIDTH+1), //+1 for conversion of real parts to signed
         .B_WIDTH(ADD_TREE_O_WIDTH),
-        .A_IS_SIGNED("FALSE"),
+        .A_IS_SIGNED("TRUE"),
         .B_IS_SIGNED("TRUE"),
         .REGISTER_OUTPUT("FALSE")
     ) re_im_adder_inst [1:0] (
         .clk(clk),
-        .a({x_re_sum, y_re_sum}),
+        .a({x_re_sum_signed, y_re_sum_signed}),
         .b({x_im_sum, y_im_sum}),
         .c({x_re_p_im, y_re_p_im})
     );
     
     subtractor #(
-        .A_WIDTH(ADD_TREE_O_WIDTH),
+        .A_WIDTH(ADD_TREE_O_WIDTH+1),
         .B_WIDTH(ADD_TREE_O_WIDTH),
-        .A_IS_SIGNED("FALSE"),
+        .A_IS_SIGNED("TRUE"),
         .B_IS_SIGNED("TRUE"),
         .REGISTER_OUTPUT("FALSE")
     ) re_im_sub_inst [1:0] (
         .clk(clk),
-        .a({x_re_sum, y_re_sum}),
+        .a({x_re_sum_signed, y_re_sum_signed}),
         .b({x_im_sum, y_im_sum}),
         .c({x_re_m_im, y_re_m_im})
     );
+
     
     ///////////////////////////////////////////////////////////////////////////////
     
     //accumulate the serial streams
-    localparam SERIAL_ACC_WIDTH = ADD_TREE_O_WIDTH + 1 + SERIAL_ACC_LEN_BITS;
+    localparam SERIAL_ACC_WIDTH = ADD_TREE_O_WIDTH + 1 + 1 + SERIAL_ACC_LEN_BITS;
     wire [SERIAL_ACC_WIDTH -1 :0] x_re_p_im_acc_a;
     wire [SERIAL_ACC_WIDTH -1 :0] x_re_m_im_acc_a;
     wire [SERIAL_ACC_WIDTH -1 :0] y_re_p_im_acc_a;
@@ -181,12 +196,10 @@ module component_tracker(
     //after last baseline, change to the other buffer
     wire buf_sel;
 
-    //TODO -- what is the signing here? 
     comp_vacc #(
-        .INPUT_WIDTH(ADD_TREE_O_WIDTH+1),
+        .INPUT_WIDTH(ADD_TREE_O_WIDTH+1+1),
         .ACC_LEN_BITS(SERIAL_ACC_LEN_BITS),
-        .VECTOR_LENGTH(N_ANTS),
-        .PLATFORM(PLATFORM)
+        .VECTOR_LENGTH(N_ANTS)
     ) comp_vacc_inst [3:0] (
         .clk(clk),
         .ant_sel_a(ant_a_sel),
@@ -195,7 +208,7 @@ module component_tracker(
         .din({x_re_p_im, x_re_m_im, y_re_p_im, y_re_m_im}),
         .dout_a({x_re_p_im_acc_a, x_re_m_im_acc_a, y_re_p_im_acc_a, y_re_m_im_acc_a}),
         .dout_b({x_re_p_im_acc_b, x_re_m_im_acc_b, y_re_p_im_acc_b, y_re_m_im_acc_b}),
-        .new_acc(adder_tree_sync)
+        .sync(adder_tree_sync)
         );
         
     ////////////////////////////////////////////////////////////////////
@@ -204,7 +217,7 @@ module component_tracker(
     
     //It takes 2 clocks for data to be pulled from the BRAM, so we need to request data (i.e. have ant_a/b_sel signals
     //ready) two clocks in advance. To achieve this, use a sync delayed by 2 clocks less than the X-eng tap chain latency.
-    reg [SERIAL_ACC_LEN_BITS-1:0] tap_out_vld_ctr;
+    reg [SERIAL_ACC_LEN_BITS-1:0] tap_out_vld_ctr = 0;
     wire gen_next_bl;
     wire bl_order_gen_sync;
     always @(posedge(clk)) begin
@@ -264,7 +277,7 @@ module component_tracker(
         .clk(clk),
         .a({x_re_m_im_acc_b, x_re_m_im_acc_b, y_re_m_im_acc_b, y_re_m_im_acc_b}),
         .b({x_re_m_im_acc_a, y_re_m_im_acc_a, x_re_m_im_acc_a, y_re_m_im_acc_a}),
-        .c({im_correction_xx, im_correction_xy, im_correction_yx, im_correction_yy})
+        .c({im_correction_xx, im_correction_yx, im_correction_xy, im_correction_yy})
     );
     
 endmodule

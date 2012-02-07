@@ -45,9 +45,6 @@ module adder_tree(
     output sync_out;
     output [INPUT_WIDTH+PARALLEL_SAMPLE_BITS-1:0] dout;
        
-    /* TODO: this wire vector will throw lots of warnings because parts of it
-     * aren't used. Fix.
-     */
     wire [PARALLEL_SAMPLES*INPUT_WIDTH-1 : 0] branches_int[PARALLEL_SAMPLE_BITS+1 - 1 : 0]; //create a 2D vector for interconnect of branches
 
     assign branches_int[0][PARALLEL_SAMPLES*INPUT_WIDTH-1:0] = din[PARALLEL_SAMPLES*INPUT_WIDTH-1:0]; //first input

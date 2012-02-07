@@ -3,25 +3,7 @@
 //`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/delay.v"
 
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    13:47:09 11/24/2011 
-// Design Name: 
-// Module Name:    subtractor 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+
 module subtractor(
     clk,
     a,
@@ -44,10 +26,25 @@ module subtractor(
     
     // sign extend the inputs
     wire a_sign = a[A_WIDTH-1];
+    wire [OUTPUT_WIDTH-1:0] a_ext;
     wire b_sign = b[B_WIDTH-1];
-    wire [OUTPUT_WIDTH-1:0] a_ext = {{(OUTPUT_WIDTH-A_WIDTH){a_sign}}, a};
-    wire [OUTPUT_WIDTH-1:0] b_ext = {{(OUTPUT_WIDTH-A_WIDTH){b_sign}}, b};
-    
+    wire [OUTPUT_WIDTH-1:0] b_ext;
+    generate
+        if (A_IS_SIGNED == "TRUE") begin
+            assign a_ext = {{(OUTPUT_WIDTH-A_WIDTH){a_sign}}, a};
+        end else begin
+            assign a_ext = {{(OUTPUT_WIDTH-A_WIDTH){1'b0}}, a};
+        end
+    endgenerate
+
+    generate
+        if (B_IS_SIGNED == "TRUE") begin
+            assign b_ext = {{(OUTPUT_WIDTH-B_WIDTH){b_sign}}, b};
+        end else begin
+            assign b_ext = {{(OUTPUT_WIDTH-B_WIDTH){1'b0}}, b};
+        end
+    endgenerate
+
     // addition circuit
     wire [OUTPUT_WIDTH-1:0] c_int = a_ext - b_ext;
     

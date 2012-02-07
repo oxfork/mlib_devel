@@ -71,7 +71,14 @@ module delay(
     endgenerate
 
     //assign output to last register in chain
-    assign dout = din_reg[DELAY-1];
+    //or input if delay=0
+    generate
+        if (DELAY==0) begin : delay_bypass_sel
+            assign dout = din;
+        end else begin
+            assign dout = din_reg[DELAY-1];
+        end
+    endgenerate
 
 endmodule
 

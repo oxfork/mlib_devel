@@ -28,7 +28,7 @@ module sync_delay(
     output dout
     );
 
-    `include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/math_func.txt"
+    `include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func.txt"
     parameter DELAY_LENGTH = 256; //Delay to apply to sync pulse in clocks
     localparam DELAY_BITS = `log2(DELAY_LENGTH+1);
     

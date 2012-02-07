@@ -3,6 +3,8 @@
 
 module tb_xeng_top();
     
+    `include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func.txt"
+    
     localparam PERIOD = 10;
 
     localparam SERIAL_ACC_LEN_BITS   = 7;  //Serial accumulation length (2^?)
@@ -33,7 +35,7 @@ module tb_xeng_top();
     reg [INPUT_WIDTH-1:0] din;        //data input should be {{X_real, X_imag}*parallel samples, {Y_real, Y_imag}*parallel samples} 
     reg vld;                          //data in valid flag -- should be held high for whole window
     reg  [MCNT_WIDTH-1:0] mcnt;        //mcnt timestamp
-    wire [ACC_WIDTH+8-1:0] dout;      //accumulation output (all 4 stokes)
+    wire [ACC_WIDTH+16-1:0] dout;      //accumulation output (all 4 stokes)
     wire [ACC_WIDTH-1:0] dout_uncorr;      //accumulation output (all 4 stokes) with uint convert uncorrected
     wire sync_out;                    //sync output
     wire vld_out;                     //data output valid flag
@@ -50,7 +52,7 @@ module tb_xeng_top();
         .DSP_REGISTERS      (DSP_REGISTERS      ),
         .N_ANTS             (N_ANTS             ),
         .BRAM_LATENCY       (BRAM_LATENCY       ),
-        .DEMUX_FACTOR       (DEMUX_FACTOR       ),
+        //.DEMUX_FACTOR       (DEMUX_FACTOR       ),
         .MCNT_WIDTH         (MCNT_WIDTH         )
     ) uut (
         .clk         (clk),
@@ -148,14 +150,14 @@ module tb_xeng_top();
     wire [ACC_WIDTH/8 -1 : 0] yy_r = dout_uncorr[2*(ACC_WIDTH/8)-1:1*(ACC_WIDTH/8)];
     wire [ACC_WIDTH/8 -1 : 0] yy_i = dout_uncorr[1*(ACC_WIDTH/8)-1:0*(ACC_WIDTH/8)];
 
-    wire [ACC_WIDTH/8 +1 -1 : 0] xx_r_c = dout[8*(ACC_WIDTH/8 + 1)-1:7*(ACC_WIDTH/8 + 1)];
-    wire [ACC_WIDTH/8 +1 -1 : 0] xx_i_c = dout[7*(ACC_WIDTH/8 + 1)-1:6*(ACC_WIDTH/8 + 1)];
-    wire [ACC_WIDTH/8 +1 -1 : 0] xy_r_c = dout[6*(ACC_WIDTH/8 + 1)-1:5*(ACC_WIDTH/8 + 1)];
-    wire [ACC_WIDTH/8 +1 -1 : 0] xy_i_c = dout[5*(ACC_WIDTH/8 + 1)-1:4*(ACC_WIDTH/8 + 1)];
-    wire [ACC_WIDTH/8 +1 -1 : 0] yx_r_c = dout[4*(ACC_WIDTH/8 + 1)-1:3*(ACC_WIDTH/8 + 1)];
-    wire [ACC_WIDTH/8 +1 -1 : 0] yx_i_c = dout[3*(ACC_WIDTH/8 + 1)-1:2*(ACC_WIDTH/8 + 1)];
-    wire [ACC_WIDTH/8 +1 -1 : 0] yy_r_c = dout[2*(ACC_WIDTH/8 + 1)-1:1*(ACC_WIDTH/8 + 1)];
-    wire [ACC_WIDTH/8 +1 -1 : 0] yy_i_c = dout[1*(ACC_WIDTH/8 + 1)-1:0*(ACC_WIDTH/8 + 1)];
+    wire [ACC_WIDTH/8 +1 -1 : 0] xx_r_c = dout[8*(ACC_WIDTH/8 + 2)-1:7*(ACC_WIDTH/8 + 2)];
+    wire [ACC_WIDTH/8 +1 -1 : 0] xx_i_c = dout[7*(ACC_WIDTH/8 + 2)-1:6*(ACC_WIDTH/8 + 2)];
+    wire [ACC_WIDTH/8 +1 -1 : 0] xy_r_c = dout[6*(ACC_WIDTH/8 + 2)-1:5*(ACC_WIDTH/8 + 2)];
+    wire [ACC_WIDTH/8 +1 -1 : 0] xy_i_c = dout[5*(ACC_WIDTH/8 + 2)-1:4*(ACC_WIDTH/8 + 2)];
+    wire [ACC_WIDTH/8 +1 -1 : 0] yx_r_c = dout[4*(ACC_WIDTH/8 + 2)-1:3*(ACC_WIDTH/8 + 2)];
+    wire [ACC_WIDTH/8 +1 -1 : 0] yx_i_c = dout[3*(ACC_WIDTH/8 + 2)-1:2*(ACC_WIDTH/8 + 2)];
+    wire [ACC_WIDTH/8 +1 -1 : 0] yy_r_c = dout[2*(ACC_WIDTH/8 + 2)-1:1*(ACC_WIDTH/8 + 2)];
+    wire [ACC_WIDTH/8 +1 -1 : 0] yy_i_c = dout[1*(ACC_WIDTH/8 + 2)-1:0*(ACC_WIDTH/8 + 2)];
 
     initial begin
         $display("clock \t buf \t antA \t antB \t xx_r \t xx_i \t yy_r \t yy_i \t xy_r \t xy_i \t yx_r \t yx_i");

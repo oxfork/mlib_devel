@@ -94,18 +94,21 @@ module dsp48e_mac_chain(
         
     genvar n;
     generate
-        for (n=1; n<(N_INPUTS-1); n=n+1) begin : gen_dsp_chain
-            dsp48e_uint_cmult #(
-                .BITWIDTH(BITWIDTH),
-                .DSP_INPUT_REGISTERS(DSP_REGISTERS),
-                .OPMODE(7'd21)) //add and output
-                dsp_chain_el (
-                .clk(clk),
-                .a0(a[(n+1)*(2*BITWIDTH)-1:n*(2*BITWIDTH)]),
-                .b0(b[(n+1)*(2*BITWIDTH)-1:n*(2*BITWIDTH)]),
-                .pcin(dsp_link_wire[n*48-1:(n-1)*48]),
-                .pcout(dsp_link_wire[(n+1)*48-1:n*(48)]));
-                end // gen_dsp_chain        
+        if (N_INPUTS!=1) begin : dsp_chain_en
+            for (n=1; n<(N_INPUTS-1); n=n+1) begin : gen_dsp_chain
+                dsp48e_uint_cmult #(
+                    .BITWIDTH(BITWIDTH),
+                    .DSP_INPUT_REGISTERS(DSP_REGISTERS),
+                    .OPMODE(7'd21) //add and output
+                ) dsp_chain_el (
+                    .clk(clk),
+                    .a0(a[(n+1)*(2*BITWIDTH)-1:n*(2*BITWIDTH)]),
+                    .b0(b[(n+1)*(2*BITWIDTH)-1:n*(2*BITWIDTH)]),
+                    .pcin(dsp_link_wire[n*48-1:(n-1)*48]),
+                    .pcout(dsp_link_wire[(n+1)*48-1:n*(48)])
+                );
+            end // gen_dsp_chain        
+        end //dsp_chain_en
     endgenerate
     
     //Carve up the output of the last dsp slice.

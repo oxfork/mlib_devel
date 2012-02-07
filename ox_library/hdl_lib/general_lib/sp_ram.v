@@ -16,6 +16,14 @@ module sp_ram #(
 // memory
 reg [D_WIDTH-1:0] mem [(2**A_WIDTH)-1:0];
 
+//Initialise ram contents
+integer k;
+initial begin
+    for(k=0; k<(2**A_WIDTH); k=k+1) begin
+        mem[k][D_WIDTH-1:0] = {D_WIDTH{1'b0}};
+    end
+end
+
 // dout
 reg [D_WIDTH-1:0] dout_int;
 

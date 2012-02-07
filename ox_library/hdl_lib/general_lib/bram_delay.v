@@ -28,7 +28,7 @@ module bram_delay(
     dout
     );
 
-    `include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/math_func.txt"
+    `include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func.txt"
     parameter WIDTH = 32;                //interface width (<37 for 18Kb bram, <73 for 36Kb)
     parameter DELAY = 1024;               //Delay to implement in clocks.
     parameter TARGET_BRAM = "36Kb";      //Target bram block size. Either "18Kb" or "36Kb"
