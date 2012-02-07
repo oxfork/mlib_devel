@@ -51,7 +51,7 @@ module sample_and_hold(
     end
     
     //sampling logic
-    reg [WIDTH-1:0] dout_reg;
+    reg [WIDTH-1:0] dout_reg = {WIDTH{1'b0}};
     wire dout_reg_enable;
     delay #(
         .DELAY(1),
