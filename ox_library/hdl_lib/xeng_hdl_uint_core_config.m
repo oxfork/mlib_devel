@@ -26,7 +26,7 @@ function xeng_top_config(this_block)
   mcnt_width            = 48; %get_param(myname, 'mcnt_width'           );
 
   input_width = bitwidth*2*2*(2^p_factor_bits); %bitwidth*{r/i}*{x/y}*parallel samples
-  output_width = (2*4)*((bitwidth*2+1)+p_factor_bits+serial_acc_len_bits+2); %r/i}*{4 stokes}*(cmult_width+bit_growth+{2bit uint -> int correction})
+  output_width = (2*4)*((bitwidth*2+1)+p_factor_bits+serial_acc_len_bits); %r/i}*{4 stokes}*(cmult_width+bit_growth+)
   output_width_uncorr = (2*4)*((bitwidth*2+1)+p_factor_bits+serial_acc_len_bits); %r/i}*{4 stokes}*(cmult_width+bit_growth)
   
   % System Generator has to assume that your entity  has a combinational feed through; 

@@ -8,7 +8,7 @@ module tb_xeng_top();
     localparam PERIOD = 10;
 
     localparam SERIAL_ACC_LEN_BITS   = 7;  //Serial accumulation length (2^?)
-    localparam P_FACTOR_BITS         = 2;  //Number of samples to accumulate in parallel (2^?)
+    localparam P_FACTOR_BITS         = 0;  //Number of samples to accumulate in parallel (2^?)
     localparam BITWIDTH              = 4;  //bitwidth of each real/imag part of a single sample
     localparam ACC_MUX_LATENCY       = 2;  //Latency of the mux to place the accumulation result on the xeng shift reg
     localparam FIRST_DSP_REGISTERS   = 2;  //number of registers on the input of the first DSP slice in the chain
@@ -35,7 +35,7 @@ module tb_xeng_top();
     reg [INPUT_WIDTH-1:0] din;        //data input should be {{X_real, X_imag}*parallel samples, {Y_real, Y_imag}*parallel samples} 
     reg vld;                          //data in valid flag -- should be held high for whole window
     reg  [MCNT_WIDTH-1:0] mcnt;        //mcnt timestamp
-    wire [ACC_WIDTH+16-1:0] dout;      //accumulation output (all 4 stokes)
+    wire [ACC_WIDTH-1:0] dout;      //accumulation output (all 4 stokes)
     wire [ACC_WIDTH-1:0] dout_uncorr;      //accumulation output (all 4 stokes) with uint convert uncorrected
     wire sync_out;                    //sync output
     wire vld_out;                     //data output valid flag
@@ -123,8 +123,9 @@ module tb_xeng_top();
     end
 
     //generate data
-    reg [BITWIDTH-1:0] file_val[2*P_FACTOR-1:0];
-    wire [2*P_FACTOR*BITWIDTH-1:0] dat_single_pol = {file_val[7],file_val[6],file_val[5],file_val[4],
+    localparam P_FACTOR_HARDCODE = 1<<2; //hack
+    reg [BITWIDTH-1:0] file_val[2*P_FACTOR_HARDCODE-1:0];
+    wire [2*P_FACTOR_HARDCODE*BITWIDTH-1:0] dat_single_pol = {file_val[7],file_val[6],file_val[5],file_val[4],
                                                     file_val[3],file_val[2],file_val[1], file_val[0]};
     //wire [2*P_FACTOR*BITWIDTH-1:0] dat_single_pol = {file_val[1],file_val[0]};
                                                     
@@ -138,7 +139,7 @@ module tb_xeng_top();
                 file_val[4], file_val[3], file_val[2], file_val[1], file_val[0]);
         //null = $fscanf(gold_in, "%d\n%d\n", file_val[1], file_val[0]);
 
-        din = {dat_single_pol,dat_single_pol};
+        din = {dat_single_pol[INPUT_WIDTH/2-1:0],dat_single_pol[INPUT_WIDTH/2-1:0]};
     end
 
     wire [ACC_WIDTH/8 -1 : 0] xx_r = dout_uncorr[8*(ACC_WIDTH/8)-1:7*(ACC_WIDTH/8)];
@@ -150,14 +151,14 @@ module tb_xeng_top();
     wire [ACC_WIDTH/8 -1 : 0] yy_r = dout_uncorr[2*(ACC_WIDTH/8)-1:1*(ACC_WIDTH/8)];
     wire [ACC_WIDTH/8 -1 : 0] yy_i = dout_uncorr[1*(ACC_WIDTH/8)-1:0*(ACC_WIDTH/8)];
 
-    wire [ACC_WIDTH/8 +1 -1 : 0] xx_r_c = dout[8*(ACC_WIDTH/8 + 2)-1:7*(ACC_WIDTH/8 + 2)];
-    wire [ACC_WIDTH/8 +1 -1 : 0] xx_i_c = dout[7*(ACC_WIDTH/8 + 2)-1:6*(ACC_WIDTH/8 + 2)];
-    wire [ACC_WIDTH/8 +1 -1 : 0] xy_r_c = dout[6*(ACC_WIDTH/8 + 2)-1:5*(ACC_WIDTH/8 + 2)];
-    wire [ACC_WIDTH/8 +1 -1 : 0] xy_i_c = dout[5*(ACC_WIDTH/8 + 2)-1:4*(ACC_WIDTH/8 + 2)];
-    wire [ACC_WIDTH/8 +1 -1 : 0] yx_r_c = dout[4*(ACC_WIDTH/8 + 2)-1:3*(ACC_WIDTH/8 + 2)];
-    wire [ACC_WIDTH/8 +1 -1 : 0] yx_i_c = dout[3*(ACC_WIDTH/8 + 2)-1:2*(ACC_WIDTH/8 + 2)];
-    wire [ACC_WIDTH/8 +1 -1 : 0] yy_r_c = dout[2*(ACC_WIDTH/8 + 2)-1:1*(ACC_WIDTH/8 + 2)];
-    wire [ACC_WIDTH/8 +1 -1 : 0] yy_i_c = dout[1*(ACC_WIDTH/8 + 2)-1:0*(ACC_WIDTH/8 + 2)];
+    wire [ACC_WIDTH/8 +0 -1 : 0] xx_r_c = dout[8*(ACC_WIDTH/8 + 0)-1:7*(ACC_WIDTH/8 + 0)];
+    wire [ACC_WIDTH/8 +0 -1 : 0] xx_i_c = dout[7*(ACC_WIDTH/8 + 0)-1:6*(ACC_WIDTH/8 + 0)];
+    wire [ACC_WIDTH/8 +0 -1 : 0] xy_r_c = dout[6*(ACC_WIDTH/8 + 0)-1:5*(ACC_WIDTH/8 + 0)];
+    wire [ACC_WIDTH/8 +0 -1 : 0] xy_i_c = dout[5*(ACC_WIDTH/8 + 0)-1:4*(ACC_WIDTH/8 + 0)];
+    wire [ACC_WIDTH/8 +0 -1 : 0] yx_r_c = dout[4*(ACC_WIDTH/8 + 0)-1:3*(ACC_WIDTH/8 + 0)];
+    wire [ACC_WIDTH/8 +0 -1 : 0] yx_i_c = dout[3*(ACC_WIDTH/8 + 0)-1:2*(ACC_WIDTH/8 + 0)];
+    wire [ACC_WIDTH/8 +0 -1 : 0] yy_r_c = dout[2*(ACC_WIDTH/8 + 0)-1:1*(ACC_WIDTH/8 + 0)];
+    wire [ACC_WIDTH/8 +0 -1 : 0] yy_i_c = dout[1*(ACC_WIDTH/8 + 0)-1:0*(ACC_WIDTH/8 + 0)];
 
     initial begin
         $display("clock \t buf \t antA \t antB \t xx_r \t xx_i \t yy_r \t yy_i \t xy_r \t xy_i \t yx_r \t yx_i");

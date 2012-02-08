@@ -71,7 +71,7 @@ module xeng_top(
     input [INPUT_WIDTH-1:0] din;        //data input should be {{X_real, X_imag}*parallel samples, {Y_real, Y_imag}*parallel samples} 
     input vld;                          //data in valid flag -- should be held high for whole window
     input [MCNT_WIDTH-1:0] mcnt;        //mcnt timestamp
-    output [ACC_WIDTH+8+8-1:0] dout;      //accumulation output (all 4 stokes) 
+    output [ACC_WIDTH-1:0] dout;      //accumulation output (all 4 stokes) 
     output [ACC_WIDTH-1:0] dout_uncorr;      //accumulation output (all 4 stokes) with uint convert uncorrected
     output sync_out;                    //sync output
     output vld_out;                     //data output valid flag
@@ -273,6 +273,14 @@ module xeng_top(
     wire [ACC_WIDTH/8 -1 : 0] acc_out_yy_r = {acc_out_uint[2*(ACC_WIDTH/8)-1:1*(ACC_WIDTH/8)]};
     wire [ACC_WIDTH/8 -1 : 0] acc_out_yy_i = {acc_out_uint[1*(ACC_WIDTH/8)-1:0*(ACC_WIDTH/8)]};
     
+    wire [ACC_WIDTH/8+2-1:0] dout_corr_xx_r;
+    wire [ACC_WIDTH/8+2-1:0] dout_corr_xx_i;
+    wire [ACC_WIDTH/8+2-1:0] dout_corr_xy_r;
+    wire [ACC_WIDTH/8+2-1:0] dout_corr_xy_i;
+    wire [ACC_WIDTH/8+2-1:0] dout_corr_yx_r;
+    wire [ACC_WIDTH/8+2-1:0] dout_corr_yx_i;
+    wire [ACC_WIDTH/8+2-1:0] dout_corr_yy_r;
+    wire [ACC_WIDTH/8+2-1:0] dout_corr_yy_i;
     subtractor #(
         .A_WIDTH(ACC_WIDTH/8),
         .B_WIDTH(CORRECTION_ACC_WIDTH+BITWIDTH-1),
@@ -281,8 +289,20 @@ module xeng_top(
         .clk(clk),
         .a({acc_out_xx_r, acc_out_xx_i, acc_out_xy_r, acc_out_xy_i, acc_out_yx_r, acc_out_yx_i, acc_out_yy_r, acc_out_yy_i}),
         .b({re_c_xx, im_c_xx, re_c_xy, im_c_xy, re_c_yx, im_c_yx, re_c_yy, im_c_yy}),
-        .c(dout)
+        .c({dout_corr_xx_r,dout_corr_xx_i,dout_corr_xy_r,dout_corr_xy_i,dout_corr_yx_r,dout_corr_yx_i,dout_corr_yy_r,dout_corr_yy_i})
     );
+
+    // The bitwidth out of the subtractor is greater than it needs to be.
+    // Slice off the useful bits
+    assign dout = {dout_corr_xx_r[ACC_WIDTH/8 - 1:0],
+                   dout_corr_xx_i[ACC_WIDTH/8 - 1:0],
+                   dout_corr_xy_r[ACC_WIDTH/8 - 1:0],
+                   dout_corr_xy_i[ACC_WIDTH/8 - 1:0],
+                   dout_corr_yx_r[ACC_WIDTH/8 - 1:0],
+                   dout_corr_yx_i[ACC_WIDTH/8 - 1:0],
+                   dout_corr_yy_r[ACC_WIDTH/8 - 1:0],
+                   dout_corr_yy_i[ACC_WIDTH/8 - 1:0]};
+    
     
     assign dout_uncorr = acc_out_uint; //DEBUG
     
