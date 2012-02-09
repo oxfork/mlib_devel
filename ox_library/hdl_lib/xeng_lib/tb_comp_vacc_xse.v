@@ -1,6 +1,6 @@
-////\\`include "/tools/Xilinx/11.1/ISE/verilog/src/unimacro/BRAM_TDP_MACRO.v"
-////\\`include "/tools/Xilinx/11.1/ISE/verilog/src/unisims/RAMB18.v"
-////\\`include "/tools/Xilinx/11.1/ISE/verilog/src/unisims/ARAMB36_INTERNAL.v"
+////\\//`include "/tools/Xilinx/11.1/ISE/verilog/src/unimacro/BRAM_TDP_MACRO.v"
+////\\//`include "/tools/Xilinx/11.1/ISE/verilog/src/unisims/RAMB18.v"
+////\\//`include "/tools/Xilinx/11.1/ISE/verilog/src/unisims/ARAMB36_INTERNAL.v"
 `timescale 1ns / 1ps
 
 //////////////////////////////////////////////////////////////////////////////////
@@ -24,7 +24,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module tb_comp_vacc();
     
-    `include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func.txt"
+    //`include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func.txt"
     
     parameter INPUT_WIDTH = 4;
     parameter ACC_LEN_BITS = 8;

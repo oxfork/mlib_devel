@@ -1,6 +1,6 @@
 `ifndef sample_and_hold
 `define sample_and_hold
-//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/delay.v"
+////`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/delay.v"
 
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
@@ -29,7 +29,7 @@ module sample_and_hold(
     dout
     );
     
-    `include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func.txt"
+    //`include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func.txt"
     parameter WIDTH = 1;    //data bus width
     parameter PERIOD = 128; //sampling period in clocks
     

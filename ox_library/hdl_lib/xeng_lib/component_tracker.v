@@ -1,10 +1,10 @@
 `ifndef component_tracker
 `define component_tracker
-//\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/adder_tree.v"
-//\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/adder.v"
-//\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/subtractor.v"
-//\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/comp_vacc.v"
-//\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/bl_order_gen.v"
+//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/adder_tree.v"
+//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/adder.v"
+//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/subtractor.v"
+//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/comp_vacc.v"
+//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/bl_order_gen.v"
 `timescale 1ns / 1ps
 
 //////////////////////////////////////////////////////////////////////////////////
@@ -42,7 +42,7 @@ module component_tracker(
     im_correction_yy
     );
     
-    `include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func.txt"
+    //`include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func.txt"
    
     parameter SERIAL_ACC_LEN_BITS = 7;  //Serial accumulation length (2^?)
     parameter P_FACTOR_BITS = 2;        //Number of samples to accumulate in parallel (2^?)

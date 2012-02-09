@@ -1,9 +1,9 @@
 `ifndef baseline_tap
 `define baseline_tap
-////\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/bram_delay_top2.v"
-//\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/bram_delay_behave.v"
-//\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/delay.v"
-//\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/dual_pol_cmac.v"
+////\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/bram_delay_top2.v"
+//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/bram_delay_behave.v"
+//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/delay.v"
+//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/dual_pol_cmac.v"
 `define DEBUG
 
 `timescale 1ns / 1ps
@@ -47,7 +47,7 @@ module baseline_tap(
     a_end_out
     );
     
-    `include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func.txt"
+    //`include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func.txt"
     parameter SERIAL_ACC_LEN_BITS = 7;  //Serial accumulation length (2^?)
     parameter P_FACTOR_BITS = 0;        //Number of samples to accumulate in parallel (2^?)
     parameter BITWIDTH = 4;             //bitwidth of each real/imag part of a single sample
@@ -119,35 +119,6 @@ module baseline_tap(
         .dout(a_del_delay)
     );
 
-    /*
-    delay #(
-        .WIDTH(INPUT_WIDTH),
-        .DELAY(SERIAL_ACC_LEN)
-    ) debug_bram_delay (
-        .clk(clk),
-        .din(a_del),
-        .dout(a_del_delay)
-    );
-    */
-
-    //always @(posedge(clk)) begin
-    //    if (a_del_delay_debug != a_del_delay)
-    //        $display("TAP %d: BRAM DELAY FAIL!!!", TAP_SEPARATION);
-    //end
-
-//`ifdef DEBUG
-//    reg [11:0] debug_bram_ctr=0;
-//    always @(posedge(clk)) begin
-//        if(sync1) begin
-//            debug_bram_ctr <= 11'b0;
-//        end else begin
-//            debug_bram_ctr <= debug_bram_ctr + 1'b1;
-//            $display ("clk %d: bram input %d. bram output %d", debug_bram_ctr, a_del[BITWIDTH*2*P_FACTOR-1:BITWIDTH*2*(P_FACTOR-1)], a_del_delay[BITWIDTH*2*P_FACTOR-1:BITWIDTH*2*(P_FACTOR-1)]);
-//        end
-//    end
-//`endif
-
-
     
     // one extra register for good measure
     reg [INPUT_WIDTH-1:0] a_del_delay_reg = 0;
@@ -157,21 +128,6 @@ module baseline_tap(
     assign a_del_out = a_del_delay_reg;
     
     
-    /*
-    ////// Instantiate counter to control a_ndel/a_end mux
-    localparam log2_NANTS_MINUS_1 = `log2(N_ANTS-1);
-    reg [log2_NANTS_MINUS_1+SERIAL_ACC_LEN_BITS-1:0] mux_ctrl_ctr = 0; //N ants means ants numbered 0->N-1
-    localparam [log2_NANTS_MINUS_1+SERIAL_ACC_LEN_BITS-1:0] COUNTER_LIMIT = ((N_ANTS*(1<<SERIAL_ACC_LEN_BITS))-1);
-    always @(posedge(clk)) begin
-        if(rst) begin
-            mux_ctrl_ctr <= 0;
-        end else if(mux_ctrl_ctr == ((N_ANTS*(1<<SERIAL_ACC_LEN_BITS))-1)) begin
-            mux_ctrl_ctr <= 0;
-        end else begin
-            mux_ctrl_ctr <= mux_ctrl_ctr + 1;
-        end
-    end
-    */
     ////// Instantiate counter to control a_ndel/a_end mux
     localparam ANT_BITS = `log2(N_ANTS);
     reg [ANT_BITS+SERIAL_ACC_LEN_BITS-1:0] mux_ctrl_ctr = 0;

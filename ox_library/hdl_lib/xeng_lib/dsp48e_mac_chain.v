@@ -1,6 +1,6 @@
 `ifndef dsp48e_mac_chan
 `define dsp48e_mac_chain
-//\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/dsp48e_uint_cmult.v"
+//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/dsp48e_uint_cmult.v"
 
 
 `timescale 1ns / 1ps

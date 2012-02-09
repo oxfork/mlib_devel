@@ -1,9 +1,9 @@
 `ifndef auto_tap
 `define auto_tap
-//\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/sync_delay.v"
-////\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/bram_delay_top2.v"
-//\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/bram_delay_behave.v"
-//\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/dual_pol_cmac.v"
+//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/sync_delay.v"
+////\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/bram_delay_top2.v"
+//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/bram_delay_behave.v"
+//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/dual_pol_cmac.v"
 `define DEBUG
 
 `timescale 1ns / 1ps
@@ -82,7 +82,7 @@ module auto_tap(
     assign a_del_out = a_del;
     assign rst_out = sync_in;
     assign a_ndel_out = a_ndel;
-      
+    
     //Connect up the sync output with appropriate sync delay
     sync_delay #(
         .DELAY_LENGTH(ADD_LATENCY + MULT_LATENCY + SERIAL_ACC_LEN + (N_ANTS>>1) +1 +1)
@@ -93,20 +93,6 @@ module auto_tap(
         .dout(sync_out)
     );
 
-`ifdef DEBUG
-    reg [9:0] debug_sync_ctr;
-    always @(posedge(clk)) begin
-        if (sync_in) begin
-            debug_sync_ctr <= 10'b1;
-            $display("auto tap sync in!\n");
-        end else begin
-            debug_sync_ctr <= debug_sync_ctr + 1'b1;
-        end
-        if (sync_out)
-            $display("%d: auto tap sync out!\n", debug_sync_ctr);
-    end
-`endif
-    
     // Instantiate the antenna_loop passthrough, with bram delay
     //delay length:
     localparam DELAY_LEN = (SERIAL_ACC_LEN-1)*

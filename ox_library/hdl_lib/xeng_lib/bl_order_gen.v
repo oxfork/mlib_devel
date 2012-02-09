@@ -30,7 +30,7 @@ module bl_order_gen(
     buf_sel
     );
     
-    `include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func.txt"
+    //`include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func.txt"
     parameter N_ANTS = 16;
     localparam ANT_BITS = `log2(N_ANTS);
     

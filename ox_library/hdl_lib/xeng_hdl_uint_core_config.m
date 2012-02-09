@@ -187,6 +187,8 @@ function xeng_top_config(this_block)
 
   source_root_path = [getenv('MLIB_ROOT'), '/ox_library/hdl_lib'];
 
+  this_block.addFile([source_root_path, '/general_lib/math_func.v']);
+
   this_block.addFile([source_root_path, '/general_lib/delay.v']);
   this_block.addFile([source_root_path, '/general_lib/posedge.v']);
   this_block.addFile([source_root_path, '/general_lib/negedge.v']);

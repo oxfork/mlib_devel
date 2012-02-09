@@ -1,9 +1,9 @@
 `ifndef comp_vacc
 `define comp_vacc
-////\\`include "/tools/Xilinx/11.1/ISE/verilog/src/unimacro/BRAM_TDP_MACRO.v"
-////\\`include "/tools/Xilinx/11.1/ISE/verilog/src/unisims/RAMB18.v"
-////\\`include "/tools/Xilinx/11.1/ISE/verilog/src/unisims/ARAMB36_INTERNAL.v"
-//\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/dp_ram.v"
+////\\//`include "/tools/Xilinx/11.1/ISE/verilog/src/unimacro/BRAM_TDP_MACRO.v"
+////\\//`include "/tools/Xilinx/11.1/ISE/verilog/src/unisims/RAMB18.v"
+////\\//`include "/tools/Xilinx/11.1/ISE/verilog/src/unisims/ARAMB36_INTERNAL.v"
+//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/dp_ram.v"
 `timescale 1ns / 1ps
 
 //////////////////////////////////////////////////////////////////////////////////
@@ -37,7 +37,7 @@ module comp_vacc(
     
     );
     
-    `include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func.txt"
+    //`include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func.txt"
     
     parameter INPUT_WIDTH = 4;
     parameter ACC_LEN_BITS = 8;
@@ -57,16 +57,19 @@ module comp_vacc(
     output [INPUT_WIDTH+ACC_LEN_BITS-1:0] dout_b;         //accumulated data out for ram B
     
     reg [ACC_LEN_BITS + VECTOR_LEN_BITS +1 -1:0] comp_ctr = 0;
+    reg active_ram = 0;
     always @(posedge(clk)) begin
         if (sync) begin
             comp_ctr <= 0;
+            active_ram <= 1'b0;
         end else begin
             comp_ctr <= comp_ctr == ACC_LEN*VECTOR_LENGTH-1 ? 0 : comp_ctr + 1'b1;
+            active_ram <= comp_ctr == ACC_LEN*VECTOR_LENGTH-1 ? ~active_ram : active_ram; //change ram at the next round of antennas
         end 
     end
 
     wire [ACC_LEN_BITS + VECTOR_LEN_BITS - 1:0] acc_ctr = comp_ctr[ACC_LEN_BITS + VECTOR_LEN_BITS + 1:0];
-    wire active_ram = comp_ctr[ACC_LEN_BITS+VECTOR_LEN_BITS]; //value of half of ram we are writing to
+    //wire active_ram = comp_ctr[ACC_LEN_BITS+VECTOR_LEN_BITS]; //value of half of ram we are writing to
     
     //sign extended input for summing
     wire din_sign_bit = din[INPUT_WIDTH-1];

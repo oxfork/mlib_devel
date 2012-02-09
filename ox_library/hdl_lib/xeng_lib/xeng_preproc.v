@@ -1,7 +1,7 @@
 `ifndef xeng_preproc
 `define xeng_preproc
-//\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/conv_uint.v"
-//\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/stagger.v"
+//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/conv_uint.v"
+//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/stagger.v"
 
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
@@ -44,7 +44,6 @@ module xeng_preproc(
     localparam P_FACTOR = 1<<P_FACTOR_BITS;                     //number of parallel cmults
     localparam INPUT_WIDTH = 2*BITWIDTH*2*(1<<P_FACTOR_BITS);   //width of complex in/out bus (dual pol)
     localparam N_COMPONENTS = P_FACTOR*2*2;                     //number of components to accumulate
-    // localparam ACC_WIDTH = 2*BITWI  //width of complex acc in/out bus (4 stokes)
    
     input clk;                                  //clock input
     input ce;                                   //dummy clock enable (exists only for simulink)

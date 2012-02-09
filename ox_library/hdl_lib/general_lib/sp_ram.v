@@ -1,5 +1,5 @@
 // A parameterized, inferable (hopefully) block RAM in Verilog.
-//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/delay.v"
+////`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/delay.v"
 
 module sp_ram #(
     parameter D_WIDTH = 72,

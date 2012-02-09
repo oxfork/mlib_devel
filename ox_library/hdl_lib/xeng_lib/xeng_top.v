@@ -1,13 +1,13 @@
 `timescale 1ns / 1ps
 `ifndef xeng_top
 `define xeng_top
-//\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/window_delay.v"
-//\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/sample_and_hold.v"
-//\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/xeng_preproc.v"
-//\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/auto_tap.v"
-//\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/baseline_tap.v"
-//\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/component_tracker.v"
-//\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/subtractor.v"
+//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/window_delay.v"
+//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/sample_and_hold.v"
+//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/xeng_preproc.v"
+//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/auto_tap.v"
+//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/baseline_tap.v"
+//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/component_tracker.v"
+//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/subtractor.v"
 
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
@@ -264,14 +264,14 @@ module xeng_top(
     // Slice out the correlator accumulation values
     wire [ACC_WIDTH-1:0] acc_out_uint = acc_out_int[N_TAPS*ACC_WIDTH-1:(N_TAPS-1)*ACC_WIDTH];
     
-    wire [ACC_WIDTH/8 -1 : 0] acc_out_xx_r = {acc_out_uint[8*(ACC_WIDTH/8)-1:7*(ACC_WIDTH/8)]};
-    wire [ACC_WIDTH/8 -1 : 0] acc_out_xx_i = {acc_out_uint[7*(ACC_WIDTH/8)-1:6*(ACC_WIDTH/8)]};
-    wire [ACC_WIDTH/8 -1 : 0] acc_out_xy_r = {acc_out_uint[6*(ACC_WIDTH/8)-1:5*(ACC_WIDTH/8)]};
-    wire [ACC_WIDTH/8 -1 : 0] acc_out_xy_i = {acc_out_uint[5*(ACC_WIDTH/8)-1:4*(ACC_WIDTH/8)]};
-    wire [ACC_WIDTH/8 -1 : 0] acc_out_yx_r = {acc_out_uint[4*(ACC_WIDTH/8)-1:3*(ACC_WIDTH/8)]};
-    wire [ACC_WIDTH/8 -1 : 0] acc_out_yx_i = {acc_out_uint[3*(ACC_WIDTH/8)-1:2*(ACC_WIDTH/8)]};
-    wire [ACC_WIDTH/8 -1 : 0] acc_out_yy_r = {acc_out_uint[2*(ACC_WIDTH/8)-1:1*(ACC_WIDTH/8)]};
-    wire [ACC_WIDTH/8 -1 : 0] acc_out_yy_i = {acc_out_uint[1*(ACC_WIDTH/8)-1:0*(ACC_WIDTH/8)]};
+    wire [ACC_WIDTH/8 -1 : 0] acc_out_xx_r = acc_out_uint[8*(ACC_WIDTH/8)-1:7*(ACC_WIDTH/8)];
+    wire [ACC_WIDTH/8 -1 : 0] acc_out_xx_i = acc_out_uint[7*(ACC_WIDTH/8)-1:6*(ACC_WIDTH/8)];
+    wire [ACC_WIDTH/8 -1 : 0] acc_out_yy_r = acc_out_uint[6*(ACC_WIDTH/8)-1:5*(ACC_WIDTH/8)];
+    wire [ACC_WIDTH/8 -1 : 0] acc_out_yy_i = acc_out_uint[5*(ACC_WIDTH/8)-1:4*(ACC_WIDTH/8)];
+    wire [ACC_WIDTH/8 -1 : 0] acc_out_xy_r = acc_out_uint[4*(ACC_WIDTH/8)-1:3*(ACC_WIDTH/8)];
+    wire [ACC_WIDTH/8 -1 : 0] acc_out_xy_i = acc_out_uint[3*(ACC_WIDTH/8)-1:2*(ACC_WIDTH/8)];
+    wire [ACC_WIDTH/8 -1 : 0] acc_out_yx_r = acc_out_uint[2*(ACC_WIDTH/8)-1:1*(ACC_WIDTH/8)];
+    wire [ACC_WIDTH/8 -1 : 0] acc_out_yx_i = acc_out_uint[1*(ACC_WIDTH/8)-1:0*(ACC_WIDTH/8)];
     
     wire [ACC_WIDTH/8+2-1:0] dout_corr_xx_r;
     wire [ACC_WIDTH/8+2-1:0] dout_corr_xx_i;
@@ -296,15 +296,22 @@ module xeng_top(
     // Slice off the useful bits
     assign dout = {dout_corr_xx_r[ACC_WIDTH/8 - 1:0],
                    dout_corr_xx_i[ACC_WIDTH/8 - 1:0],
+                   dout_corr_yy_r[ACC_WIDTH/8 - 1:0],
+                   dout_corr_yy_i[ACC_WIDTH/8 - 1:0],
                    dout_corr_xy_r[ACC_WIDTH/8 - 1:0],
                    dout_corr_xy_i[ACC_WIDTH/8 - 1:0],
                    dout_corr_yx_r[ACC_WIDTH/8 - 1:0],
-                   dout_corr_yx_i[ACC_WIDTH/8 - 1:0],
-                   dout_corr_yy_r[ACC_WIDTH/8 - 1:0],
-                   dout_corr_yy_i[ACC_WIDTH/8 - 1:0]};
+                   dout_corr_yx_i[ACC_WIDTH/8 - 1:0]};
     
     
-    assign dout_uncorr = acc_out_uint; //DEBUG
+    assign dout_uncorr = {acc_out_xx_r[ACC_WIDTH/8 - 1:0],
+                          acc_out_xx_i[ACC_WIDTH/8 - 1:0],
+                          acc_out_yy_r[ACC_WIDTH/8 - 1:0],
+                          acc_out_yy_i[ACC_WIDTH/8 - 1:0],
+                          acc_out_xy_r[ACC_WIDTH/8 - 1:0],
+                          acc_out_xy_i[ACC_WIDTH/8 - 1:0],
+                          acc_out_yx_r[ACC_WIDTH/8 - 1:0],
+                          acc_out_yx_i[ACC_WIDTH/8 - 1:0]};
     
 endmodule
 

@@ -1,6 +1,6 @@
 `ifndef dual_pol_cmac
 `define dual_pol_cmac
-//\\`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/cmac.v"
+//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/cmac.v"
 
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
