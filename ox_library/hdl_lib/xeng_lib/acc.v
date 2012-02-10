@@ -1,27 +1,8 @@
 `ifndef acc
 `define acc
-//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/delay.v"
 
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    15:27:39 10/05/2011 
-// Design Name: 
-// Module Name:    acc 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments:
-//
-//////////////////////////////////////////////////////////////////////////////////
+
 module acc(
     clk,
     rst,
@@ -32,10 +13,10 @@ module acc(
     acc_out
     );
     
-    parameter BITWIDTH_IN = 9;  //Bit width of a single input sample 
-    parameter ACC_LEN_BITS = 7; //Accumulation length (2^?)
-    parameter UNSIGNED = 1;     //Input samples are unsigned (i.e, don't sign extend them)
-    parameter MULTIPLEX_DELAY = 2; //Delay of output multiplexers on valid and acc_out lines
+    parameter BITWIDTH_IN = 9;      //Bit width of a single input sample 
+    parameter ACC_LEN_BITS = 7;     //Accumulation length (2^?)
+    parameter UNSIGNED = 1;         //Input samples are unsigned (i.e, don't sign extend them)
+    parameter MULTIPLEX_DELAY = 2;  //Delay of output multiplexers on valid and acc_out lines
     
     localparam BITWIDTH_OUT = ACC_LEN_BITS+BITWIDTH_IN; //bit width of accumulator output
     

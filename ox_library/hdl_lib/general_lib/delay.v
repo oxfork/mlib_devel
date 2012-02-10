@@ -2,25 +2,6 @@
 `ifndef delay
 `define delay
 
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    14:14:30 10/05/2011 
-// Design Name: 
-// Module Name:    delay 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
 module delay(
     clk,
     ce,

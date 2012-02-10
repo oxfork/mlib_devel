@@ -1,28 +1,8 @@
 `ifndef dsp48e_mac_chan
 `define dsp48e_mac_chain
-//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/dsp48e_uint_cmult.v"
-
 
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    15:05:55 09/29/2011 
-// Design Name: 
-// Module Name:    dsp48e_dual_multiply 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-//////////////////////////////////////////////////////////////////////////////////
-//
-//
+
 // This module sums the resulting complex cross products from a series of DSP
 // slices
 

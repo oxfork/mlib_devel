@@ -1,33 +1,7 @@
 `timescale 1ns / 1ps
 `ifndef xeng_top
 `define xeng_top
-//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/window_delay.v"
-//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/sample_and_hold.v"
-//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/xeng_preproc.v"
-//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/auto_tap.v"
-//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/baseline_tap.v"
-//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/component_tracker.v"
-//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/subtractor.v"
 
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    14:15:12 10/22/2011 
-// Design Name: 
-// Module Name:    xeng_core 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
 module xeng_top(
     clk,
     ce,
@@ -43,7 +17,6 @@ module xeng_top(
     window_vld_out,
     mcnt_out
     );
-
 
     parameter SERIAL_ACC_LEN_BITS = 7;  //Serial accumulation length (2^?)
     parameter P_FACTOR_BITS = 2;        //Number of samples to accumulate in parallel (2^?)

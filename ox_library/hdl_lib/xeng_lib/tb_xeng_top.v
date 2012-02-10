@@ -1,7 +1,5 @@
-//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/xeng_top.v"
-
 //`define DEBUG
-`include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func_iverilog.v"
+`define USE_CLOG2
 
 module tb_xeng_top();
     

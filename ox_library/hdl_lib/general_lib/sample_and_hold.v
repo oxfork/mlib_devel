@@ -1,27 +1,19 @@
 `ifndef sample_and_hold
 `define sample_and_hold
-////`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/delay.v"
 
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    14:26:58 12/03/2011 
-// Design Name: 
-// Module Name:    sample_and_hold 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+
+/* Currently, Xilinx doesn't support $clog2, but iverilog doesn't support
+ * constant user functions. Decide which to use here
+ */
+`ifndef log2
+`ifdef USE_CLOG2
+`define log2(p) $clog2(p)
+`else
+`define log2(p) log2_func(p)
+`endif
+`endif
+
 module sample_and_hold(
     clk,
     sync,
@@ -29,7 +21,17 @@ module sample_and_hold(
     dout
     );
     
-    //`include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func.txt"
+    function integer log2_func;
+      input integer value;
+      integer loop_cnt;
+      begin
+        value = value-1;
+        for (loop_cnt=0; value>0; loop_cnt=loop_cnt+1)
+          value = value>>1;
+        log2_func = loop_cnt;
+      end
+    endfunction
+
     parameter WIDTH = 1;    //data bus width
     parameter PERIOD = 128; //sampling period in clocks
     

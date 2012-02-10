@@ -1,28 +1,5 @@
-////`include "adder_tree.v"
 
 `timescale 1ns / 1ps
-
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
-//
-// Create Date:   19:08:38 12/04/2011
-// Design Name:   adder_tree
-// Module Name:   /home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/xengine13/general_lib/adder_tree_tb.v
-// Project Name:  xengine
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: adder_tree
-//
-// Dependencies:
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-////////////////////////////////////////////////////////////////////////////////
 
 module adder_tree_tb;
 

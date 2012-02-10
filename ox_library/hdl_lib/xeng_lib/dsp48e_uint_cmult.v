@@ -1,30 +1,13 @@
 `ifndef dsp48e_uint_cmult
 `define dsp48e_uint_cmult
-////\\//`include "/tools/Xilinx/11.1/ISE/verilog/src/unisims/DSP48E.v"
 
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    15:05:55 09/29/2011 
-// Design Name: 
-// Module Name:    dsp48e_dual_multiply 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: This module calculates the cross products of two complex numbers.
+
+// This module calculates the cross products of two complex numbers.
 // I.e. if a0,b0 are complex numbers, the output will be (a0* x b0)
 //      with the result requiring extraction from the 48 bits of output.
 //      Complex numbers of BITWIDTH = N have 2N bits, with N MSBs = real, and N LSBs = imag
-//
-//////////////////////////////////////////////////////////////////////////////////
+
 module dsp48e_uint_cmult(
     clk,
     a0,

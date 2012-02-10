@@ -2,25 +2,18 @@
 `define bl_order_gen
 
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    19:03:50 11/23/2011 
-// Design Name: 
-// Module Name:    bl_order_gen 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+
+/* Currently, Xilinx doesn't support $clog2, but iverilog doesn't support
+ * constant user functions. Decide which to use here
+ */
+`ifndef log2
+`ifdef USE_CLOG2
+`define log2(p) $clog2(p)
+`else
+`define log2(p) log2_func(p)
+`endif
+`endif
+
 module bl_order_gen(
     clk,
     sync,
@@ -29,8 +22,18 @@ module bl_order_gen(
     ant_b,
     buf_sel
     );
-    
-    //`include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func.txt"
+
+    function integer log2_func;
+      input integer value;
+      integer loop_cnt;
+      begin
+        value = value-1;
+        for (loop_cnt=0; value>0; loop_cnt=loop_cnt+1)
+          value = value>>1;
+        log2_func = loop_cnt;
+      end
+    endfunction
+
     parameter N_ANTS = 16;
     localparam ANT_BITS = `log2(N_ANTS);
     

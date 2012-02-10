@@ -2,25 +2,18 @@
 `define sync_delay
 
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    12:33:31 10/13/2011 
-// Design Name: 
-// Module Name:    sync_delay 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+
+/* Currently, Xilinx doesn't support $clog2, but iverilog doesn't support
+ * constant user functions. Decide which to use here
+ */
+`ifndef log2
+`ifdef USE_CLOG2
+`define log2(p) $clog2(p)
+`else
+`define log2(p) log2_func(p)
+`endif
+`endif
+
 module sync_delay(
     input clk,
     input ce,
@@ -28,7 +21,17 @@ module sync_delay(
     output dout
     );
 
-    //`include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func.txt"
+    function integer log2_func;
+      input integer value;
+      integer loop_cnt;
+      begin
+        value = value-1;
+        for (loop_cnt=0; value>0; loop_cnt=loop_cnt+1)
+          value = value>>1;
+        log2_func = loop_cnt;
+      end
+    endfunction
+
     parameter DELAY_LENGTH = 256; //Delay to apply to sync pulse in clocks
     localparam DELAY_BITS = `log2(DELAY_LENGTH+1);
     

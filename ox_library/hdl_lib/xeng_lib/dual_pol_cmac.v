@@ -1,30 +1,13 @@
 `ifndef dual_pol_cmac
 `define dual_pol_cmac
-//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/cmac.v"
 
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    18:07:47 10/05/2011 
-// Design Name: 
-// Module Name:    dual_pol_cmac 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
+
 //////////////////////////////////////////////////////////////////////////////////
 // This module instantiates 4 cmac blocks, each performing one part of an
 // AxBx AxBy AyBx AyBy cross multiply
 //////////////////////////////////////////////////////////////////////////////////
+
 module dual_pol_cmac(
     clk,
     a,

@@ -1,31 +1,19 @@
 `ifndef component_tracker
 `define component_tracker
-//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/adder_tree.v"
-//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/adder.v"
-//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/general_lib/subtractor.v"
-//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/comp_vacc.v"
-//\\//`include "/home/jack/physics_svn/gmrt_beamformer/trunk/projects/xeng_opt/hdl/iverilog_xeng/xeng_lib/bl_order_gen.v"
+
 `timescale 1ns / 1ps
 
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    18:50:41 11/23/2011 
-// Design Name: 
-// Module Name:    component_tracker 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+/* Currently, Xilinx doesn't support $clog2, but iverilog doesn't support
+ * constant user functions. Decide which to use here
+ */
+`ifndef log2
+`ifdef USE_CLOG2
+`define log2(p) $clog2(p)
+`else
+`define log2(p) log2_func(p)
+`endif
+`endif
+
 module component_tracker(
     clk,
     din,
@@ -41,9 +29,18 @@ module component_tracker(
     im_correction_yx,
     im_correction_yy
     );
-    
-    //`include "/home/jack/github/oxfork/mlib_devel/ox_library/hdl_lib/general_lib/math_func.txt"
-   
+
+    function integer log2_func;
+      input integer value;
+      integer loop_cnt;
+      begin
+        value = value-1;
+        for (loop_cnt=0; value>0; loop_cnt=loop_cnt+1)
+          value = value>>1;
+        log2_func = loop_cnt;
+      end
+    endfunction
+
     parameter SERIAL_ACC_LEN_BITS = 7;  //Serial accumulation length (2^?)
     parameter P_FACTOR_BITS = 2;        //Number of samples to accumulate in parallel (2^?)
     parameter BITWIDTH = 4;             //bitwidth of each real/imag part of a single sample
