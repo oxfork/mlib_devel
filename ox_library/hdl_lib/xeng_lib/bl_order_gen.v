@@ -20,7 +20,8 @@ module bl_order_gen(
     en,
     ant_a,
     ant_b,
-    buf_sel
+    buf_sel,
+    last_triangle
     );
 
     function integer log2_func;
@@ -43,6 +44,7 @@ module bl_order_gen(
     output [ANT_BITS-1:0] ant_a;
     output [ANT_BITS-1:0] ant_b;
     output buf_sel;
+    output last_triangle;
     
     reg [ANT_BITS-1:0] a=0;
     reg [ANT_BITS-1:0] b=0;
@@ -76,6 +78,7 @@ module bl_order_gen(
     assign ant_a = a;
     assign ant_b = b;
     assign buf_sel = ant_a <= ant_b ? buf_sel_reg : ~buf_sel_reg;
+    assign last_triangle = (ant_a > ant_b);
 
 endmodule
 

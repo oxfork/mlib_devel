@@ -9,7 +9,7 @@ module delay(
     dout
     );
 
-    parameter WIDTH = 32;
+    parameter WIDTH = 1;
     parameter DELAY = 3;
     parameter ALLOW_SRL = "YES"; //set to "NO" to disable SRL inference
 

@@ -25,7 +25,7 @@ initial begin
 end
 
 // dout
-reg [D_WIDTH-1:0] dout_int;
+reg [D_WIDTH-1:0] dout_int = 0;
 
 // Inherent latency of 1
 // read before write

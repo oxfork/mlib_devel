@@ -27,7 +27,9 @@ module component_tracker(
     im_correction_xx,
     im_correction_xy,
     im_correction_yx,
-    im_correction_yy
+    im_correction_yy,
+    last_triangle,
+    buf_sel_out
     );
 
     function integer log2_func;
@@ -69,6 +71,8 @@ module component_tracker(
     output [CORRECTION_ACC_WIDTH-1:0] im_correction_xy;
     output [CORRECTION_ACC_WIDTH-1:0] im_correction_yx;
     output [CORRECTION_ACC_WIDTH-1:0] im_correction_yy;
+    output last_triangle;
+    output buf_sel_out;
     
     //split the inputs into x/y/re/im ready for accumulating
     wire [INPUT_WIDTH/4 -1:0] x_re;
@@ -236,6 +240,8 @@ module component_tracker(
         .dout(bl_order_gen_sync)
     );
     
+    wire last_triangle_int;
+
     bl_order_gen #(
         .N_ANTS(N_ANTS)
         ) bl_order_gen_inst (
@@ -244,8 +250,19 @@ module component_tracker(
         .en(gen_next_bl),
         .ant_a(ant_a_sel),
         .ant_b(ant_b_sel),
-        .buf_sel(buf_sel)
+        .buf_sel(buf_sel),
+        .last_triangle(last_triangle_int)
     );
+
+    delay #(
+        .WIDTH(1),
+        .DELAY(2)
+    ) buf_sel_delay [1:0](
+        .clk(clk),
+        .din({last_triangle_int, buf_sel}),
+        .dout({last_triangle, buf_sel_out})
+    );
+
         
 
     ////////////////////////////////////////////////////////////////////

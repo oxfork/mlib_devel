@@ -15,7 +15,9 @@ module xeng_top(
     sync_out,
     vld_out,
     window_vld_out,
-    mcnt_out
+    mcnt_out,
+    last_triangle,
+    buf_sel_out
     );
 
     parameter SERIAL_ACC_LEN_BITS = 7;  //Serial accumulation length (2^?)
@@ -50,6 +52,8 @@ module xeng_top(
     output vld_out;                     //data output valid flag
     output window_vld_out;              //data output window valid flag
     output [MCNT_WIDTH-1:0] mcnt_out;   //mcnt of data being output
+    output last_triangle;
+    output buf_sel_out;
     
     /////////////////////////////// MCNT and valid sync logic
     // Window delay on valid in to sync with final tap acc output
@@ -229,7 +233,9 @@ module xeng_top(
         .im_correction_xx(im_c_xx[CORRECTION_ACC_WIDTH+BITWIDTH-1-1:BITWIDTH-1]),
         .im_correction_xy(im_c_xy[CORRECTION_ACC_WIDTH+BITWIDTH-1-1:BITWIDTH-1]),
         .im_correction_yx(im_c_yx[CORRECTION_ACC_WIDTH+BITWIDTH-1-1:BITWIDTH-1]),
-        .im_correction_yy(im_c_yy[CORRECTION_ACC_WIDTH+BITWIDTH-1-1:BITWIDTH-1])
+        .im_correction_yy(im_c_yy[CORRECTION_ACC_WIDTH+BITWIDTH-1-1:BITWIDTH-1]),
+        .last_triangle(last_triangle),
+        .buf_sel_out(buf_sel_out)
         );
     
 

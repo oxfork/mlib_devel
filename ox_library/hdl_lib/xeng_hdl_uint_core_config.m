@@ -43,6 +43,8 @@ function xeng_top_config(this_block)
   this_block.addSimulinkOutport('sync_out');
   this_block.addSimulinkOutport('vld_out');
   this_block.addSimulinkOutport('window_vld_out');
+  this_block.addSimulinkOutport('last_triangle');
+  this_block.addSimulinkOutport('buf_sel_out');
   this_block.addSimulinkOutport('mcnt_out');
 
   sync_out_port = this_block.port('sync_out');
@@ -56,6 +58,14 @@ function xeng_top_config(this_block)
   window_vld_out_port = this_block.port('window_vld_out');
   window_vld_out_port.setType('Bool');
   window_vld_out_port.useHDLVector(false);
+
+  last_triangle_port = this_block.port('last_triangle');
+  last_triangle_port.setType('Bool');
+  last_triangle_port.useHDLVector(false);
+
+  buf_sel_out_port = this_block.port('buf_sel_out');
+  buf_sel_out_port.setType('Bool');
+  buf_sel_out_port.useHDLVector(false);
 
   mcnt_out_port = this_block.port('mcnt_out');
   mcnt_out_port.setType(['UFix_', num2str(mcnt_width), '_0']);
