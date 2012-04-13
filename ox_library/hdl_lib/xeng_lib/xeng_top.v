@@ -20,8 +20,8 @@ module xeng_top(
     buf_sel_out
     );
 
-    parameter SERIAL_ACC_LEN_BITS = 7;  //Serial accumulation length (2^?)
-    parameter P_FACTOR_BITS = 2;        //Number of samples to accumulate in parallel (2^?)
+    parameter SERIAL_ACC_LEN_BITS = 8;  //Serial accumulation length (2^?)
+    parameter P_FACTOR_BITS = 0;        //Number of samples to accumulate in parallel (2^?)
     parameter BITWIDTH = 4;             //bitwidth of each real/imag part of a single sample
     parameter ACC_MUX_LATENCY = 2;      //Latency of the mux to place the accumulation result on the xeng shift reg
     parameter FIRST_DSP_REGISTERS = 2;  //number of registers on the input of the first DSP slice in the chain
@@ -176,7 +176,8 @@ module xeng_top(
                 .sync1(sync_out_int[t-1]), 
                 .a_del(a_del_out_int[t*INPUT_WIDTH-1:(t-1)*INPUT_WIDTH]), 
                 .a_ndel(a_ndel_out_int[t*INPUT_WIDTH-1:(t-1)*INPUT_WIDTH]), 
-                .a_end(a_end_out_int[t*INPUT_WIDTH-1:(t-1)*INPUT_WIDTH]), 
+                .a_end(a_end_out_int[t*INPUT_WIDTH-1:(t-1)*INPUT_WIDTH]),
+                //DEBUG .a_end(a_ndel_out_int[t*INPUT_WIDTH-1:(t-1)*INPUT_WIDTH]), 
                 .acc_in(acc_out_int[t*ACC_WIDTH-1:(t-1)*ACC_WIDTH]), 
                 .valid_in(valid_out_int[t-1]), 
                 .acc_out(acc_out_int[(t+1)*ACC_WIDTH-1:t*ACC_WIDTH]), 

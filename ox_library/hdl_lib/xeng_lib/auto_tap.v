@@ -88,6 +88,7 @@ module auto_tap(
         .dout(a_end_out)
     );
     */
+
     bram_delay_behave #(
         .WIDTH(INPUT_WIDTH),
         .DELAY(DELAY_LEN),
@@ -97,6 +98,7 @@ module auto_tap(
         .din(a_loop),
         .dout(a_end_out)
     );
+
 
     
     //Instantiate the dual pol cmac (could[should] optimize for auto correlations)

@@ -126,18 +126,20 @@ module baseline_tap(
     
     ////// Instantiate counter to control a_ndel/a_end mux
     localparam ANT_BITS = `log2(N_ANTS);
+    localparam [ANT_BITS+SERIAL_ACC_LEN_BITS-1:0] mux_switch_val = (TAP_SEPARATION*SERIAL_ACC_LEN);
     reg [ANT_BITS+SERIAL_ACC_LEN_BITS-1:0] mux_ctrl_ctr = 0;
+    localparam [ANT_BITS+SERIAL_ACC_LEN_BITS-1:0] mux_ctr_val = ((N_ANTS*SERIAL_ACC_LEN)-1);
     always @(posedge(clk)) begin
         if(rst) begin
             mux_ctrl_ctr <= 0;
         end else begin
-            mux_ctrl_ctr <= (mux_ctrl_ctr == ((N_ANTS*SERIAL_ACC_LEN)-1)) ? 0 : mux_ctrl_ctr + 1'b1;
+            mux_ctrl_ctr <= (mux_ctrl_ctr == mux_ctr_val) ? 0 : mux_ctrl_ctr + 1'b1;
         end
     end
     
     // Switch condition
     wire [P_FACTOR-1:0] mux_ctrl;
-    assign mux_ctrl[0] = (mux_ctrl_ctr < (TAP_SEPARATION*SERIAL_ACC_LEN));
+    assign mux_ctrl[0] = (mux_ctrl_ctr < mux_switch_val);
 
     //////TODO -- make sure the latencies are applied to the muxes in the same way latencies are applied in the
     //////parallel mac block.

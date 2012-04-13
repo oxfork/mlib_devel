@@ -231,11 +231,11 @@ module component_tracker(
 
     assign gen_next_bl = (tap_out_vld_ctr < N_TAPS);
 
-    delay #(
-        .WIDTH(1),
-        .DELAY(VALID_DELAY-2)
+    sync_delay #(
+        .DELAY_LENGTH(VALID_DELAY-2)
     ) bl_order_gen_sync_del (
         .clk(clk),
+        .ce(1'b1),
         .din(sync),
         .dout(bl_order_gen_sync)
     );
