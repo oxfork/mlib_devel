@@ -94,10 +94,10 @@ module dsp48e_mac_chain(
     //Carve up the output of the last dsp slice.
     //for complex multiply (a+ib)x(c-id) = (ac+bd) + i(bc-ad)
 
-
-    wire [OUTPUT_WIDTH-2:0] bc = dsp_chain_output[OUTPUT_WIDTH-2:0];
+    //sign extend the ad and bc ready for subtraction
+    wire [OUTPUT_WIDTH-1:0] bc = {1'b0, dsp_chain_output[OUTPUT_WIDTH-2:0]};
     wire [OUTPUT_WIDTH-1:0] ac_plus_bd = dsp_chain_output[(DSP_WIDTH-BITWIDTH-1)+(OUTPUT_WIDTH-1):DSP_WIDTH-BITWIDTH-1];
-    wire [OUTPUT_WIDTH-2:0] ad = dsp_chain_output[2*(DSP_WIDTH-BITWIDTH-1)+(OUTPUT_WIDTH-1):2*(DSP_WIDTH-BITWIDTH-1)];
+    wire [OUTPUT_WIDTH-1:0] ad = {1'b0, dsp_chain_output[2*(DSP_WIDTH-BITWIDTH-1)+(OUTPUT_WIDTH-1):2*(DSP_WIDTH-BITWIDTH-1)]};
 
     reg [OUTPUT_WIDTH-1:0] ab_real = 0;
     reg [OUTPUT_WIDTH-1:0] ab_imag = 0;
