@@ -43,10 +43,10 @@ module component_tracker(
       end
     endfunction
 
-    parameter SERIAL_ACC_LEN_BITS = 7;  //Serial accumulation length (2^?)
-    parameter P_FACTOR_BITS = 2;        //Number of samples to accumulate in parallel (2^?)
+    parameter SERIAL_ACC_LEN_BITS = 8;  //Serial accumulation length (2^?)
+    parameter P_FACTOR_BITS = 0;        //Number of samples to accumulate in parallel (2^?)
     parameter BITWIDTH = 4;             //bitwidth of each real/imag part of a single sample
-    parameter N_ANTS = 32;              //number of (dual pol) antenna inputs
+    parameter N_ANTS = 8;               //number of (dual pol) antenna inputs
     parameter PLATFORM = "VIRTEX5";     // FPGA platform
     parameter VALID_DELAY = 1024;       //Number of clock cycles between valid data entering tap chain and valid data leaving
     
