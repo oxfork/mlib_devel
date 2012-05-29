@@ -15,9 +15,9 @@ Library {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "jack"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Apr 17 19:16:20 2012"
-  RTWModifiedTimeStamp	  256590975
-  ModelVersionFormat	  "1.%<AutoIncrement:12>"
+  LastModifiedDate	  "Thu Sep 22 22:05:54 2011"
+  RTWModifiedTimeStamp	  238629939
+  ModelVersionFormat	  "1.%<AutoIncrement:10>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -620,7 +620,7 @@ Library {
   }
   System {
     Name		    "casper_library_multipliers"
-    Location		    [97, 259, 847, 642]
+    Location		    [154, 280, 904, 663]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -3456,7 +3456,7 @@ Library {
       "pe,Output Type,Output Type,Output Type"
       System {
 	Name			"cmult_4bit_em*"
-	Location		[163, 306, 984, 885]
+	Location		[298, 77, 1119, 656]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -3469,7 +3469,6 @@ Library {
 	TiledPageScale		1
 	ShowPageBoundaries	off
 	ZoomFactor		"100"
-	SIDHighWatermark	250
 	Block {
 	  BlockType		  Inport
 	  Name			  "a"
@@ -3526,9 +3525,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -3558,9 +3557,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -3590,9 +3589,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -3622,9 +3621,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -3654,9 +3653,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -3686,9 +3685,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -3718,9 +3717,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -3750,9 +3749,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -3776,63 +3775,63 @@ Library {
 	  SourceType		  "Xilinx DSP48E Block"
 	  use_a			  "Direct from A Port"
 	  use_b			  "Direct from B Port"
-	  pattern_from_creg	  off
+	  pattern_from_creg	  "off"
 	  pattern		  "'000000000000'"
-	  mask_from_creg	  off
+	  mask_from_creg	  "off"
 	  pattern_mask		  "'3FFFFFFFFFFF'"
-	  reset_preg		  off
+	  reset_preg		  "off"
 	  sel_rounding_mask	  "Select mask"
-	  use_op		  off
-	  use_creg		  off
-	  rst_all		  off
-	  en_all		  off
-	  use_pcin		  off
-	  use_carrycascin	  off
-	  use_multsignin	  off
-	  use_carryout		  off
-	  use_patterndetect	  off
-	  use_patternbdetect	  off
-	  use_overflow		  off
-	  use_underflow		  off
-	  use_acout		  off
-	  use_bcout		  off
-	  use_pcout		  on
-	  use_multsignout	  off
-	  use_carrycascout	  off
+	  use_op		  "off"
+	  use_creg		  "off"
+	  rst_all		  "off"
+	  en_all		  "off"
+	  use_pcin		  "off"
+	  use_carrycascin	  "off"
+	  use_multsignin	  "off"
+	  use_carryout		  "off"
+	  use_patterndetect	  "off"
+	  use_patternbdetect	  "off"
+	  use_overflow		  "off"
+	  use_underflow		  "off"
+	  use_acout		  "off"
+	  use_bcout		  "off"
+	  use_pcout		  "on"
+	  use_multsignout	  "off"
+	  use_carrycascout	  "off"
 	  pipeline_a		  "1"
 	  pipeline_b		  "1"
 	  pipeline_acout	  "1"
 	  pipeline_bcout	  "1"
-	  pipeline_c		  on
-	  pipeline_p		  on
-	  pipeline_mult		  on
-	  pipeline_opmode	  on
-	  pipeline_alumode	  on
-	  pipeline_carryin	  on
-	  pipeline_carryinsel	  on
-	  rst_a			  off
-	  rst_b			  off
-	  rst_c			  off
-	  rst_mult		  off
-	  rst_p			  off
-	  rst_carry_in		  off
-	  rst_alumode		  off
-	  rst_ctrl		  off
-	  en_a1			  off
-	  en_a2			  off
-	  en_b1			  off
-	  en_b2			  off
-	  en_c			  off
-	  en_mult		  off
-	  en_p			  off
-	  en_carry_in		  off
-	  en_alumode		  off
-	  en_multcarryin	  off
-	  en_ctrl		  off
-	  use_synth_model	  off
+	  pipeline_c		  "on"
+	  pipeline_p		  "on"
+	  pipeline_mult		  "on"
+	  pipeline_opmode	  "on"
+	  pipeline_alumode	  "on"
+	  pipeline_carryin	  "on"
+	  pipeline_carryinsel	  "on"
+	  rst_a			  "off"
+	  rst_b			  "off"
+	  rst_c			  "off"
+	  rst_mult		  "off"
+	  rst_p			  "off"
+	  rst_carry_in		  "off"
+	  rst_alumode		  "off"
+	  rst_ctrl		  "off"
+	  en_a1			  "off"
+	  en_a2			  "off"
+	  en_b1			  "off"
+	  en_b2			  "off"
+	  en_c			  "off"
+	  en_mult		  "off"
+	  en_p			  "off"
+	  en_carry_in		  "off"
+	  en_alumode		  "off"
+	  en_multcarryin	  "off"
+	  en_ctrl		  "off"
+	  use_synth_model	  "off"
 	  addsub_mode		  "ONE48"
-	  xl_useadderonly	  off
-	  xl_use_area		  off
+	  xl_useadderonly	  "off"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "0,0,658,967"
@@ -3860,63 +3859,63 @@ Library {
 	  SourceType		  "Xilinx DSP48E Block"
 	  use_a			  "Direct from A Port"
 	  use_b			  "Direct from B Port"
-	  pattern_from_creg	  off
+	  pattern_from_creg	  "off"
 	  pattern		  "'000000000000'"
-	  mask_from_creg	  off
+	  mask_from_creg	  "off"
 	  pattern_mask		  "'3FFFFFFFFFFF'"
-	  reset_preg		  off
+	  reset_preg		  "off"
 	  sel_rounding_mask	  "Select mask"
-	  use_op		  off
-	  use_creg		  off
-	  rst_all		  off
-	  en_all		  off
-	  use_pcin		  on
-	  use_carrycascin	  off
-	  use_multsignin	  off
-	  use_carryout		  off
-	  use_patterndetect	  off
-	  use_patternbdetect	  off
-	  use_overflow		  off
-	  use_underflow		  off
-	  use_acout		  off
-	  use_bcout		  off
-	  use_pcout		  off
-	  use_multsignout	  off
-	  use_carrycascout	  off
+	  use_op		  "off"
+	  use_creg		  "off"
+	  rst_all		  "off"
+	  en_all		  "off"
+	  use_pcin		  "on"
+	  use_carrycascin	  "off"
+	  use_multsignin	  "off"
+	  use_carryout		  "off"
+	  use_patterndetect	  "off"
+	  use_patternbdetect	  "off"
+	  use_overflow		  "off"
+	  use_underflow		  "off"
+	  use_acout		  "off"
+	  use_bcout		  "off"
+	  use_pcout		  "off"
+	  use_multsignout	  "off"
+	  use_carrycascout	  "off"
 	  pipeline_a		  "2"
 	  pipeline_b		  "2"
 	  pipeline_acout	  "1"
 	  pipeline_bcout	  "1"
-	  pipeline_c		  on
-	  pipeline_p		  on
-	  pipeline_mult		  on
-	  pipeline_opmode	  on
-	  pipeline_alumode	  on
-	  pipeline_carryin	  on
-	  pipeline_carryinsel	  on
-	  rst_a			  off
-	  rst_b			  off
-	  rst_c			  off
-	  rst_mult		  off
-	  rst_p			  off
-	  rst_carry_in		  off
-	  rst_alumode		  off
-	  rst_ctrl		  off
-	  en_a1			  off
-	  en_a2			  off
-	  en_b1			  off
-	  en_b2			  off
-	  en_c			  off
-	  en_mult		  off
-	  en_p			  off
-	  en_carry_in		  off
-	  en_alumode		  off
-	  en_multcarryin	  off
-	  en_ctrl		  off
-	  use_synth_model	  off
+	  pipeline_c		  "on"
+	  pipeline_p		  "on"
+	  pipeline_mult		  "on"
+	  pipeline_opmode	  "on"
+	  pipeline_alumode	  "on"
+	  pipeline_carryin	  "on"
+	  pipeline_carryinsel	  "on"
+	  rst_a			  "off"
+	  rst_b			  "off"
+	  rst_c			  "off"
+	  rst_mult		  "off"
+	  rst_p			  "off"
+	  rst_carry_in		  "off"
+	  rst_alumode		  "off"
+	  rst_ctrl		  "off"
+	  en_a1			  "off"
+	  en_a2			  "off"
+	  en_b1			  "off"
+	  en_b2			  "off"
+	  en_c			  "off"
+	  en_mult		  "off"
+	  en_p			  "off"
+	  en_carry_in		  "off"
+	  en_alumode		  "off"
+	  en_multcarryin	  "off"
+	  en_ctrl		  "off"
+	  use_synth_model	  "off"
 	  addsub_mode		  "ONE48"
-	  xl_useadderonly	  off
-	  xl_use_area		  off
+	  xl_useadderonly	  "off"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "224,37,658,967"
@@ -3944,63 +3943,63 @@ Library {
 	  SourceType		  "Xilinx DSP48E Block"
 	  use_a			  "Direct from A Port"
 	  use_b			  "Direct from B Port"
-	  pattern_from_creg	  off
+	  pattern_from_creg	  "off"
 	  pattern		  "'000000000000'"
-	  mask_from_creg	  off
+	  mask_from_creg	  "off"
 	  pattern_mask		  "'3FFFFFFFFFFF'"
-	  reset_preg		  off
+	  reset_preg		  "off"
 	  sel_rounding_mask	  "Select mask"
-	  use_op		  off
-	  use_creg		  off
-	  rst_all		  off
-	  en_all		  off
-	  use_pcin		  off
-	  use_carrycascin	  off
-	  use_multsignin	  off
-	  use_carryout		  off
-	  use_patterndetect	  off
-	  use_patternbdetect	  off
-	  use_overflow		  off
-	  use_underflow		  off
-	  use_acout		  off
-	  use_bcout		  off
-	  use_pcout		  on
-	  use_multsignout	  off
-	  use_carrycascout	  off
+	  use_op		  "off"
+	  use_creg		  "off"
+	  rst_all		  "off"
+	  en_all		  "off"
+	  use_pcin		  "off"
+	  use_carrycascin	  "off"
+	  use_multsignin	  "off"
+	  use_carryout		  "off"
+	  use_patterndetect	  "off"
+	  use_patternbdetect	  "off"
+	  use_overflow		  "off"
+	  use_underflow		  "off"
+	  use_acout		  "off"
+	  use_bcout		  "off"
+	  use_pcout		  "on"
+	  use_multsignout	  "off"
+	  use_carrycascout	  "off"
 	  pipeline_a		  "1"
 	  pipeline_b		  "1"
 	  pipeline_acout	  "1"
 	  pipeline_bcout	  "1"
-	  pipeline_c		  on
-	  pipeline_p		  on
-	  pipeline_mult		  on
-	  pipeline_opmode	  on
-	  pipeline_alumode	  on
-	  pipeline_carryin	  on
-	  pipeline_carryinsel	  on
-	  rst_a			  off
-	  rst_b			  off
-	  rst_c			  off
-	  rst_mult		  off
-	  rst_p			  off
-	  rst_carry_in		  off
-	  rst_alumode		  off
-	  rst_ctrl		  off
-	  en_a1			  off
-	  en_a2			  off
-	  en_b1			  off
-	  en_b2			  off
-	  en_c			  off
-	  en_mult		  off
-	  en_p			  off
-	  en_carry_in		  off
-	  en_alumode		  off
-	  en_multcarryin	  off
-	  en_ctrl		  off
-	  use_synth_model	  off
+	  pipeline_c		  "on"
+	  pipeline_p		  "on"
+	  pipeline_mult		  "on"
+	  pipeline_opmode	  "on"
+	  pipeline_alumode	  "on"
+	  pipeline_carryin	  "on"
+	  pipeline_carryinsel	  "on"
+	  rst_a			  "off"
+	  rst_b			  "off"
+	  rst_c			  "off"
+	  rst_mult		  "off"
+	  rst_p			  "off"
+	  rst_carry_in		  "off"
+	  rst_alumode		  "off"
+	  rst_ctrl		  "off"
+	  en_a1			  "off"
+	  en_a2			  "off"
+	  en_b1			  "off"
+	  en_b2			  "off"
+	  en_c			  "off"
+	  en_mult		  "off"
+	  en_p			  "off"
+	  en_carry_in		  "off"
+	  en_alumode		  "off"
+	  en_multcarryin	  "off"
+	  en_ctrl		  "off"
+	  use_synth_model	  "off"
 	  addsub_mode		  "ONE48"
-	  xl_useadderonly	  off
-	  xl_use_area		  off
+	  xl_useadderonly	  "off"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "0,0,658,967"
@@ -4028,63 +4027,63 @@ Library {
 	  SourceType		  "Xilinx DSP48E Block"
 	  use_a			  "Direct from A Port"
 	  use_b			  "Direct from B Port"
-	  pattern_from_creg	  off
+	  pattern_from_creg	  "off"
 	  pattern		  "'000000000000'"
-	  mask_from_creg	  off
+	  mask_from_creg	  "off"
 	  pattern_mask		  "'3FFFFFFFFFFF'"
-	  reset_preg		  off
+	  reset_preg		  "off"
 	  sel_rounding_mask	  "Select mask"
-	  use_op		  off
-	  use_creg		  off
-	  rst_all		  off
-	  en_all		  off
-	  use_pcin		  on
-	  use_carrycascin	  off
-	  use_multsignin	  off
-	  use_carryout		  off
-	  use_patterndetect	  off
-	  use_patternbdetect	  off
-	  use_overflow		  off
-	  use_underflow		  off
-	  use_acout		  off
-	  use_bcout		  off
-	  use_pcout		  off
-	  use_multsignout	  off
-	  use_carrycascout	  off
+	  use_op		  "off"
+	  use_creg		  "off"
+	  rst_all		  "off"
+	  en_all		  "off"
+	  use_pcin		  "on"
+	  use_carrycascin	  "off"
+	  use_multsignin	  "off"
+	  use_carryout		  "off"
+	  use_patterndetect	  "off"
+	  use_patternbdetect	  "off"
+	  use_overflow		  "off"
+	  use_underflow		  "off"
+	  use_acout		  "off"
+	  use_bcout		  "off"
+	  use_pcout		  "off"
+	  use_multsignout	  "off"
+	  use_carrycascout	  "off"
 	  pipeline_a		  "2"
 	  pipeline_b		  "2"
 	  pipeline_acout	  "1"
 	  pipeline_bcout	  "1"
-	  pipeline_c		  on
-	  pipeline_p		  on
-	  pipeline_mult		  on
-	  pipeline_opmode	  on
-	  pipeline_alumode	  on
-	  pipeline_carryin	  on
-	  pipeline_carryinsel	  on
-	  rst_a			  off
-	  rst_b			  off
-	  rst_c			  off
-	  rst_mult		  off
-	  rst_p			  off
-	  rst_carry_in		  off
-	  rst_alumode		  off
-	  rst_ctrl		  off
-	  en_a1			  off
-	  en_a2			  off
-	  en_b1			  off
-	  en_b2			  off
-	  en_c			  off
-	  en_mult		  off
-	  en_p			  off
-	  en_carry_in		  off
-	  en_alumode		  off
-	  en_multcarryin	  off
-	  en_ctrl		  off
-	  use_synth_model	  off
+	  pipeline_c		  "on"
+	  pipeline_p		  "on"
+	  pipeline_mult		  "on"
+	  pipeline_opmode	  "on"
+	  pipeline_alumode	  "on"
+	  pipeline_carryin	  "on"
+	  pipeline_carryinsel	  "on"
+	  rst_a			  "off"
+	  rst_b			  "off"
+	  rst_c			  "off"
+	  rst_mult		  "off"
+	  rst_p			  "off"
+	  rst_carry_in		  "off"
+	  rst_alumode		  "off"
+	  rst_ctrl		  "off"
+	  en_a1			  "off"
+	  en_a2			  "off"
+	  en_b1			  "off"
+	  en_b2			  "off"
+	  en_c			  "off"
+	  en_mult		  "off"
+	  en_p			  "off"
+	  en_carry_in		  "off"
+	  en_alumode		  "off"
+	  en_multcarryin	  "off"
+	  en_ctrl		  "off"
+	  use_synth_model	  "off"
 	  addsub_mode		  "ONE48"
-	  xl_useadderonly	  off
-	  xl_use_area		  off
+	  xl_useadderonly	  "off"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "224,37,658,967"
@@ -4129,7 +4128,7 @@ Library {
 	  const			  "0"
 	  n_bits		  "4"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -4138,7 +4137,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -4164,7 +4163,7 @@ Library {
 	  const			  "3"
 	  n_bits		  "4"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -4173,7 +4172,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -4203,7 +4202,7 @@ Library {
 	  const			  "0"
 	  n_bits		  "4"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -4212,7 +4211,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -4238,7 +4237,7 @@ Library {
 	  const			  "0"
 	  n_bits		  "4"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -4247,7 +4246,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -4273,7 +4272,7 @@ Library {
 	  const			  "0"
 	  n_bits		  "1"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -4282,7 +4281,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -4308,7 +4307,7 @@ Library {
 	  const			  "0"
 	  n_bits		  "1"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -4317,7 +4316,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -4343,7 +4342,7 @@ Library {
 	  const			  "0"
 	  n_bits		  "1"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -4352,7 +4351,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -4378,7 +4377,7 @@ Library {
 	  const			  "0"
 	  n_bits		  "1"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -4387,7 +4386,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -4413,7 +4412,7 @@ Library {
 	  const			  "0"
 	  n_bits		  "3"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -4422,7 +4421,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -4448,7 +4447,7 @@ Library {
 	  const			  "0"
 	  n_bits		  "3"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -4457,7 +4456,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -4483,7 +4482,7 @@ Library {
 	  const			  "0"
 	  n_bits		  "3"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -4492,7 +4491,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -4518,7 +4517,7 @@ Library {
 	  const			  "0"
 	  n_bits		  "3"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -4527,7 +4526,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -4555,9 +4554,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -4586,9 +4585,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -4615,7 +4614,7 @@ Library {
 	  const			  "5"
 	  n_bits		  "7"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -4624,7 +4623,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "0,0,550,547"
 	  block_type		  "constant"
@@ -4654,7 +4653,7 @@ Library {
 	  const			  "21"
 	  n_bits		  "7"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -4663,7 +4662,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "0,0,550,547"
 	  block_type		  "constant"
@@ -4693,7 +4692,7 @@ Library {
 	  const			  "5"
 	  n_bits		  "7"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -4702,7 +4701,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "0,0,550,547"
 	  block_type		  "constant"
@@ -4732,7 +4731,7 @@ Library {
 	  const			  "21"
 	  n_bits		  "7"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -4741,7 +4740,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "0,0,550,547"
 	  block_type		  "constant"
@@ -4773,9 +4772,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -4804,9 +4803,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -4835,9 +4834,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -4866,9 +4865,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -4895,9 +4894,9 @@ Library {
 	  "<br>Example:  Suppose the input is 6 bits wide, signed, with 2 fractional bits, and the output is forced to unsigne"
 	  "d with 0 fractional bits.  Then an input of -2.0 (1110.00 in binary 2's complement) becomes an output of 56 (111000"
 	  " in binary)."
-	  force_arith_type	  on
+	  force_arith_type	  "on"
 	  arith_type		  "Signed  (2's comp)"
-	  force_bin_pt		  on
+	  force_bin_pt		  "on"
 	  bin_pt		  "0"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "15,25,372,364"
@@ -4924,9 +4923,9 @@ Library {
 	  "<br>Example:  Suppose the input is 6 bits wide, signed, with 2 fractional bits, and the output is forced to unsigne"
 	  "d with 0 fractional bits.  Then an input of -2.0 (1110.00 in binary 2's complement) becomes an output of 56 (111000"
 	  " in binary)."
-	  force_arith_type	  on
+	  force_arith_type	  "on"
 	  arith_type		  "Signed  (2's comp)"
-	  force_bin_pt		  on
+	  force_bin_pt		  "on"
 	  bin_pt		  "0"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "15,25,372,364"
@@ -4953,9 +4952,9 @@ Library {
 	  "<br>Example:  Suppose the input is 6 bits wide, signed, with 2 fractional bits, and the output is forced to unsigne"
 	  "d with 0 fractional bits.  Then an input of -2.0 (1110.00 in binary 2's complement) becomes an output of 56 (111000"
 	  " in binary)."
-	  force_arith_type	  on
+	  force_arith_type	  "on"
 	  arith_type		  "Signed  (2's comp)"
-	  force_bin_pt		  on
+	  force_bin_pt		  "on"
 	  bin_pt		  "0"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "15,25,372,364"
@@ -4982,9 +4981,9 @@ Library {
 	  "<br>Example:  Suppose the input is 6 bits wide, signed, with 2 fractional bits, and the output is forced to unsigne"
 	  "d with 0 fractional bits.  Then an input of -2.0 (1110.00 in binary 2's complement) becomes an output of 56 (111000"
 	  " in binary)."
-	  force_arith_type	  on
+	  force_arith_type	  "on"
 	  arith_type		  "Signed  (2's comp)"
-	  force_bin_pt		  on
+	  force_bin_pt		  "on"
 	  bin_pt		  "0"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "15,25,372,364"
@@ -5011,9 +5010,9 @@ Library {
 	  "<br>Example:  Suppose the input is 6 bits wide, signed, with 2 fractional bits, and the output is forced to unsigne"
 	  "d with 0 fractional bits.  Then an input of -2.0 (1110.00 in binary 2's complement) becomes an output of 56 (111000"
 	  " in binary)."
-	  force_arith_type	  on
+	  force_arith_type	  "on"
 	  arith_type		  "Signed  (2's comp)"
-	  force_bin_pt		  on
+	  force_bin_pt		  "on"
 	  bin_pt		  "6"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "15,25,372,364"
@@ -5040,9 +5039,9 @@ Library {
 	  "<br>Example:  Suppose the input is 6 bits wide, signed, with 2 fractional bits, and the output is forced to unsigne"
 	  "d with 0 fractional bits.  Then an input of -2.0 (1110.00 in binary 2's complement) becomes an output of 56 (111000"
 	  " in binary)."
-	  force_arith_type	  on
+	  force_arith_type	  "on"
 	  arith_type		  "Signed  (2's comp)"
-	  force_bin_pt		  on
+	  force_bin_pt		  "on"
 	  bin_pt		  "6"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "15,25,372,364"
@@ -5120,8 +5119,8 @@ Library {
 	    DstPort		    1
 	  }
 	  Branch {
-	    Points		    [0, 180]
-	    DstBlock		    "Convert6"
+	    Points		    [0, 330]
+	    DstBlock		    "Convert7"
 	    DstPort		    1
 	  }
 	}
@@ -5130,12 +5129,12 @@ Library {
 	  SrcPort		  1
 	  Points		  [65, 0; 0, 85]
 	  Branch {
-	    DstBlock		    "Convert4"
+	    Points		    [0, 135]
+	    DstBlock		    "Convert6"
 	    DstPort		    1
 	  }
 	  Branch {
-	    Points		    [0, 285]
-	    DstBlock		    "Convert7"
+	    DstBlock		    "Convert4"
 	    DstPort		    1
 	  }
 	}
@@ -5149,8 +5148,8 @@ Library {
 	    DstPort		    1
 	  }
 	  Branch {
-	    Points		    [0, 395]
-	    DstBlock		    "Convert5"
+	    Points		    [0, 245]
+	    DstBlock		    "Convert1"
 	    DstPort		    1
 	  }
 	}
@@ -5159,12 +5158,12 @@ Library {
 	  SrcPort		  1
 	  Points		  [35, 0; 0, 150]
 	  Branch {
-	    DstBlock		    "Convert2"
+	    Points		    [0, 285]
+	    DstBlock		    "Convert5"
 	    DstPort		    1
 	  }
 	  Branch {
-	    Points		    [0, 135]
-	    DstBlock		    "Convert1"
+	    DstBlock		    "Convert2"
 	    DstPort		    1
 	  }
 	}
@@ -7741,9 +7740,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -7773,9 +7772,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -7805,9 +7804,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -7837,9 +7836,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -7869,9 +7868,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -7901,9 +7900,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -7933,9 +7932,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -7965,9 +7964,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -7991,63 +7990,63 @@ Library {
 	  SourceType		  "Xilinx DSP48E Block"
 	  use_a			  "Direct from A Port"
 	  use_b			  "Direct from B Port"
-	  pattern_from_creg	  off
+	  pattern_from_creg	  "off"
 	  pattern		  "'000000000000'"
-	  mask_from_creg	  off
+	  mask_from_creg	  "off"
 	  pattern_mask		  "'3FFFFFFFFFFF'"
-	  reset_preg		  off
+	  reset_preg		  "off"
 	  sel_rounding_mask	  "Select mask"
-	  use_op		  off
-	  use_creg		  off
-	  rst_all		  off
-	  en_all		  off
-	  use_pcin		  off
-	  use_carrycascin	  off
-	  use_multsignin	  off
-	  use_carryout		  off
-	  use_patterndetect	  off
-	  use_patternbdetect	  off
-	  use_overflow		  off
-	  use_underflow		  off
-	  use_acout		  off
-	  use_bcout		  off
-	  use_pcout		  on
-	  use_multsignout	  off
-	  use_carrycascout	  off
+	  use_op		  "off"
+	  use_creg		  "off"
+	  rst_all		  "off"
+	  en_all		  "off"
+	  use_pcin		  "off"
+	  use_carrycascin	  "off"
+	  use_multsignin	  "off"
+	  use_carryout		  "off"
+	  use_patterndetect	  "off"
+	  use_patternbdetect	  "off"
+	  use_overflow		  "off"
+	  use_underflow		  "off"
+	  use_acout		  "off"
+	  use_bcout		  "off"
+	  use_pcout		  "on"
+	  use_multsignout	  "off"
+	  use_carrycascout	  "off"
 	  pipeline_a		  "1"
 	  pipeline_b		  "1"
 	  pipeline_acout	  "1"
 	  pipeline_bcout	  "1"
-	  pipeline_c		  on
-	  pipeline_p		  on
-	  pipeline_mult		  on
-	  pipeline_opmode	  on
-	  pipeline_alumode	  on
-	  pipeline_carryin	  on
-	  pipeline_carryinsel	  on
-	  rst_a			  off
-	  rst_b			  off
-	  rst_c			  off
-	  rst_mult		  off
-	  rst_p			  off
-	  rst_carry_in		  off
-	  rst_alumode		  off
-	  rst_ctrl		  off
-	  en_a1			  off
-	  en_a2			  off
-	  en_b1			  off
-	  en_b2			  off
-	  en_c			  off
-	  en_mult		  off
-	  en_p			  off
-	  en_carry_in		  off
-	  en_alumode		  off
-	  en_multcarryin	  off
-	  en_ctrl		  off
-	  use_synth_model	  off
+	  pipeline_c		  "on"
+	  pipeline_p		  "on"
+	  pipeline_mult		  "on"
+	  pipeline_opmode	  "on"
+	  pipeline_alumode	  "on"
+	  pipeline_carryin	  "on"
+	  pipeline_carryinsel	  "on"
+	  rst_a			  "off"
+	  rst_b			  "off"
+	  rst_c			  "off"
+	  rst_mult		  "off"
+	  rst_p			  "off"
+	  rst_carry_in		  "off"
+	  rst_alumode		  "off"
+	  rst_ctrl		  "off"
+	  en_a1			  "off"
+	  en_a2			  "off"
+	  en_b1			  "off"
+	  en_b2			  "off"
+	  en_c			  "off"
+	  en_mult		  "off"
+	  en_p			  "off"
+	  en_carry_in		  "off"
+	  en_alumode		  "off"
+	  en_multcarryin	  "off"
+	  en_ctrl		  "off"
+	  use_synth_model	  "off"
 	  addsub_mode		  "ONE48"
-	  xl_useadderonly	  off
-	  xl_use_area		  off
+	  xl_useadderonly	  "off"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "0,0,658,967"
@@ -8075,63 +8074,63 @@ Library {
 	  SourceType		  "Xilinx DSP48E Block"
 	  use_a			  "Direct from A Port"
 	  use_b			  "Direct from B Port"
-	  pattern_from_creg	  off
+	  pattern_from_creg	  "off"
 	  pattern		  "'000000000000'"
-	  mask_from_creg	  off
+	  mask_from_creg	  "off"
 	  pattern_mask		  "'3FFFFFFFFFFF'"
-	  reset_preg		  off
+	  reset_preg		  "off"
 	  sel_rounding_mask	  "Select mask"
-	  use_op		  off
-	  use_creg		  off
-	  rst_all		  off
-	  en_all		  off
-	  use_pcin		  on
-	  use_carrycascin	  off
-	  use_multsignin	  off
-	  use_carryout		  off
-	  use_patterndetect	  off
-	  use_patternbdetect	  off
-	  use_overflow		  off
-	  use_underflow		  off
-	  use_acout		  off
-	  use_bcout		  off
-	  use_pcout		  off
-	  use_multsignout	  off
-	  use_carrycascout	  off
+	  use_op		  "off"
+	  use_creg		  "off"
+	  rst_all		  "off"
+	  en_all		  "off"
+	  use_pcin		  "on"
+	  use_carrycascin	  "off"
+	  use_multsignin	  "off"
+	  use_carryout		  "off"
+	  use_patterndetect	  "off"
+	  use_patternbdetect	  "off"
+	  use_overflow		  "off"
+	  use_underflow		  "off"
+	  use_acout		  "off"
+	  use_bcout		  "off"
+	  use_pcout		  "off"
+	  use_multsignout	  "off"
+	  use_carrycascout	  "off"
 	  pipeline_a		  "2"
 	  pipeline_b		  "2"
 	  pipeline_acout	  "1"
 	  pipeline_bcout	  "1"
-	  pipeline_c		  on
-	  pipeline_p		  on
-	  pipeline_mult		  on
-	  pipeline_opmode	  on
-	  pipeline_alumode	  on
-	  pipeline_carryin	  on
-	  pipeline_carryinsel	  on
-	  rst_a			  off
-	  rst_b			  off
-	  rst_c			  off
-	  rst_mult		  off
-	  rst_p			  off
-	  rst_carry_in		  off
-	  rst_alumode		  off
-	  rst_ctrl		  off
-	  en_a1			  off
-	  en_a2			  off
-	  en_b1			  off
-	  en_b2			  off
-	  en_c			  off
-	  en_mult		  off
-	  en_p			  off
-	  en_carry_in		  off
-	  en_alumode		  off
-	  en_multcarryin	  off
-	  en_ctrl		  off
-	  use_synth_model	  off
+	  pipeline_c		  "on"
+	  pipeline_p		  "on"
+	  pipeline_mult		  "on"
+	  pipeline_opmode	  "on"
+	  pipeline_alumode	  "on"
+	  pipeline_carryin	  "on"
+	  pipeline_carryinsel	  "on"
+	  rst_a			  "off"
+	  rst_b			  "off"
+	  rst_c			  "off"
+	  rst_mult		  "off"
+	  rst_p			  "off"
+	  rst_carry_in		  "off"
+	  rst_alumode		  "off"
+	  rst_ctrl		  "off"
+	  en_a1			  "off"
+	  en_a2			  "off"
+	  en_b1			  "off"
+	  en_b2			  "off"
+	  en_c			  "off"
+	  en_mult		  "off"
+	  en_p			  "off"
+	  en_carry_in		  "off"
+	  en_alumode		  "off"
+	  en_multcarryin	  "off"
+	  en_ctrl		  "off"
+	  use_synth_model	  "off"
 	  addsub_mode		  "ONE48"
-	  xl_useadderonly	  off
-	  xl_use_area		  off
+	  xl_useadderonly	  "off"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "224,37,658,967"
@@ -8159,63 +8158,63 @@ Library {
 	  SourceType		  "Xilinx DSP48E Block"
 	  use_a			  "Direct from A Port"
 	  use_b			  "Direct from B Port"
-	  pattern_from_creg	  off
+	  pattern_from_creg	  "off"
 	  pattern		  "'000000000000'"
-	  mask_from_creg	  off
+	  mask_from_creg	  "off"
 	  pattern_mask		  "'3FFFFFFFFFFF'"
-	  reset_preg		  off
+	  reset_preg		  "off"
 	  sel_rounding_mask	  "Select mask"
-	  use_op		  off
-	  use_creg		  off
-	  rst_all		  off
-	  en_all		  off
-	  use_pcin		  off
-	  use_carrycascin	  off
-	  use_multsignin	  off
-	  use_carryout		  off
-	  use_patterndetect	  off
-	  use_patternbdetect	  off
-	  use_overflow		  off
-	  use_underflow		  off
-	  use_acout		  off
-	  use_bcout		  off
-	  use_pcout		  on
-	  use_multsignout	  off
-	  use_carrycascout	  off
+	  use_op		  "off"
+	  use_creg		  "off"
+	  rst_all		  "off"
+	  en_all		  "off"
+	  use_pcin		  "off"
+	  use_carrycascin	  "off"
+	  use_multsignin	  "off"
+	  use_carryout		  "off"
+	  use_patterndetect	  "off"
+	  use_patternbdetect	  "off"
+	  use_overflow		  "off"
+	  use_underflow		  "off"
+	  use_acout		  "off"
+	  use_bcout		  "off"
+	  use_pcout		  "on"
+	  use_multsignout	  "off"
+	  use_carrycascout	  "off"
 	  pipeline_a		  "1"
 	  pipeline_b		  "1"
 	  pipeline_acout	  "1"
 	  pipeline_bcout	  "1"
-	  pipeline_c		  on
-	  pipeline_p		  on
-	  pipeline_mult		  on
-	  pipeline_opmode	  on
-	  pipeline_alumode	  on
-	  pipeline_carryin	  on
-	  pipeline_carryinsel	  on
-	  rst_a			  off
-	  rst_b			  off
-	  rst_c			  off
-	  rst_mult		  off
-	  rst_p			  off
-	  rst_carry_in		  off
-	  rst_alumode		  off
-	  rst_ctrl		  off
-	  en_a1			  off
-	  en_a2			  off
-	  en_b1			  off
-	  en_b2			  off
-	  en_c			  off
-	  en_mult		  off
-	  en_p			  off
-	  en_carry_in		  off
-	  en_alumode		  off
-	  en_multcarryin	  off
-	  en_ctrl		  off
-	  use_synth_model	  off
+	  pipeline_c		  "on"
+	  pipeline_p		  "on"
+	  pipeline_mult		  "on"
+	  pipeline_opmode	  "on"
+	  pipeline_alumode	  "on"
+	  pipeline_carryin	  "on"
+	  pipeline_carryinsel	  "on"
+	  rst_a			  "off"
+	  rst_b			  "off"
+	  rst_c			  "off"
+	  rst_mult		  "off"
+	  rst_p			  "off"
+	  rst_carry_in		  "off"
+	  rst_alumode		  "off"
+	  rst_ctrl		  "off"
+	  en_a1			  "off"
+	  en_a2			  "off"
+	  en_b1			  "off"
+	  en_b2			  "off"
+	  en_c			  "off"
+	  en_mult		  "off"
+	  en_p			  "off"
+	  en_carry_in		  "off"
+	  en_alumode		  "off"
+	  en_multcarryin	  "off"
+	  en_ctrl		  "off"
+	  use_synth_model	  "off"
 	  addsub_mode		  "ONE48"
-	  xl_useadderonly	  off
-	  xl_use_area		  off
+	  xl_useadderonly	  "off"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "0,0,658,967"
@@ -8243,63 +8242,63 @@ Library {
 	  SourceType		  "Xilinx DSP48E Block"
 	  use_a			  "Direct from A Port"
 	  use_b			  "Direct from B Port"
-	  pattern_from_creg	  off
+	  pattern_from_creg	  "off"
 	  pattern		  "'000000000000'"
-	  mask_from_creg	  off
+	  mask_from_creg	  "off"
 	  pattern_mask		  "'3FFFFFFFFFFF'"
-	  reset_preg		  off
+	  reset_preg		  "off"
 	  sel_rounding_mask	  "Select mask"
-	  use_op		  off
-	  use_creg		  off
-	  rst_all		  off
-	  en_all		  off
-	  use_pcin		  on
-	  use_carrycascin	  off
-	  use_multsignin	  off
-	  use_carryout		  off
-	  use_patterndetect	  off
-	  use_patternbdetect	  off
-	  use_overflow		  off
-	  use_underflow		  off
-	  use_acout		  off
-	  use_bcout		  off
-	  use_pcout		  off
-	  use_multsignout	  off
-	  use_carrycascout	  off
+	  use_op		  "off"
+	  use_creg		  "off"
+	  rst_all		  "off"
+	  en_all		  "off"
+	  use_pcin		  "on"
+	  use_carrycascin	  "off"
+	  use_multsignin	  "off"
+	  use_carryout		  "off"
+	  use_patterndetect	  "off"
+	  use_patternbdetect	  "off"
+	  use_overflow		  "off"
+	  use_underflow		  "off"
+	  use_acout		  "off"
+	  use_bcout		  "off"
+	  use_pcout		  "off"
+	  use_multsignout	  "off"
+	  use_carrycascout	  "off"
 	  pipeline_a		  "2"
 	  pipeline_b		  "2"
 	  pipeline_acout	  "1"
 	  pipeline_bcout	  "1"
-	  pipeline_c		  on
-	  pipeline_p		  on
-	  pipeline_mult		  on
-	  pipeline_opmode	  on
-	  pipeline_alumode	  on
-	  pipeline_carryin	  on
-	  pipeline_carryinsel	  on
-	  rst_a			  off
-	  rst_b			  off
-	  rst_c			  off
-	  rst_mult		  off
-	  rst_p			  off
-	  rst_carry_in		  off
-	  rst_alumode		  off
-	  rst_ctrl		  off
-	  en_a1			  off
-	  en_a2			  off
-	  en_b1			  off
-	  en_b2			  off
-	  en_c			  off
-	  en_mult		  off
-	  en_p			  off
-	  en_carry_in		  off
-	  en_alumode		  off
-	  en_multcarryin	  off
-	  en_ctrl		  off
-	  use_synth_model	  off
+	  pipeline_c		  "on"
+	  pipeline_p		  "on"
+	  pipeline_mult		  "on"
+	  pipeline_opmode	  "on"
+	  pipeline_alumode	  "on"
+	  pipeline_carryin	  "on"
+	  pipeline_carryinsel	  "on"
+	  rst_a			  "off"
+	  rst_b			  "off"
+	  rst_c			  "off"
+	  rst_mult		  "off"
+	  rst_p			  "off"
+	  rst_carry_in		  "off"
+	  rst_alumode		  "off"
+	  rst_ctrl		  "off"
+	  en_a1			  "off"
+	  en_a2			  "off"
+	  en_b1			  "off"
+	  en_b2			  "off"
+	  en_c			  "off"
+	  en_mult		  "off"
+	  en_p			  "off"
+	  en_carry_in		  "off"
+	  en_alumode		  "off"
+	  en_multcarryin	  "off"
+	  en_ctrl		  "off"
+	  use_synth_model	  "off"
 	  addsub_mode		  "ONE48"
-	  xl_useadderonly	  off
-	  xl_use_area		  off
+	  xl_useadderonly	  "off"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "224,37,658,967"
@@ -8344,7 +8343,7 @@ Library {
 	  const			  "0"
 	  n_bits		  "4"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -8353,7 +8352,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -8379,7 +8378,7 @@ Library {
 	  const			  "3"
 	  n_bits		  "4"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -8388,7 +8387,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -8418,7 +8417,7 @@ Library {
 	  const			  "0"
 	  n_bits		  "4"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -8427,7 +8426,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -8453,7 +8452,7 @@ Library {
 	  const			  "0"
 	  n_bits		  "4"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -8462,7 +8461,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -8488,7 +8487,7 @@ Library {
 	  const			  "0"
 	  n_bits		  "1"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -8497,7 +8496,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -8523,7 +8522,7 @@ Library {
 	  const			  "0"
 	  n_bits		  "1"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -8532,7 +8531,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -8558,7 +8557,7 @@ Library {
 	  const			  "0"
 	  n_bits		  "1"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -8567,7 +8566,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -8593,7 +8592,7 @@ Library {
 	  const			  "0"
 	  n_bits		  "1"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -8602,7 +8601,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -8628,7 +8627,7 @@ Library {
 	  const			  "0"
 	  n_bits		  "3"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -8637,7 +8636,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -8663,7 +8662,7 @@ Library {
 	  const			  "0"
 	  n_bits		  "3"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -8672,7 +8671,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -8698,7 +8697,7 @@ Library {
 	  const			  "0"
 	  n_bits		  "3"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -8707,7 +8706,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -8733,7 +8732,7 @@ Library {
 	  const			  "0"
 	  n_bits		  "3"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -8742,7 +8741,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,20,400,346"
 	  block_type		  "constant"
@@ -8770,9 +8769,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -8801,9 +8800,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -8830,7 +8829,7 @@ Library {
 	  const			  "5"
 	  n_bits		  "7"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -8839,7 +8838,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "0,0,550,547"
 	  block_type		  "constant"
@@ -8869,7 +8868,7 @@ Library {
 	  const			  "21"
 	  n_bits		  "7"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -8878,7 +8877,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "0,0,550,547"
 	  block_type		  "constant"
@@ -8908,7 +8907,7 @@ Library {
 	  const			  "5"
 	  n_bits		  "7"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -8917,7 +8916,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "0,0,550,547"
 	  block_type		  "constant"
@@ -8947,7 +8946,7 @@ Library {
 	  const			  "21"
 	  n_bits		  "7"
 	  bin_pt		  "0"
-	  explicit_period	  off
+	  explicit_period	  "off"
 	  period		  "1"
 	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
 	  equ			  "P=C"
@@ -8956,7 +8955,7 @@ Library {
 	  opr			  "+"
 	  inp1			  "P"
 	  carry			  "CIN"
-	  dbl_ovrd		  off
+	  dbl_ovrd		  "off"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "0,0,550,547"
 	  block_type		  "constant"
@@ -8988,9 +8987,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -9019,9 +9018,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -9050,9 +9049,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -9081,9 +9080,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
 	  latency		  "0"
-	  dbl_ovrd		  off
-	  pipeline		  on
-	  xl_use_area		  off
+	  dbl_ovrd		  "off"
+	  pipeline		  "on"
+	  xl_use_area		  "off"
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "20,27,633,525"
@@ -9110,9 +9109,9 @@ Library {
 	  "<br>Example:  Suppose the input is 6 bits wide, signed, with 2 fractional bits, and the output is forced to unsigne"
 	  "d with 0 fractional bits.  Then an input of -2.0 (1110.00 in binary 2's complement) becomes an output of 56 (111000"
 	  " in binary)."
-	  force_arith_type	  on
+	  force_arith_type	  "on"
 	  arith_type		  "Signed  (2's comp)"
-	  force_bin_pt		  on
+	  force_bin_pt		  "on"
 	  bin_pt		  "0"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "15,25,372,364"
@@ -9139,9 +9138,9 @@ Library {
 	  "<br>Example:  Suppose the input is 6 bits wide, signed, with 2 fractional bits, and the output is forced to unsigne"
 	  "d with 0 fractional bits.  Then an input of -2.0 (1110.00 in binary 2's complement) becomes an output of 56 (111000"
 	  " in binary)."
-	  force_arith_type	  on
+	  force_arith_type	  "on"
 	  arith_type		  "Signed  (2's comp)"
-	  force_bin_pt		  on
+	  force_bin_pt		  "on"
 	  bin_pt		  "0"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "15,25,372,364"
@@ -9168,9 +9167,9 @@ Library {
 	  "<br>Example:  Suppose the input is 6 bits wide, signed, with 2 fractional bits, and the output is forced to unsigne"
 	  "d with 0 fractional bits.  Then an input of -2.0 (1110.00 in binary 2's complement) becomes an output of 56 (111000"
 	  " in binary)."
-	  force_arith_type	  on
+	  force_arith_type	  "on"
 	  arith_type		  "Signed  (2's comp)"
-	  force_bin_pt		  on
+	  force_bin_pt		  "on"
 	  bin_pt		  "0"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "15,25,372,364"
@@ -9197,9 +9196,9 @@ Library {
 	  "<br>Example:  Suppose the input is 6 bits wide, signed, with 2 fractional bits, and the output is forced to unsigne"
 	  "d with 0 fractional bits.  Then an input of -2.0 (1110.00 in binary 2's complement) becomes an output of 56 (111000"
 	  " in binary)."
-	  force_arith_type	  on
+	  force_arith_type	  "on"
 	  arith_type		  "Signed  (2's comp)"
-	  force_bin_pt		  on
+	  force_bin_pt		  "on"
 	  bin_pt		  "0"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "15,25,372,364"
@@ -9226,9 +9225,9 @@ Library {
 	  "<br>Example:  Suppose the input is 6 bits wide, signed, with 2 fractional bits, and the output is forced to unsigne"
 	  "d with 0 fractional bits.  Then an input of -2.0 (1110.00 in binary 2's complement) becomes an output of 56 (111000"
 	  " in binary)."
-	  force_arith_type	  on
+	  force_arith_type	  "on"
 	  arith_type		  "Signed  (2's comp)"
-	  force_bin_pt		  on
+	  force_bin_pt		  "on"
 	  bin_pt		  "6"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "15,25,372,364"
@@ -9255,9 +9254,9 @@ Library {
 	  "<br>Example:  Suppose the input is 6 bits wide, signed, with 2 fractional bits, and the output is forced to unsigne"
 	  "d with 0 fractional bits.  Then an input of -2.0 (1110.00 in binary 2's complement) becomes an output of 56 (111000"
 	  " in binary)."
-	  force_arith_type	  on
+	  force_arith_type	  "on"
 	  arith_type		  "Signed  (2's comp)"
-	  force_bin_pt		  on
+	  force_bin_pt		  "on"
 	  bin_pt		  "6"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "15,25,372,364"
