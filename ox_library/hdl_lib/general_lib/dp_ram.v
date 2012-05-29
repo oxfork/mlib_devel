@@ -1,8 +1,8 @@
 // A parameterized, inferable, true dual-port, dual-clock block RAM in Verilog.
 
 module bram_tdp #(
-    parameter DATA = 15,
-    parameter ADDR = 6
+    parameter DATA = 72,
+    parameter ADDR = 10
 ) (
     // Port A
     input   wire                a_clk,
@@ -22,7 +22,6 @@ module bram_tdp #(
 // Shared memory
 reg [DATA-1:0] mem [(2**ADDR)-1:0];
 
-
 //Initialise ram contents
 integer k;
 initial begin
@@ -31,21 +30,20 @@ initial begin
     end
 end
 
-
 // Port A
+// read before write
 always @(posedge a_clk) begin
     a_dout      <= mem[a_addr];
     if(a_wr) begin
-        a_dout      <= a_din;
         mem[a_addr] <= a_din;
     end
 end
 
 // Port B
+// read before write
 always @(posedge b_clk) begin
     b_dout      <= mem[b_addr];
     if(b_wr) begin
-        b_dout      <= b_din;
         mem[b_addr] <= b_din;
     end
 end

@@ -13,11 +13,11 @@ Library {
   Creator		  "hchen05"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "jack"
+  LastModifiedBy	  "griffin"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Apr  2 16:40:41 2012"
-  RTWModifiedTimeStamp	  255285639
-  ModelVersionFormat	  "1.%<AutoIncrement:442>"
+  LastModifiedDate	  "Tue May 29 13:46:42 2012"
+  RTWModifiedTimeStamp	  260199999
+  ModelVersionFormat	  "1.%<AutoIncrement:446>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -713,7 +713,7 @@ Library {
   }
   System {
     Name		    "xps_library"
-    Location		    [-124, -100, 1148, 868]
+    Location		    [1, 51, 1919, 1173]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -727,7 +727,7 @@ Library {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    414
+    SIDHighWatermark	    518
     Block {
       BlockType		      SubSystem
       Name		      "1new_yellow_block"
@@ -15490,7 +15490,7 @@ Library {
       SID		      75
       Tag		      "xps:xaui"
       Ports		      [5, 7]
-      Position		      [895, 601, 1035, 769]
+      Position		      [1010, 341, 1150, 509]
       BackgroundColor	      "[1.000000, 1.000000, 0.000000]"
       MinAlgLoopOccurrences   off
       PropExecContextOutsideSubsystem off
@@ -23597,10 +23597,10 @@ Library {
     Block {
       BlockType		      SubSystem
       Name		      "adc2x14_400"
-      SID		      413
+      SID		      351
       Tag		      "xps:adc2x14_400"
       Ports		      [0, 5]
-      Position		      [695, 1386, 770, 1634]
+      Position		      [1700, 811, 1775, 1059]
       BackgroundColor	      "[1.000000, 1.000000, 0.000000]"
       MinAlgLoopOccurrences   off
       PropExecContextOutsideSubsystem off
@@ -23636,18 +23636,16 @@ Library {
 	ScreenColor		"white"
 	PaperOrientation	"landscape"
 	PaperPositionMode	"auto"
-	PaperType		"A4"
-	PaperUnits		"centimeters"
-	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
 	ZoomFactor		"100"
-	SIDHighWatermark	42
-	SIDPrevWatermark	42
 	Block {
 	  BlockType		  Reference
 	  Name			  "adc_snap_test_zdock0_adc2x14_400_user_data_i0"
-	  SID			  1
+	  SID			  435
 	  Ports			  [1, 1]
 	  Position		  [205, 39, 260, 61]
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
@@ -23683,7 +23681,7 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "adc_snap_test_zdock0_adc2x14_400_user_data_i1"
-	  SID			  2
+	  SID			  436
 	  Ports			  [1, 1]
 	  Position		  [205, 139, 260, 161]
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
@@ -23719,7 +23717,7 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "adc_snap_test_zdock0_adc2x14_400_user_data_q0"
-	  SID			  3
+	  SID			  437
 	  Ports			  [1, 1]
 	  Position		  [205, 249, 260, 271]
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
@@ -23755,7 +23753,7 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "adc_snap_test_zdock0_adc2x14_400_user_data_q1"
-	  SID			  4
+	  SID			  438
 	  Ports			  [1, 1]
 	  Position		  [205, 349, 260, 371]
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
@@ -23791,7 +23789,7 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "adc_snap_test_zdock0_adc2x14_400_user_sync"
-	  SID			  5
+	  SID			  439
 	  Ports			  [1, 1]
 	  Position		  [210, 439, 265, 461]
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
@@ -23827,7 +23825,7 @@ Library {
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "conv"
-	  SID			  6
+	  SID			  440
 	  Ports			  [1, 1]
 	  Position		  [385, 35, 465, 65]
 	  MinAlgLoopOccurrences	  off
@@ -23853,16 +23851,16 @@ Library {
 	    ScreenColor		    "white"
 	    PaperOrientation	    "landscape"
 	    PaperPositionMode	    "auto"
-	    PaperType		    "A4"
-	    PaperUnits		    "centimeters"
-	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "In1"
-	      SID		      7
+	      SID		      441
 	      Position		      [25, 38, 55, 52]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -23871,7 +23869,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Concat"
-	      SID		      8
+	      SID		      442
 	      Ports		      [2, 1]
 	      Position		      [265, 32, 315, 83]
 	      SourceBlock	      "xbsIndex_r4/Concat"
@@ -23896,7 +23894,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Inverter"
-	      SID		      9
+	      SID		      443
 	      Ports		      [1, 1]
 	      Position		      [175, 28, 225, 62]
 	      SourceBlock	      "xbsIndex_r4/Inverter"
@@ -23922,7 +23920,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Reinterpret"
-	      SID		      10
+	      SID		      444
 	      Ports		      [1, 1]
 	      Position		      [355, 44, 395, 76]
 	      SourceBlock	      "xbsIndex_r4/Reinterpret"
@@ -23951,7 +23949,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice"
-	      SID		      11
+	      SID		      445
 	      Ports		      [1, 1]
 	      Position		      [100, 31, 145, 59]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -23983,7 +23981,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice1"
-	      SID		      12
+	      SID		      446
 	      Ports		      [1, 1]
 	      Position		      [100, 86, 145, 114]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -24015,7 +24013,7 @@ Library {
 	    Block {
 	      BlockType		      Outport
 	      Name		      "Out1"
-	      SID		      13
+	      SID		      447
 	      Position		      [420, 53, 450, 67]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -24071,7 +24069,7 @@ Library {
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "conv1"
-	  SID			  14
+	  SID			  448
 	  Ports			  [1, 1]
 	  Position		  [390, 135, 470, 165]
 	  MinAlgLoopOccurrences	  off
@@ -24097,16 +24095,16 @@ Library {
 	    ScreenColor		    "white"
 	    PaperOrientation	    "landscape"
 	    PaperPositionMode	    "auto"
-	    PaperType		    "A4"
-	    PaperUnits		    "centimeters"
-	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "In1"
-	      SID		      15
+	      SID		      449
 	      Position		      [25, 38, 55, 52]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -24115,7 +24113,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Concat"
-	      SID		      16
+	      SID		      450
 	      Ports		      [2, 1]
 	      Position		      [265, 32, 315, 83]
 	      SourceBlock	      "xbsIndex_r4/Concat"
@@ -24140,7 +24138,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Inverter"
-	      SID		      17
+	      SID		      451
 	      Ports		      [1, 1]
 	      Position		      [175, 28, 225, 62]
 	      SourceBlock	      "xbsIndex_r4/Inverter"
@@ -24166,7 +24164,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Reinterpret"
-	      SID		      18
+	      SID		      452
 	      Ports		      [1, 1]
 	      Position		      [355, 44, 395, 76]
 	      SourceBlock	      "xbsIndex_r4/Reinterpret"
@@ -24195,7 +24193,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice"
-	      SID		      19
+	      SID		      453
 	      Ports		      [1, 1]
 	      Position		      [100, 31, 145, 59]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -24227,7 +24225,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice1"
-	      SID		      20
+	      SID		      454
 	      Ports		      [1, 1]
 	      Position		      [100, 86, 145, 114]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -24259,7 +24257,7 @@ Library {
 	    Block {
 	      BlockType		      Outport
 	      Name		      "Out1"
-	      SID		      21
+	      SID		      455
 	      Position		      [420, 53, 450, 67]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -24315,7 +24313,7 @@ Library {
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "conv2"
-	  SID			  22
+	  SID			  456
 	  Ports			  [1, 1]
 	  Position		  [395, 245, 475, 275]
 	  MinAlgLoopOccurrences	  off
@@ -24341,16 +24339,16 @@ Library {
 	    ScreenColor		    "white"
 	    PaperOrientation	    "landscape"
 	    PaperPositionMode	    "auto"
-	    PaperType		    "A4"
-	    PaperUnits		    "centimeters"
-	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "In1"
-	      SID		      23
+	      SID		      457
 	      Position		      [25, 38, 55, 52]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -24359,7 +24357,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Concat"
-	      SID		      24
+	      SID		      458
 	      Ports		      [2, 1]
 	      Position		      [265, 32, 315, 83]
 	      SourceBlock	      "xbsIndex_r4/Concat"
@@ -24384,7 +24382,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Inverter"
-	      SID		      25
+	      SID		      459
 	      Ports		      [1, 1]
 	      Position		      [175, 28, 225, 62]
 	      SourceBlock	      "xbsIndex_r4/Inverter"
@@ -24410,7 +24408,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Reinterpret"
-	      SID		      26
+	      SID		      460
 	      Ports		      [1, 1]
 	      Position		      [355, 44, 395, 76]
 	      SourceBlock	      "xbsIndex_r4/Reinterpret"
@@ -24439,7 +24437,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice"
-	      SID		      27
+	      SID		      461
 	      Ports		      [1, 1]
 	      Position		      [100, 31, 145, 59]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -24471,7 +24469,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice1"
-	      SID		      28
+	      SID		      462
 	      Ports		      [1, 1]
 	      Position		      [100, 86, 145, 114]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -24503,7 +24501,7 @@ Library {
 	    Block {
 	      BlockType		      Outport
 	      Name		      "Out1"
-	      SID		      29
+	      SID		      463
 	      Position		      [420, 53, 450, 67]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -24559,7 +24557,7 @@ Library {
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "conv3"
-	  SID			  30
+	  SID			  464
 	  Ports			  [1, 1]
 	  Position		  [395, 345, 475, 375]
 	  MinAlgLoopOccurrences	  off
@@ -24585,16 +24583,16 @@ Library {
 	    ScreenColor		    "white"
 	    PaperOrientation	    "landscape"
 	    PaperPositionMode	    "auto"
-	    PaperType		    "A4"
-	    PaperUnits		    "centimeters"
-	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "In1"
-	      SID		      31
+	      SID		      465
 	      Position		      [25, 38, 55, 52]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -24603,7 +24601,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Concat"
-	      SID		      32
+	      SID		      466
 	      Ports		      [2, 1]
 	      Position		      [265, 32, 315, 83]
 	      SourceBlock	      "xbsIndex_r4/Concat"
@@ -24628,7 +24626,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Inverter"
-	      SID		      33
+	      SID		      467
 	      Ports		      [1, 1]
 	      Position		      [175, 28, 225, 62]
 	      SourceBlock	      "xbsIndex_r4/Inverter"
@@ -24654,7 +24652,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Reinterpret"
-	      SID		      34
+	      SID		      468
 	      Ports		      [1, 1]
 	      Position		      [355, 44, 395, 76]
 	      SourceBlock	      "xbsIndex_r4/Reinterpret"
@@ -24683,7 +24681,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice"
-	      SID		      35
+	      SID		      469
 	      Ports		      [1, 1]
 	      Position		      [100, 31, 145, 59]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -24715,7 +24713,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice1"
-	      SID		      36
+	      SID		      470
 	      Ports		      [1, 1]
 	      Position		      [100, 86, 145, 114]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -24747,7 +24745,7 @@ Library {
 	    Block {
 	      BlockType		      Outport
 	      Name		      "Out1"
-	      SID		      37
+	      SID		      471
 	      Position		      [420, 53, 450, 67]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -24803,7 +24801,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "data_i0"
-	  SID			  38
+	  SID			  472
 	  Position		  [640, 43, 670, 57]
 	  IconDisplay		  "Port number"
 	  OutDataType		  "sfix(16)"
@@ -24812,7 +24810,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "data_i1"
-	  SID			  39
+	  SID			  473
 	  Position		  [640, 143, 670, 157]
 	  Port			  "2"
 	  IconDisplay		  "Port number"
@@ -24822,7 +24820,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "data_q0"
-	  SID			  40
+	  SID			  474
 	  Position		  [640, 253, 670, 267]
 	  Port			  "3"
 	  IconDisplay		  "Port number"
@@ -24832,7 +24830,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "data_q1"
-	  SID			  41
+	  SID			  475
 	  Position		  [645, 353, 675, 367]
 	  Port			  "4"
 	  IconDisplay		  "Port number"
@@ -24842,7 +24840,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "sync"
-	  SID			  42
+	  SID			  476
 	  Position		  [645, 443, 675, 457]
 	  Port			  "5"
 	  IconDisplay		  "Port number"
@@ -24908,10 +24906,10 @@ Library {
     Block {
       BlockType		      SubSystem
       Name		      "adc2x14_400_4x"
-      SID		      414
+      SID		      352
       Tag		      "xps:adc2x14_400_4x"
       Ports		      [0, 9]
-      Position		      [560, 1335, 630, 1685]
+      Position		      [1595, 760, 1665, 1110]
       BackgroundColor	      "[1.000000, 1.000000, 0.000000]"
       MinAlgLoopOccurrences   off
       PropExecContextOutsideSubsystem off
@@ -24947,18 +24945,16 @@ Library {
 	ScreenColor		"white"
 	PaperOrientation	"landscape"
 	PaperPositionMode	"auto"
-	PaperType		"A4"
-	PaperUnits		"centimeters"
-	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
 	ZoomFactor		"100"
-	SIDHighWatermark	82
-	SIDPrevWatermark	82
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "conv"
-	  SID			  1
+	  SID			  353
 	  Ports			  [1, 1]
 	  Position		  [650, 45, 730, 75]
 	  MinAlgLoopOccurrences	  off
@@ -24984,16 +24980,16 @@ Library {
 	    ScreenColor		    "white"
 	    PaperOrientation	    "landscape"
 	    PaperPositionMode	    "auto"
-	    PaperType		    "A4"
-	    PaperUnits		    "centimeters"
-	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "In1"
-	      SID		      2
+	      SID		      354
 	      Position		      [25, 38, 55, 52]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -25002,7 +24998,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Concat"
-	      SID		      3
+	      SID		      355
 	      Ports		      [2, 1]
 	      Position		      [265, 32, 315, 83]
 	      SourceBlock	      "xbsIndex_r4/Concat"
@@ -25025,7 +25021,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Inverter"
-	      SID		      4
+	      SID		      356
 	      Ports		      [1, 1]
 	      Position		      [175, 28, 225, 62]
 	      SourceBlock	      "xbsIndex_r4/Inverter"
@@ -25050,7 +25046,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Reinterpret"
-	      SID		      5
+	      SID		      357
 	      Ports		      [1, 1]
 	      Position		      [355, 44, 395, 76]
 	      SourceBlock	      "xbsIndex_r4/Reinterpret"
@@ -25078,7 +25074,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice"
-	      SID		      6
+	      SID		      358
 	      Ports		      [1, 1]
 	      Position		      [100, 31, 145, 59]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -25108,7 +25104,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice1"
-	      SID		      7
+	      SID		      359
 	      Ports		      [1, 1]
 	      Position		      [100, 86, 145, 114]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -25138,7 +25134,7 @@ Library {
 	    Block {
 	      BlockType		      Outport
 	      Name		      "Out1"
-	      SID		      8
+	      SID		      360
 	      Position		      [420, 53, 450, 67]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -25194,7 +25190,7 @@ Library {
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "conv1"
-	  SID			  9
+	  SID			  361
 	  Ports			  [1, 1]
 	  Position		  [650, 125, 730, 155]
 	  MinAlgLoopOccurrences	  off
@@ -25220,16 +25216,16 @@ Library {
 	    ScreenColor		    "white"
 	    PaperOrientation	    "landscape"
 	    PaperPositionMode	    "auto"
-	    PaperType		    "A4"
-	    PaperUnits		    "centimeters"
-	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "In1"
-	      SID		      10
+	      SID		      362
 	      Position		      [25, 38, 55, 52]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -25238,7 +25234,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Concat"
-	      SID		      11
+	      SID		      363
 	      Ports		      [2, 1]
 	      Position		      [265, 32, 315, 83]
 	      SourceBlock	      "xbsIndex_r4/Concat"
@@ -25261,7 +25257,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Inverter"
-	      SID		      12
+	      SID		      364
 	      Ports		      [1, 1]
 	      Position		      [175, 28, 225, 62]
 	      SourceBlock	      "xbsIndex_r4/Inverter"
@@ -25286,7 +25282,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Reinterpret"
-	      SID		      13
+	      SID		      365
 	      Ports		      [1, 1]
 	      Position		      [355, 44, 395, 76]
 	      SourceBlock	      "xbsIndex_r4/Reinterpret"
@@ -25314,7 +25310,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice"
-	      SID		      14
+	      SID		      366
 	      Ports		      [1, 1]
 	      Position		      [100, 31, 145, 59]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -25344,7 +25340,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice1"
-	      SID		      15
+	      SID		      367
 	      Ports		      [1, 1]
 	      Position		      [100, 86, 145, 114]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -25374,7 +25370,7 @@ Library {
 	    Block {
 	      BlockType		      Outport
 	      Name		      "Out1"
-	      SID		      16
+	      SID		      368
 	      Position		      [420, 53, 450, 67]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -25430,7 +25426,7 @@ Library {
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "conv2"
-	  SID			  17
+	  SID			  369
 	  Ports			  [1, 1]
 	  Position		  [650, 205, 730, 235]
 	  MinAlgLoopOccurrences	  off
@@ -25456,16 +25452,16 @@ Library {
 	    ScreenColor		    "white"
 	    PaperOrientation	    "landscape"
 	    PaperPositionMode	    "auto"
-	    PaperType		    "A4"
-	    PaperUnits		    "centimeters"
-	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "In1"
-	      SID		      18
+	      SID		      370
 	      Position		      [25, 38, 55, 52]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -25474,7 +25470,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Concat"
-	      SID		      19
+	      SID		      371
 	      Ports		      [2, 1]
 	      Position		      [265, 32, 315, 83]
 	      SourceBlock	      "xbsIndex_r4/Concat"
@@ -25497,7 +25493,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Inverter"
-	      SID		      20
+	      SID		      372
 	      Ports		      [1, 1]
 	      Position		      [175, 28, 225, 62]
 	      SourceBlock	      "xbsIndex_r4/Inverter"
@@ -25522,7 +25518,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Reinterpret"
-	      SID		      21
+	      SID		      373
 	      Ports		      [1, 1]
 	      Position		      [355, 44, 395, 76]
 	      SourceBlock	      "xbsIndex_r4/Reinterpret"
@@ -25550,7 +25546,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice"
-	      SID		      22
+	      SID		      374
 	      Ports		      [1, 1]
 	      Position		      [100, 31, 145, 59]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -25580,7 +25576,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice1"
-	      SID		      23
+	      SID		      375
 	      Ports		      [1, 1]
 	      Position		      [100, 86, 145, 114]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -25610,7 +25606,7 @@ Library {
 	    Block {
 	      BlockType		      Outport
 	      Name		      "Out1"
-	      SID		      24
+	      SID		      376
 	      Position		      [420, 53, 450, 67]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -25666,7 +25662,7 @@ Library {
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "conv3"
-	  SID			  25
+	  SID			  377
 	  Ports			  [1, 1]
 	  Position		  [655, 285, 735, 315]
 	  MinAlgLoopOccurrences	  off
@@ -25692,16 +25688,16 @@ Library {
 	    ScreenColor		    "white"
 	    PaperOrientation	    "landscape"
 	    PaperPositionMode	    "auto"
-	    PaperType		    "A4"
-	    PaperUnits		    "centimeters"
-	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "In1"
-	      SID		      26
+	      SID		      378
 	      Position		      [25, 38, 55, 52]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -25710,7 +25706,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Concat"
-	      SID		      27
+	      SID		      379
 	      Ports		      [2, 1]
 	      Position		      [265, 32, 315, 83]
 	      SourceBlock	      "xbsIndex_r4/Concat"
@@ -25733,7 +25729,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Inverter"
-	      SID		      28
+	      SID		      380
 	      Ports		      [1, 1]
 	      Position		      [175, 28, 225, 62]
 	      SourceBlock	      "xbsIndex_r4/Inverter"
@@ -25758,7 +25754,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Reinterpret"
-	      SID		      29
+	      SID		      381
 	      Ports		      [1, 1]
 	      Position		      [355, 44, 395, 76]
 	      SourceBlock	      "xbsIndex_r4/Reinterpret"
@@ -25786,7 +25782,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice"
-	      SID		      30
+	      SID		      382
 	      Ports		      [1, 1]
 	      Position		      [100, 31, 145, 59]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -25816,7 +25812,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice1"
-	      SID		      31
+	      SID		      383
 	      Ports		      [1, 1]
 	      Position		      [100, 86, 145, 114]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -25846,7 +25842,7 @@ Library {
 	    Block {
 	      BlockType		      Outport
 	      Name		      "Out1"
-	      SID		      32
+	      SID		      384
 	      Position		      [420, 53, 450, 67]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -25902,7 +25898,7 @@ Library {
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "conv4"
-	  SID			  33
+	  SID			  385
 	  Ports			  [1, 1]
 	  Position		  [655, 415, 735, 445]
 	  MinAlgLoopOccurrences	  off
@@ -25928,16 +25924,16 @@ Library {
 	    ScreenColor		    "white"
 	    PaperOrientation	    "landscape"
 	    PaperPositionMode	    "auto"
-	    PaperType		    "A4"
-	    PaperUnits		    "centimeters"
-	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "In1"
-	      SID		      34
+	      SID		      386
 	      Position		      [25, 38, 55, 52]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -25946,7 +25942,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Concat"
-	      SID		      35
+	      SID		      387
 	      Ports		      [2, 1]
 	      Position		      [265, 32, 315, 83]
 	      SourceBlock	      "xbsIndex_r4/Concat"
@@ -25969,7 +25965,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Inverter"
-	      SID		      36
+	      SID		      388
 	      Ports		      [1, 1]
 	      Position		      [175, 28, 225, 62]
 	      SourceBlock	      "xbsIndex_r4/Inverter"
@@ -25994,7 +25990,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Reinterpret"
-	      SID		      37
+	      SID		      389
 	      Ports		      [1, 1]
 	      Position		      [355, 44, 395, 76]
 	      SourceBlock	      "xbsIndex_r4/Reinterpret"
@@ -26022,7 +26018,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice"
-	      SID		      38
+	      SID		      390
 	      Ports		      [1, 1]
 	      Position		      [100, 31, 145, 59]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -26052,7 +26048,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice1"
-	      SID		      39
+	      SID		      391
 	      Ports		      [1, 1]
 	      Position		      [100, 86, 145, 114]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -26082,7 +26078,7 @@ Library {
 	    Block {
 	      BlockType		      Outport
 	      Name		      "Out1"
-	      SID		      40
+	      SID		      392
 	      Position		      [420, 53, 450, 67]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -26138,7 +26134,7 @@ Library {
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "conv5"
-	  SID			  41
+	  SID			  393
 	  Ports			  [1, 1]
 	  Position		  [660, 495, 740, 525]
 	  MinAlgLoopOccurrences	  off
@@ -26164,16 +26160,16 @@ Library {
 	    ScreenColor		    "white"
 	    PaperOrientation	    "landscape"
 	    PaperPositionMode	    "auto"
-	    PaperType		    "A4"
-	    PaperUnits		    "centimeters"
-	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "In1"
-	      SID		      42
+	      SID		      394
 	      Position		      [25, 38, 55, 52]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -26182,7 +26178,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Concat"
-	      SID		      43
+	      SID		      395
 	      Ports		      [2, 1]
 	      Position		      [265, 32, 315, 83]
 	      SourceBlock	      "xbsIndex_r4/Concat"
@@ -26205,7 +26201,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Inverter"
-	      SID		      44
+	      SID		      396
 	      Ports		      [1, 1]
 	      Position		      [175, 28, 225, 62]
 	      SourceBlock	      "xbsIndex_r4/Inverter"
@@ -26230,7 +26226,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Reinterpret"
-	      SID		      45
+	      SID		      397
 	      Ports		      [1, 1]
 	      Position		      [355, 44, 395, 76]
 	      SourceBlock	      "xbsIndex_r4/Reinterpret"
@@ -26258,7 +26254,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice"
-	      SID		      46
+	      SID		      398
 	      Ports		      [1, 1]
 	      Position		      [100, 31, 145, 59]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -26288,7 +26284,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice1"
-	      SID		      47
+	      SID		      399
 	      Ports		      [1, 1]
 	      Position		      [100, 86, 145, 114]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -26318,7 +26314,7 @@ Library {
 	    Block {
 	      BlockType		      Outport
 	      Name		      "Out1"
-	      SID		      48
+	      SID		      400
 	      Position		      [420, 53, 450, 67]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -26374,7 +26370,7 @@ Library {
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "conv6"
-	  SID			  49
+	  SID			  401
 	  Ports			  [1, 1]
 	  Position		  [665, 580, 745, 610]
 	  MinAlgLoopOccurrences	  off
@@ -26400,16 +26396,16 @@ Library {
 	    ScreenColor		    "white"
 	    PaperOrientation	    "landscape"
 	    PaperPositionMode	    "auto"
-	    PaperType		    "A4"
-	    PaperUnits		    "centimeters"
-	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "In1"
-	      SID		      50
+	      SID		      402
 	      Position		      [25, 38, 55, 52]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -26418,7 +26414,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Concat"
-	      SID		      51
+	      SID		      403
 	      Ports		      [2, 1]
 	      Position		      [265, 32, 315, 83]
 	      SourceBlock	      "xbsIndex_r4/Concat"
@@ -26441,7 +26437,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Inverter"
-	      SID		      52
+	      SID		      404
 	      Ports		      [1, 1]
 	      Position		      [175, 28, 225, 62]
 	      SourceBlock	      "xbsIndex_r4/Inverter"
@@ -26466,7 +26462,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Reinterpret"
-	      SID		      53
+	      SID		      405
 	      Ports		      [1, 1]
 	      Position		      [355, 44, 395, 76]
 	      SourceBlock	      "xbsIndex_r4/Reinterpret"
@@ -26494,7 +26490,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice"
-	      SID		      54
+	      SID		      406
 	      Ports		      [1, 1]
 	      Position		      [100, 31, 145, 59]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -26524,7 +26520,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice1"
-	      SID		      55
+	      SID		      407
 	      Ports		      [1, 1]
 	      Position		      [100, 86, 145, 114]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -26554,7 +26550,7 @@ Library {
 	    Block {
 	      BlockType		      Outport
 	      Name		      "Out1"
-	      SID		      56
+	      SID		      408
 	      Position		      [420, 53, 450, 67]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -26610,7 +26606,7 @@ Library {
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "conv7"
-	  SID			  57
+	  SID			  409
 	  Ports			  [1, 1]
 	  Position		  [665, 655, 745, 685]
 	  MinAlgLoopOccurrences	  off
@@ -26636,16 +26632,16 @@ Library {
 	    ScreenColor		    "white"
 	    PaperOrientation	    "landscape"
 	    PaperPositionMode	    "auto"
-	    PaperType		    "A4"
-	    PaperUnits		    "centimeters"
-	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "In1"
-	      SID		      58
+	      SID		      410
 	      Position		      [25, 38, 55, 52]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -26654,7 +26650,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Concat"
-	      SID		      59
+	      SID		      411
 	      Ports		      [2, 1]
 	      Position		      [265, 32, 315, 83]
 	      SourceBlock	      "xbsIndex_r4/Concat"
@@ -26677,7 +26673,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Inverter"
-	      SID		      60
+	      SID		      412
 	      Ports		      [1, 1]
 	      Position		      [175, 28, 225, 62]
 	      SourceBlock	      "xbsIndex_r4/Inverter"
@@ -26702,7 +26698,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Reinterpret"
-	      SID		      61
+	      SID		      413
 	      Ports		      [1, 1]
 	      Position		      [355, 44, 395, 76]
 	      SourceBlock	      "xbsIndex_r4/Reinterpret"
@@ -26730,7 +26726,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice"
-	      SID		      62
+	      SID		      414
 	      Ports		      [1, 1]
 	      Position		      [100, 31, 145, 59]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -26760,7 +26756,7 @@ Library {
 	    Block {
 	      BlockType		      Reference
 	      Name		      "Slice1"
-	      SID		      63
+	      SID		      415
 	      Ports		      [1, 1]
 	      Position		      [100, 86, 145, 114]
 	      SourceBlock	      "xbsIndex_r4/Slice"
@@ -26790,7 +26786,7 @@ Library {
 	    Block {
 	      BlockType		      Outport
 	      Name		      "Out1"
-	      SID		      64
+	      SID		      416
 	      Position		      [420, 53, 450, 67]
 	      IconDisplay	      "Port number"
 	      OutDataType	      "sfix(16)"
@@ -26846,7 +26842,7 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "xps_library_ADCs_adc2x14_400_4x_user_data_i0"
-	  SID			  65
+	  SID			  417
 	  Ports			  [1, 1]
 	  Position		  [470, 49, 525, 71]
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
@@ -26879,7 +26875,7 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "xps_library_ADCs_adc2x14_400_4x_user_data_i1"
-	  SID			  66
+	  SID			  418
 	  Ports			  [1, 1]
 	  Position		  [465, 129, 520, 151]
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
@@ -26912,7 +26908,7 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "xps_library_ADCs_adc2x14_400_4x_user_data_i2"
-	  SID			  67
+	  SID			  419
 	  Ports			  [1, 1]
 	  Position		  [465, 209, 520, 231]
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
@@ -26945,7 +26941,7 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "xps_library_ADCs_adc2x14_400_4x_user_data_i3"
-	  SID			  68
+	  SID			  420
 	  Ports			  [1, 1]
 	  Position		  [470, 289, 525, 311]
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
@@ -26978,7 +26974,7 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "xps_library_ADCs_adc2x14_400_4x_user_data_q0"
-	  SID			  69
+	  SID			  421
 	  Ports			  [1, 1]
 	  Position		  [475, 419, 530, 441]
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
@@ -27011,7 +27007,7 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "xps_library_ADCs_adc2x14_400_4x_user_data_q1"
-	  SID			  70
+	  SID			  422
 	  Ports			  [1, 1]
 	  Position		  [475, 499, 530, 521]
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
@@ -27044,7 +27040,7 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "xps_library_ADCs_adc2x14_400_4x_user_data_q2"
-	  SID			  71
+	  SID			  423
 	  Ports			  [1, 1]
 	  Position		  [480, 584, 535, 606]
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
@@ -27077,7 +27073,7 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "xps_library_ADCs_adc2x14_400_4x_user_data_q3"
-	  SID			  72
+	  SID			  424
 	  Ports			  [1, 1]
 	  Position		  [475, 659, 530, 681]
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
@@ -27110,7 +27106,7 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "xps_library_ADCs_adc2x14_400_4x_user_sync"
-	  SID			  73
+	  SID			  425
 	  Ports			  [1, 1]
 	  Position		  [480, 734, 535, 756]
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
@@ -27143,7 +27139,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "data_i0"
-	  SID			  74
+	  SID			  426
 	  Position		  [905, 53, 935, 67]
 	  IconDisplay		  "Port number"
 	  OutDataType		  "sfix(16)"
@@ -27152,7 +27148,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "data_i1"
-	  SID			  75
+	  SID			  427
 	  Position		  [900, 133, 930, 147]
 	  Port			  "2"
 	  IconDisplay		  "Port number"
@@ -27162,7 +27158,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "data_i2"
-	  SID			  76
+	  SID			  428
 	  Position		  [900, 213, 930, 227]
 	  Port			  "3"
 	  IconDisplay		  "Port number"
@@ -27172,7 +27168,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "data_i3"
-	  SID			  77
+	  SID			  429
 	  Position		  [905, 293, 935, 307]
 	  Port			  "4"
 	  IconDisplay		  "Port number"
@@ -27182,7 +27178,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "data_q0"
-	  SID			  78
+	  SID			  430
 	  Position		  [910, 423, 940, 437]
 	  Port			  "5"
 	  IconDisplay		  "Port number"
@@ -27192,7 +27188,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "data_q1"
-	  SID			  79
+	  SID			  431
 	  Position		  [915, 503, 945, 517]
 	  Port			  "6"
 	  IconDisplay		  "Port number"
@@ -27202,7 +27198,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "data_q2"
-	  SID			  80
+	  SID			  432
 	  Position		  [920, 588, 950, 602]
 	  Port			  "7"
 	  IconDisplay		  "Port number"
@@ -27212,7 +27208,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "data_q3"
-	  SID			  81
+	  SID			  433
 	  Position		  [915, 663, 945, 677]
 	  Port			  "8"
 	  IconDisplay		  "Port number"
@@ -27222,7 +27218,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "sync"
-	  SID			  82
+	  SID			  434
 	  Position		  [915, 738, 945, 752]
 	  Port			  "9"
 	  IconDisplay		  "Port number"
@@ -44126,8 +44122,1551 @@ Library {
     }
     Block {
       BlockType		      SubSystem
-      Name		      "pcore"
+      Name		      "one_GbE"
       SID		      285
+      Tag		      "xps:onegbe"
+      Ports		      [8, 11]
+      Position		      [1205, 24, 1340, 286]
+      BackgroundColor	      "[1.000000, 1.000000, 0.000000]"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskType		      "one_GbE"
+      MaskDescription	      "This block sends and receives UDP frames (packets). It accepts a 8 bit wide data stream w"
+      "ith user-determined frame breaks. The data stream is wrapped in a UDP frame for transmission. Incoming UDP packe"
+      "ts are unwrapped and the data presented as a 8 bit wide stream."
+      MaskHelp		      "eval('xlWeb([getenv(''MLIB_ROOT''), ''\\doc\\html\\com_ten_GbE\\com_ten_GbE.html''])')"
+      MaskPromptString	      "Enable fabric on startup|Disable CPU Rx|Disable CPU Tx|CPU Promiscuous|Fabric MAC Addres"
+      "s|Fabric IP Address|Fabric UDP Port|Fabric Gateway"
+      MaskStyleString	      "checkbox,checkbox,checkbox,checkbox,edit,edit,edit,edit"
+      MaskTunableValueString  "off,off,off,off,off,off,off,off"
+      MaskCallbackString      "|||||||"
+      MaskEnableString	      "on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on"
+      MaskVariables	      "local_en=@1;dis_cpu_rx=@2;dis_cpu_tx=@3;cpu_promiscuous=@4;local_mac=@5;local_ip=@6;local_p"
+      "ort=@7;local_gateway=@8;"
+      MaskInitialization      "onegbe_mask;"
+      MaskSelfModifiable      on
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "on|off|off|on|hex2dec('123456789abc')|hex2dec('c0a8290a')|4321|1"
+      System {
+	Name			"one_GbE"
+	Location		[0, 51, 1920, 1080]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	65
+	Block {
+	  BlockType		  Inport
+	  Name			  "tx_rst"
+	  SID			  1
+	  Position		  [90, 467, 120, 483]
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "rx_rst"
+	  SID			  2
+	  Position		  [620, 492, 650, 508]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "tx_data"
+	  SID			  3
+	  Position		  [90, 132, 120, 148]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "tx_val"
+	  SID			  4
+	  Position		  [90, 177, 120, 193]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "tx_destip"
+	  SID			  5
+	  Position		  [90, 267, 120, 283]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "tx_destport"
+	  SID			  6
+	  Position		  [90, 312, 120, 328]
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "tx_eof"
+	  SID			  7
+	  Position		  [90, 222, 120, 238]
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "rx_ack"
+	  SID			  8
+	  Position		  [620, 452, 650, 468]
+	  Port			  "8"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant10"
+	  SID			  9
+	  Position		  [620, 220, 645, 240]
+	  ShowName		  off
+	  Value			  "0"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant11"
+	  SID			  10
+	  Position		  [620, 355, 645, 375]
+	  ShowName		  off
+	  Value			  "0"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant12"
+	  SID			  11
+	  Position		  [625, 400, 650, 420]
+	  ShowName		  off
+	  Value			  "0"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant14"
+	  SID			  12
+	  Position		  [630, 570, 655, 590]
+	  ShowName		  off
+	  Value			  "0"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant15"
+	  SID			  13
+	  Position		  [630, 620, 655, 640]
+	  ShowName		  off
+	  Value			  "0"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant2"
+	  SID			  14
+	  Position		  [205, 420, 230, 440]
+	  ShowName		  off
+	  Value			  "0"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant5"
+	  SID			  15
+	  Position		  [205, 375, 230, 395]
+	  ShowName		  off
+	  Value			  "0"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant6"
+	  SID			  16
+	  Position		  [620, 130, 645, 150]
+	  ShowName		  off
+	  Value			  "0"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant7"
+	  SID			  17
+	  Position		  [620, 175, 645, 195]
+	  ShowName		  off
+	  Value			  "0"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant8"
+	  SID			  18
+	  Position		  [620, 265, 645, 285]
+	  ShowName		  off
+	  Value			  "0"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant9"
+	  SID			  19
+	  Position		  [620, 310, 645, 330]
+	  ShowName		  off
+	  Value			  "0"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  SID			  20
+	  Position		  [465, 130, 485, 150]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator1"
+	  SID			  21
+	  Position		  [465, 265, 485, 285]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator2"
+	  SID			  22
+	  Position		  [465, 175, 485, 195]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator3"
+	  SID			  23
+	  Position		  [995, 490, 1015, 510]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator4"
+	  SID			  24
+	  Position		  [465, 465, 485, 485]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator5"
+	  SID			  25
+	  Position		  [995, 450, 1015, 470]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator7"
+	  SID			  26
+	  Position		  [465, 310, 485, 330]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator8"
+	  SID			  27
+	  Position		  [465, 220, 485, 240]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "convert_rx_ack"
+	  SID			  28
+	  Ports			  [1, 1]
+	  Position		  [735, 452, 785, 468]
+	  SourceBlock		  "xbsIndex_r4/Convert"
+	  SourceType		  "Xilinx Type Converter Block"
+	  infoedit		  "Hardware notes: rounding and saturating require hardware resources; truncating and wrapping do not."
+	  arith_type		  "Boolean"
+	  n_bits		  "1"
+	  bin_pt		  "0"
+	  quantization		  "Truncate"
+	  overflow		  "Wrap"
+	  latency		  "0"
+	  dbl_ovrd		  "off"
+	  pipeline		  "off"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,44,538,429"
+	  block_type		  "convert"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "50,16,1,1,white,blue,0,edca21da,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.77 0.82 0.91]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "convert_rx_rst"
+	  SID			  29
+	  Ports			  [1, 1]
+	  Position		  [735, 492, 785, 508]
+	  SourceBlock		  "xbsIndex_r4/Convert"
+	  SourceType		  "Xilinx Type Converter Block"
+	  infoedit		  "Hardware notes: rounding and saturating require hardware resources; truncating and wrapping do not."
+	  arith_type		  "Boolean"
+	  n_bits		  "1"
+	  bin_pt		  "0"
+	  quantization		  "Truncate"
+	  overflow		  "Wrap"
+	  latency		  "0"
+	  dbl_ovrd		  "off"
+	  pipeline		  "off"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,44,538,429"
+	  block_type		  "convert"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "50,16,1,1,white,blue,0,edca21da,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.77 0.82 0.91]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "convert_tx_data"
+	  SID			  30
+	  Ports			  [1, 1]
+	  Position		  [205, 132, 255, 148]
+	  SourceBlock		  "xbsIndex_r4/Convert"
+	  SourceType		  "Xilinx Type Converter Block"
+	  infoedit		  "Hardware notes: rounding and saturating require hardware resources; truncating and wrapping do not."
+	  arith_type		  "Unsigned"
+	  n_bits		  "8"
+	  bin_pt		  "0"
+	  quantization		  "Truncate"
+	  overflow		  "Wrap"
+	  latency		  "0"
+	  dbl_ovrd		  "off"
+	  pipeline		  "off"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,24,538,429"
+	  block_type		  "convert"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "50,16,1,1,white,blue,0,edca21da,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.77 0.82 0.91]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "convert_tx_dest_ip"
+	  SID			  31
+	  Ports			  [1, 1]
+	  Position		  [205, 267, 255, 283]
+	  SourceBlock		  "xbsIndex_r4/Convert"
+	  SourceType		  "Xilinx Type Converter Block"
+	  infoedit		  "Hardware notes: rounding and saturating require hardware resources; truncating and wrapping do not."
+	  arith_type		  "Unsigned"
+	  n_bits		  "32"
+	  bin_pt		  "0"
+	  quantization		  "Truncate"
+	  overflow		  "Wrap"
+	  latency		  "0"
+	  dbl_ovrd		  "off"
+	  pipeline		  "off"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,24,538,429"
+	  block_type		  "convert"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "50,16,1,1,white,blue,0,edca21da,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.77 0.82 0.91]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "convert_tx_end_of_frame"
+	  SID			  32
+	  Ports			  [1, 1]
+	  Position		  [205, 222, 255, 238]
+	  SourceBlock		  "xbsIndex_r4/Convert"
+	  SourceType		  "Xilinx Type Converter Block"
+	  infoedit		  "Hardware notes: rounding and saturating require hardware resources; truncating and wrapping do not."
+	  arith_type		  "Boolean"
+	  n_bits		  "1"
+	  bin_pt		  "0"
+	  quantization		  "Truncate"
+	  overflow		  "Wrap"
+	  latency		  "0"
+	  dbl_ovrd		  "off"
+	  pipeline		  "off"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,44,538,429"
+	  block_type		  "convert"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "50,16,1,1,white,blue,0,edca21da,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.77 0.82 0.91]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "convert_tx_port"
+	  SID			  33
+	  Ports			  [1, 1]
+	  Position		  [205, 312, 255, 328]
+	  SourceBlock		  "xbsIndex_r4/Convert"
+	  SourceType		  "Xilinx Type Converter Block"
+	  infoedit		  "Hardware notes: rounding and saturating require hardware resources; truncating and wrapping do not."
+	  arith_type		  "Unsigned"
+	  n_bits		  "16"
+	  bin_pt		  "0"
+	  quantization		  "Truncate"
+	  overflow		  "Wrap"
+	  latency		  "0"
+	  dbl_ovrd		  "off"
+	  pipeline		  "off"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,24,538,429"
+	  block_type		  "convert"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "50,16,1,1,white,blue,0,edca21da,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.77 0.82 0.91]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "convert_tx_rst"
+	  SID			  34
+	  Ports			  [1, 1]
+	  Position		  [205, 467, 255, 483]
+	  SourceBlock		  "xbsIndex_r4/Convert"
+	  SourceType		  "Xilinx Type Converter Block"
+	  infoedit		  "Hardware notes: rounding and saturating require hardware resources; truncating and wrapping do not."
+	  arith_type		  "Boolean"
+	  n_bits		  "1"
+	  bin_pt		  "0"
+	  quantization		  "Truncate"
+	  overflow		  "Wrap"
+	  latency		  "0"
+	  dbl_ovrd		  "off"
+	  pipeline		  "off"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,44,538,429"
+	  block_type		  "convert"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "50,16,1,1,white,blue,0,edca21da,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.77 0.82 0.91]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "convert_tx_valid"
+	  SID			  35
+	  Ports			  [1, 1]
+	  Position		  [205, 177, 255, 193]
+	  SourceBlock		  "xbsIndex_r4/Convert"
+	  SourceType		  "Xilinx Type Converter Block"
+	  infoedit		  "Hardware notes: rounding and saturating require hardware resources; truncating and wrapping do not."
+	  arith_type		  "Boolean"
+	  n_bits		  "1"
+	  bin_pt		  "0"
+	  quantization		  "Truncate"
+	  overflow		  "Wrap"
+	  latency		  "0"
+	  dbl_ovrd		  "off"
+	  pipeline		  "off"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,24,538,429"
+	  block_type		  "convert"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "50,16,1,1,white,blue,0,edca21da,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.77 0.82 0.91]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "gbe_tst_one_GbE_app_dbg_data"
+	  SID			  36
+	  Ports			  [1, 1]
+	  Position		  [685, 572, 785, 588]
+	  SourceBlock		  "xbsIndex_r4/Gateway In"
+	  SourceType		  "Xilinx Gateway In Block"
+	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
+	  "oint type.<br><br>Hardware notes:  In hardware these blocks become top level input ports."
+	  arith_type		  "Unsigned"
+	  n_bits		  "32"
+	  bin_pt		  "0"
+	  quantization		  "Truncate"
+	  overflow		  "Wrap"
+	  period		  "1"
+	  dbl_ovrd		  "off"
+	  timing_constraint	  "None"
+	  locs_specified	  "off"
+	  LOCs			  "{}"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  hdl_port		  "on"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,44,419,481"
+	  block_type		  "gatewayin"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "100,16,1,1,white,yellow,0,00d3666e,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.46 0.43 0.47 0.43 0.46 0.5 0.51 0.52 0.57 0.53 0.5 0.48 0.52 0.48 0.5 0.53 0.57 0.52 0.51 0.5 0.46 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black"
+	  "');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "gbe_tst_one_GbE_app_dbg_dvld"
+	  SID			  37
+	  Ports			  [1, 1]
+	  Position		  [685, 622, 785, 638]
+	  SourceBlock		  "xbsIndex_r4/Gateway In"
+	  SourceType		  "Xilinx Gateway In Block"
+	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
+	  "oint type.<br><br>Hardware notes:  In hardware these blocks become top level input ports."
+	  arith_type		  "Boolean"
+	  n_bits		  "8"
+	  bin_pt		  "0"
+	  quantization		  "Truncate"
+	  overflow		  "Wrap"
+	  period		  "1"
+	  dbl_ovrd		  "off"
+	  timing_constraint	  "None"
+	  locs_specified	  "off"
+	  LOCs			  "{}"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  hdl_port		  "on"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,44,419,481"
+	  block_type		  "gatewayin"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "100,16,1,1,white,yellow,0,00d3666e,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.46 0.43 0.47 0.43 0.46 0.5 0.51 0.52 0.57 0.53 0.5 0.48 0.52 0.48 0.5 0.53 0.57 0.52 0.51 0.5 0.46 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black"
+	  "');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "gbe_tst_one_GbE_app_rx_ack"
+	  SID			  38
+	  Ports			  [1, 1]
+	  Position		  [905, 452, 955, 468]
+	  SourceBlock		  "xbsIndex_r4/Gateway Out"
+	  SourceType		  "Xilinx Gateway Out Block"
+	  infoedit		  "Gateway out block.  Converts Xilinx fixed point inputs into ouputs of type Simulink integer, double, o"
+	  "r fixed point.<P><P>Hardware notes:  In hardware these blocks become top level output ports or are discarded, depen"
+	  "ding on how they are configured."
+	  hdl_port		  "on"
+	  timing_constraint	  "None"
+	  locs_specified	  "off"
+	  LOCs			  "{}"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,44,403,473"
+	  block_type		  "gatewayout"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "50,16,1,1,white,yellow,0,cc31b7ac,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output',1,'\\fontsize{1"
+	  "1pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "gbe_tst_one_GbE_app_rx_badframe"
+	  SID			  39
+	  Ports			  [1, 1]
+	  Position		  [675, 357, 775, 373]
+	  SourceBlock		  "xbsIndex_r4/Gateway In"
+	  SourceType		  "Xilinx Gateway In Block"
+	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
+	  "oint type.<br><br>Hardware notes:  In hardware these blocks become top level input ports."
+	  arith_type		  "Boolean"
+	  n_bits		  "1"
+	  bin_pt		  "0"
+	  quantization		  "Truncate"
+	  overflow		  "Wrap"
+	  period		  "1"
+	  dbl_ovrd		  "off"
+	  timing_constraint	  "None"
+	  locs_specified	  "off"
+	  LOCs			  "{}"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  hdl_port		  "on"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,44,419,481"
+	  block_type		  "gatewayin"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "100,16,1,1,white,yellow,0,00d3666e,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.46 0.43 0.47 0.43 0.46 0.5 0.51 0.52 0.57 0.53 0.5 0.48 0.52 0.48 0.5 0.53 0.57 0.52 0.51 0.5 0.46 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black"
+	  "');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "gbe_tst_one_GbE_app_rx_data"
+	  SID			  40
+	  Ports			  [1, 1]
+	  Position		  [675, 132, 775, 148]
+	  SourceBlock		  "xbsIndex_r4/Gateway In"
+	  SourceType		  "Xilinx Gateway In Block"
+	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
+	  "oint type.<br><br>Hardware notes:  In hardware these blocks become top level input ports."
+	  arith_type		  "Unsigned"
+	  n_bits		  "8"
+	  bin_pt		  "0"
+	  quantization		  "Truncate"
+	  overflow		  "Wrap"
+	  period		  "1"
+	  dbl_ovrd		  "off"
+	  timing_constraint	  "None"
+	  locs_specified	  "off"
+	  LOCs			  "{}"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  hdl_port		  "on"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,44,419,481"
+	  block_type		  "gatewayin"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "100,16,1,1,white,yellow,0,00d3666e,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.46 0.43 0.47 0.43 0.46 0.5 0.51 0.52 0.57 0.53 0.5 0.48 0.52 0.48 0.5 0.53 0.57 0.52 0.51 0.5 0.46 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black"
+	  "');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "gbe_tst_one_GbE_app_rx_dvld"
+	  SID			  41
+	  Ports			  [1, 1]
+	  Position		  [675, 177, 775, 193]
+	  SourceBlock		  "xbsIndex_r4/Gateway In"
+	  SourceType		  "Xilinx Gateway In Block"
+	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
+	  "oint type.<P><P>Hardware notes:  In hardware these blocks become top level input ports."
+	  arith_type		  "Boolean"
+	  n_bits		  "1"
+	  bin_pt		  "0"
+	  quantization		  "Truncate"
+	  overflow		  "Wrap"
+	  period		  "1"
+	  dbl_ovrd		  "off"
+	  timing_constraint	  "None"
+	  locs_specified	  "off"
+	  LOCs			  "{}"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  hdl_port		  "on"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "-1,-1,-1,-1"
+	  block_type		  "gatewayin"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "100,16,1,1,white,yellow,0,00d3666e,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.46 0.43 0.47 0.43 0.46 0.5 0.51 0.52 0.57 0.53 0.5 0.48 0.52 0.48 0.5 0.53 0.57 0.52 0.51 0.5 0.46 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black"
+	  "');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "gbe_tst_one_GbE_app_rx_eof"
+	  SID			  42
+	  Ports			  [1, 1]
+	  Position		  [675, 222, 775, 238]
+	  SourceBlock		  "xbsIndex_r4/Gateway In"
+	  SourceType		  "Xilinx Gateway In Block"
+	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
+	  "oint type.<br><br>Hardware notes:  In hardware these blocks become top level input ports."
+	  arith_type		  "Boolean"
+	  n_bits		  "1"
+	  bin_pt		  "0"
+	  quantization		  "Truncate"
+	  overflow		  "Wrap"
+	  period		  "1"
+	  dbl_ovrd		  "off"
+	  timing_constraint	  "None"
+	  locs_specified	  "off"
+	  LOCs			  "{}"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  hdl_port		  "on"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,44,419,481"
+	  block_type		  "gatewayin"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "100,16,1,1,white,yellow,0,00d3666e,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.46 0.43 0.47 0.43 0.46 0.5 0.51 0.52 0.57 0.53 0.5 0.48 0.52 0.48 0.5 0.53 0.57 0.52 0.51 0.5 0.46 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black"
+	  "');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "gbe_tst_one_GbE_app_rx_overrun"
+	  SID			  43
+	  Ports			  [1, 1]
+	  Position		  [680, 402, 780, 418]
+	  SourceBlock		  "xbsIndex_r4/Gateway In"
+	  SourceType		  "Xilinx Gateway In Block"
+	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
+	  "oint type.<br><br>Hardware notes:  In hardware these blocks become top level input ports."
+	  arith_type		  "Boolean"
+	  n_bits		  "1"
+	  bin_pt		  "0"
+	  quantization		  "Truncate"
+	  overflow		  "Wrap"
+	  period		  "1"
+	  dbl_ovrd		  "off"
+	  timing_constraint	  "None"
+	  locs_specified	  "off"
+	  LOCs			  "{}"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  hdl_port		  "on"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,44,419,481"
+	  block_type		  "gatewayin"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "100,16,1,1,white,yellow,0,00d3666e,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.46 0.43 0.47 0.43 0.46 0.5 0.51 0.52 0.57 0.53 0.5 0.48 0.52 0.48 0.5 0.53 0.57 0.52 0.51 0.5 0.46 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black"
+	  "');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "gbe_tst_one_GbE_app_rx_rst"
+	  SID			  44
+	  Ports			  [1, 1]
+	  Position		  [905, 492, 955, 508]
+	  SourceBlock		  "xbsIndex_r4/Gateway Out"
+	  SourceType		  "Xilinx Gateway Out Block"
+	  infoedit		  "Gateway out block.  Converts Xilinx fixed point inputs into ouputs of type Simulink integer, double, o"
+	  "r fixed point.<P><P>Hardware notes:  In hardware these blocks become top level output ports or are discarded, depen"
+	  "ding on how they are configured."
+	  hdl_port		  "on"
+	  timing_constraint	  "None"
+	  locs_specified	  "off"
+	  LOCs			  "{}"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,44,403,473"
+	  block_type		  "gatewayout"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "50,16,1,1,white,yellow,0,cc31b7ac,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output',1,'\\fontsize{1"
+	  "1pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "gbe_tst_one_GbE_app_rx_srcip"
+	  SID			  45
+	  Ports			  [1, 1]
+	  Position		  [675, 267, 775, 283]
+	  SourceBlock		  "xbsIndex_r4/Gateway In"
+	  SourceType		  "Xilinx Gateway In Block"
+	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
+	  "oint type.<br><br>Hardware notes:  In hardware these blocks become top level input ports."
+	  arith_type		  "Unsigned"
+	  n_bits		  "32"
+	  bin_pt		  "0"
+	  quantization		  "Truncate"
+	  overflow		  "Wrap"
+	  period		  "1"
+	  dbl_ovrd		  "off"
+	  timing_constraint	  "None"
+	  locs_specified	  "off"
+	  LOCs			  "{}"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  hdl_port		  "on"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,44,419,481"
+	  block_type		  "gatewayin"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "100,16,1,1,white,yellow,0,00d3666e,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.46 0.43 0.47 0.43 0.46 0.5 0.51 0.52 0.57 0.53 0.5 0.48 0.52 0.48 0.5 0.53 0.57 0.52 0.51 0.5 0.46 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black"
+	  "');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "gbe_tst_one_GbE_app_rx_srcport"
+	  SID			  46
+	  Ports			  [1, 1]
+	  Position		  [675, 312, 775, 328]
+	  SourceBlock		  "xbsIndex_r4/Gateway In"
+	  SourceType		  "Xilinx Gateway In Block"
+	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
+	  "oint type.<br><br>Hardware notes:  In hardware these blocks become top level input ports."
+	  arith_type		  "Unsigned"
+	  n_bits		  "16"
+	  bin_pt		  "0"
+	  quantization		  "Truncate"
+	  overflow		  "Wrap"
+	  period		  "1"
+	  dbl_ovrd		  "off"
+	  timing_constraint	  "None"
+	  locs_specified	  "off"
+	  LOCs			  "{}"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  hdl_port		  "on"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,44,419,481"
+	  block_type		  "gatewayin"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "100,16,1,1,white,yellow,0,00d3666e,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.46 0.43 0.47 0.43 0.46 0.5 0.51 0.52 0.57 0.53 0.5 0.48 0.52 0.48 0.5 0.53 0.57 0.52 0.51 0.5 0.46 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black"
+	  "');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "gbe_tst_one_GbE_app_tx_afull"
+	  SID			  47
+	  Ports			  [1, 1]
+	  Position		  [260, 377, 360, 393]
+	  SourceBlock		  "xbsIndex_r4/Gateway In"
+	  SourceType		  "Xilinx Gateway In Block"
+	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
+	  "oint type.<P><P>Hardware notes:  In hardware these blocks become top level input ports."
+	  arith_type		  "Boolean"
+	  n_bits		  "1"
+	  bin_pt		  "0"
+	  quantization		  "Truncate"
+	  overflow		  "Wrap"
+	  period		  "1"
+	  dbl_ovrd		  "off"
+	  timing_constraint	  "None"
+	  locs_specified	  "off"
+	  LOCs			  "{}"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  hdl_port		  "on"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,44,419,481"
+	  block_type		  "gatewayin"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "100,16,1,1,white,yellow,0,00d3666e,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.46 0.43 0.47 0.43 0.46 0.5 0.51 0.52 0.57 0.53 0.5 0.48 0.52 0.48 0.5 0.53 0.57 0.52 0.51 0.5 0.46 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black"
+	  "');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "gbe_tst_one_GbE_app_tx_data"
+	  SID			  48
+	  Ports			  [1, 1]
+	  Position		  [375, 132, 425, 148]
+	  SourceBlock		  "xbsIndex_r4/Gateway Out"
+	  SourceType		  "Xilinx Gateway Out Block"
+	  infoedit		  "Gateway out block.  Converts Xilinx fixed point inputs into ouputs of type Simulink integer, double, o"
+	  "r fixed point.<P><P>Hardware notes:  In hardware these blocks become top level output ports or are discarded, depen"
+	  "ding on how they are configured."
+	  hdl_port		  "on"
+	  timing_constraint	  "None"
+	  locs_specified	  "off"
+	  LOCs			  "{}"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,44,403,473"
+	  block_type		  "gatewayout"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "50,16,1,1,white,yellow,0,cc31b7ac,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output',1,'\\fontsize{1"
+	  "1pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "gbe_tst_one_GbE_app_tx_destip"
+	  SID			  49
+	  Ports			  [1, 1]
+	  Position		  [375, 267, 425, 283]
+	  SourceBlock		  "xbsIndex_r4/Gateway Out"
+	  SourceType		  "Xilinx Gateway Out Block"
+	  infoedit		  "Gateway out block.  Converts Xilinx fixed point inputs into ouputs of type Simulink integer, double, o"
+	  "r fixed point.<P><P>Hardware notes:  In hardware these blocks become top level output ports or are discarded, depen"
+	  "ding on how they are configured."
+	  hdl_port		  "on"
+	  timing_constraint	  "None"
+	  locs_specified	  "off"
+	  LOCs			  "{}"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "-1,-1,-1,-1"
+	  block_type		  "gatewayout"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "50,16,1,1,white,yellow,0,cc31b7ac,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output',1,'\\fontsize{1"
+	  "1pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "gbe_tst_one_GbE_app_tx_destport"
+	  SID			  50
+	  Ports			  [1, 1]
+	  Position		  [375, 312, 425, 328]
+	  SourceBlock		  "xbsIndex_r4/Gateway Out"
+	  SourceType		  "Xilinx Gateway Out Block"
+	  infoedit		  "Gateway out block.  Converts Xilinx fixed point inputs into ouputs of type Simulink integer, double, o"
+	  "r fixed point.<P><P>Hardware notes:  In hardware these blocks become top level output ports or are discarded, depen"
+	  "ding on how they are configured."
+	  hdl_port		  "on"
+	  timing_constraint	  "None"
+	  locs_specified	  "off"
+	  LOCs			  "{}"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "-1,-1,-1,-1"
+	  block_type		  "gatewayout"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "50,16,1,1,white,yellow,0,cc31b7ac,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output',1,'\\fontsize{1"
+	  "1pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "gbe_tst_one_GbE_app_tx_dvld"
+	  SID			  51
+	  Ports			  [1, 1]
+	  Position		  [375, 177, 425, 193]
+	  SourceBlock		  "xbsIndex_r4/Gateway Out"
+	  SourceType		  "Xilinx Gateway Out Block"
+	  infoedit		  "Gateway out block.  Converts Xilinx fixed point inputs into ouputs of type Simulink integer, double, o"
+	  "r fixed point.<P><P>Hardware notes:  In hardware these blocks become top level output ports or are discarded, depen"
+	  "ding on how they are configured."
+	  hdl_port		  "on"
+	  timing_constraint	  "None"
+	  locs_specified	  "off"
+	  LOCs			  "{}"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,44,403,473"
+	  block_type		  "gatewayout"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "50,16,1,1,white,yellow,0,cc31b7ac,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output',1,'\\fontsize{1"
+	  "1pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "gbe_tst_one_GbE_app_tx_eof"
+	  SID			  52
+	  Ports			  [1, 1]
+	  Position		  [375, 222, 425, 238]
+	  SourceBlock		  "xbsIndex_r4/Gateway Out"
+	  SourceType		  "Xilinx Gateway Out Block"
+	  infoedit		  "Gateway out block.  Converts Xilinx fixed point inputs into ouputs of type Simulink integer, double, o"
+	  "r fixed point.<P><P>Hardware notes:  In hardware these blocks become top level output ports or are discarded, depen"
+	  "ding on how they are configured."
+	  hdl_port		  "on"
+	  timing_constraint	  "None"
+	  locs_specified	  "off"
+	  LOCs			  "{}"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "-1,-1,-1,-1"
+	  block_type		  "gatewayout"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "50,16,1,1,white,yellow,0,cc31b7ac,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output',1,'\\fontsize{1"
+	  "1pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "gbe_tst_one_GbE_app_tx_overflow"
+	  SID			  53
+	  Ports			  [1, 1]
+	  Position		  [260, 422, 360, 438]
+	  SourceBlock		  "xbsIndex_r4/Gateway In"
+	  SourceType		  "Xilinx Gateway In Block"
+	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
+	  "oint type.<P><P>Hardware notes:  In hardware these blocks become top level input ports."
+	  arith_type		  "Boolean"
+	  n_bits		  "1"
+	  bin_pt		  "0"
+	  quantization		  "Truncate"
+	  overflow		  "Wrap"
+	  period		  "1"
+	  dbl_ovrd		  "off"
+	  timing_constraint	  "None"
+	  locs_specified	  "off"
+	  LOCs			  "{}"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  hdl_port		  "on"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,44,419,481"
+	  block_type		  "gatewayin"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "100,16,1,1,white,yellow,0,00d3666e,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.46 0.43 0.47 0.43 0.46 0.5 0.51 0.52 0.57 0.53 0.5 0.48 0.52 0.48 0.5 0.53 0.57 0.52 0.51 0.5 0.46 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black"
+	  "');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "gbe_tst_one_GbE_app_tx_rst"
+	  SID			  54
+	  Ports			  [1, 1]
+	  Position		  [375, 467, 425, 483]
+	  SourceBlock		  "xbsIndex_r4/Gateway Out"
+	  SourceType		  "Xilinx Gateway Out Block"
+	  infoedit		  "Gateway out block.  Converts Xilinx fixed point inputs into ouputs of type Simulink integer, double, o"
+	  "r fixed point.<P><P>Hardware notes:  In hardware these blocks become top level output ports or are discarded, depen"
+	  "ding on how they are configured."
+	  hdl_port		  "on"
+	  timing_constraint	  "None"
+	  locs_specified	  "off"
+	  LOCs			  "{}"
+	  xl_use_area		  "off"
+	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,44,403,473"
+	  block_type		  "gatewayout"
+	  block_version		  "9.1.01"
+	  sg_icon_stat		  "50,16,1,1,white,yellow,0,cc31b7ac,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output',1,'\\fontsize{1"
+	  "1pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "tx_afull"
+	  SID			  55
+	  Position		  [460, 377, 490, 393]
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "tx_overrun"
+	  SID			  56
+	  Position		  [460, 422, 490, 438]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "rx_data"
+	  SID			  57
+	  Position		  [875, 132, 905, 148]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "rx_val"
+	  SID			  58
+	  Position		  [875, 177, 905, 193]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "rx_srcip"
+	  SID			  59
+	  Position		  [875, 267, 905, 283]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "rx_srcport"
+	  SID			  60
+	  Position		  [875, 312, 905, 328]
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "rx_eof"
+	  SID			  61
+	  Position		  [875, 222, 905, 238]
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "rx_badframe"
+	  SID			  62
+	  Position		  [875, 357, 905, 373]
+	  Port			  "8"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "rx_overrun"
+	  SID			  63
+	  Position		  [880, 402, 910, 418]
+	  Port			  "9"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "dbg_data"
+	  SID			  64
+	  Position		  [885, 572, 915, 588]
+	  Port			  "10"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "dbg_data_val"
+	  SID			  65
+	  Position		  [885, 622, 915, 638]
+	  Port			  "11"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Line {
+	  SrcBlock		  "gbe_tst_one_GbE_app_rx_data"
+	  SrcPort		  1
+	  DstBlock		  "rx_data"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "tx_data"
+	  SrcPort		  1
+	  DstBlock		  "convert_tx_data"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "convert_tx_data"
+	  SrcPort		  1
+	  DstBlock		  "gbe_tst_one_GbE_app_tx_data"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "tx_destip"
+	  SrcPort		  1
+	  DstBlock		  "convert_tx_dest_ip"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "convert_tx_dest_ip"
+	  SrcPort		  1
+	  DstBlock		  "gbe_tst_one_GbE_app_tx_destip"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "tx_val"
+	  SrcPort		  1
+	  DstBlock		  "convert_tx_valid"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "convert_tx_valid"
+	  SrcPort		  1
+	  DstBlock		  "gbe_tst_one_GbE_app_tx_dvld"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "gbe_tst_one_GbE_app_tx_overflow"
+	  SrcPort		  1
+	  DstBlock		  "tx_overrun"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "gbe_tst_one_GbE_app_tx_data"
+	  SrcPort		  1
+	  DstBlock		  "Terminator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "gbe_tst_one_GbE_app_tx_destip"
+	  SrcPort		  1
+	  DstBlock		  "Terminator1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "gbe_tst_one_GbE_app_tx_dvld"
+	  SrcPort		  1
+	  DstBlock		  "Terminator2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant2"
+	  SrcPort		  1
+	  DstBlock		  "gbe_tst_one_GbE_app_tx_overflow"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant6"
+	  SrcPort		  1
+	  DstBlock		  "gbe_tst_one_GbE_app_rx_data"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant7"
+	  SrcPort		  1
+	  DstBlock		  "gbe_tst_one_GbE_app_rx_dvld"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "gbe_tst_one_GbE_app_rx_dvld"
+	  SrcPort		  1
+	  DstBlock		  "rx_val"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "tx_destport"
+	  SrcPort		  1
+	  DstBlock		  "convert_tx_port"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "convert_tx_port"
+	  SrcPort		  1
+	  DstBlock		  "gbe_tst_one_GbE_app_tx_destport"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "gbe_tst_one_GbE_app_tx_destport"
+	  SrcPort		  1
+	  DstBlock		  "Terminator7"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "tx_eof"
+	  SrcPort		  1
+	  DstBlock		  "convert_tx_end_of_frame"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "convert_tx_end_of_frame"
+	  SrcPort		  1
+	  DstBlock		  "gbe_tst_one_GbE_app_tx_eof"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "gbe_tst_one_GbE_app_tx_eof"
+	  SrcPort		  1
+	  DstBlock		  "Terminator8"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "gbe_tst_one_GbE_app_rx_srcip"
+	  SrcPort		  1
+	  DstBlock		  "rx_srcip"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant8"
+	  SrcPort		  1
+	  DstBlock		  "gbe_tst_one_GbE_app_rx_srcip"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant9"
+	  SrcPort		  1
+	  DstBlock		  "gbe_tst_one_GbE_app_rx_srcport"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "gbe_tst_one_GbE_app_rx_srcport"
+	  SrcPort		  1
+	  DstBlock		  "rx_srcport"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant10"
+	  SrcPort		  1
+	  DstBlock		  "gbe_tst_one_GbE_app_rx_eof"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "gbe_tst_one_GbE_app_rx_eof"
+	  SrcPort		  1
+	  DstBlock		  "rx_eof"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "tx_rst"
+	  SrcPort		  1
+	  DstBlock		  "convert_tx_rst"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "convert_tx_rst"
+	  SrcPort		  1
+	  DstBlock		  "gbe_tst_one_GbE_app_tx_rst"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "gbe_tst_one_GbE_app_tx_rst"
+	  SrcPort		  1
+	  DstBlock		  "Terminator4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "gbe_tst_one_GbE_app_tx_afull"
+	  SrcPort		  1
+	  DstBlock		  "tx_afull"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant5"
+	  SrcPort		  1
+	  DstBlock		  "gbe_tst_one_GbE_app_tx_afull"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant11"
+	  SrcPort		  1
+	  DstBlock		  "gbe_tst_one_GbE_app_rx_badframe"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "gbe_tst_one_GbE_app_rx_badframe"
+	  SrcPort		  1
+	  DstBlock		  "rx_badframe"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant12"
+	  SrcPort		  1
+	  DstBlock		  "gbe_tst_one_GbE_app_rx_overrun"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "gbe_tst_one_GbE_app_rx_overrun"
+	  SrcPort		  1
+	  DstBlock		  "rx_overrun"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "rx_rst"
+	  SrcPort		  1
+	  DstBlock		  "convert_rx_rst"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "convert_rx_rst"
+	  SrcPort		  1
+	  DstBlock		  "gbe_tst_one_GbE_app_rx_rst"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "gbe_tst_one_GbE_app_rx_rst"
+	  SrcPort		  1
+	  DstBlock		  "Terminator3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "rx_ack"
+	  SrcPort		  1
+	  DstBlock		  "convert_rx_ack"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "convert_rx_ack"
+	  SrcPort		  1
+	  DstBlock		  "gbe_tst_one_GbE_app_rx_ack"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "gbe_tst_one_GbE_app_rx_ack"
+	  SrcPort		  1
+	  DstBlock		  "Terminator5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "gbe_tst_one_GbE_app_dbg_data"
+	  SrcPort		  1
+	  DstBlock		  "dbg_data"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant14"
+	  SrcPort		  1
+	  DstBlock		  "gbe_tst_one_GbE_app_dbg_data"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "gbe_tst_one_GbE_app_dbg_dvld"
+	  SrcPort		  1
+	  DstBlock		  "dbg_data_val"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant15"
+	  SrcPort		  1
+	  DstBlock		  "gbe_tst_one_GbE_app_dbg_dvld"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "pcore"
+      SID		      286
       Tag		      "xps:pcore"
       Ports		      []
       Position		      [20, 329, 66, 372]
@@ -44176,7 +45715,7 @@ Library {
     Block {
       BlockType		      SubSystem
       Name		      "probe"
-      SID		      286
+      SID		      287
       Tag		      "xps:probe"
       Ports		      [1]
       Position		      [120, 266, 155, 294]
@@ -44308,7 +45847,7 @@ Library {
     Block {
       BlockType		      SubSystem
       Name		      "qdr"
-      SID		      296
+      SID		      288
       Tag		      "xps:qdr"
       Ports		      [5, 5]
       Position		      [400, 593, 515, 777]
@@ -44354,12 +45893,11 @@ Library {
 	TiledPageScale		1
 	ShowPageBoundaries	off
 	ZoomFactor		"100"
-	SIDHighWatermark	113
-	SIDPrevWatermark	113
+	SIDHighWatermark	92
 	Block {
 	  BlockType		  Inport
 	  Name			  "rd_en"
-	  SID			  24
+	  SID			  1
 	  Position		  [30, 252, 60, 268]
 	  IconDisplay		  "Port number"
 	  OutDataType		  "sfix(16)"
@@ -44368,7 +45906,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "wr_en"
-	  SID			  25
+	  SID			  2
 	  Position		  [30, 297, 60, 313]
 	  Port			  "2"
 	  IconDisplay		  "Port number"
@@ -44378,7 +45916,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "be"
-	  SID			  26
+	  SID			  3
 	  Position		  [30, 342, 60, 358]
 	  Port			  "3"
 	  IconDisplay		  "Port number"
@@ -44388,7 +45926,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "address"
-	  SID			  27
+	  SID			  4
 	  Position		  [30, 387, 60, 403]
 	  Port			  "4"
 	  IconDisplay		  "Port number"
@@ -44398,7 +45936,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "data_in"
-	  SID			  28
+	  SID			  5
 	  Position		  [30, 572, 60, 588]
 	  Port			  "5"
 	  IconDisplay		  "Port number"
@@ -44408,7 +45946,7 @@ Library {
 	Block {
 	  BlockType		  Constant
 	  Name			  "Constant2"
-	  SID			  29
+	  SID			  6
 	  Position		  [790, 780, 820, 810]
 	  ShowName		  off
 	  Value			  "0"
@@ -44418,7 +45956,7 @@ Library {
 	Block {
 	  BlockType		  Constant
 	  Name			  "Constant3"
-	  SID			  30
+	  SID			  7
 	  Position		  [790, 670, 820, 700]
 	  ShowName		  off
 	  OutDataType		  "sfix(16)"
@@ -44456,7 +45994,7 @@ Library {
 	Block {
 	  BlockType		  From
 	  Name			  "From"
-	  SID			  33
+	  SID			  9
 	  Position		  [330, 123, 375, 137]
 	  ShowName		  off
 	  CloseFcn		  "tagdialog Close"
@@ -44465,7 +46003,7 @@ Library {
 	Block {
 	  BlockType		  Goto
 	  Name			  "Goto"
-	  SID			  34
+	  SID			  10
 	  Position		  [1095, 636, 1150, 654]
 	  ShowName		  off
 	  GotoTag		  "ack"
@@ -45420,7 +46958,7 @@ Library {
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "qdr_sim_model"
-	  SID			  61
+	  SID			  40
 	  Ports			  [5, 1]
 	  Position		  [535, 232, 655, 468]
 	  MinAlgLoopOccurrences	  off
@@ -45448,14 +46986,14 @@ Library {
 	    Block {
 	      BlockType		      Inport
 	      Name		      "rd_en"
-	      SID		      62
+	      SID		      41
 	      Position		      [50, 408, 80, 422]
 	      IconDisplay	      "Port number"
 	    }
 	    Block {
 	      BlockType		      Inport
 	      Name		      "wr_en"
-	      SID		      63
+	      SID		      42
 	      Position		      [45, 273, 75, 287]
 	      Port		      "2"
 	      IconDisplay	      "Port number"
@@ -45463,7 +47001,7 @@ Library {
 	    Block {
 	      BlockType		      Inport
 	      Name		      "be"
-	      SID		      64
+	      SID		      43
 	      Position		      [55, 498, 85, 512]
 	      Port		      "3"
 	      IconDisplay	      "Port number"
@@ -45471,7 +47009,7 @@ Library {
 	    Block {
 	      BlockType		      Inport
 	      Name		      "addr"
-	      SID		      65
+	      SID		      44
 	      Position		      [50, 63, 80, 77]
 	      Port		      "4"
 	      IconDisplay	      "Port number"
@@ -45479,7 +47017,7 @@ Library {
 	    Block {
 	      BlockType		      Inport
 	      Name		      "data_in"
-	      SID		      66
+	      SID		      45
 	      Position		      [45, 188, 75, 202]
 	      Port		      "5"
 	      IconDisplay	      "Port number"
@@ -45809,7 +47347,7 @@ Library {
 	    Block {
 	      BlockType		      From
 	      Name		      "From"
-	      SID		      77
+	      SID		      56
 	      Position		      [500, 199, 530, 221]
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -45818,7 +47356,7 @@ Library {
 	    Block {
 	      BlockType		      From
 	      Name		      "From1"
-	      SID		      78
+	      SID		      57
 	      Position		      [100, 324, 130, 346]
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -45827,7 +47365,7 @@ Library {
 	    Block {
 	      BlockType		      From
 	      Name		      "From2"
-	      SID		      79
+	      SID		      58
 	      Position		      [500, 149, 530, 171]
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -45836,7 +47374,7 @@ Library {
 	    Block {
 	      BlockType		      From
 	      Name		      "From3"
-	      SID		      80
+	      SID		      59
 	      Position		      [550, 99, 580, 121]
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -45845,7 +47383,7 @@ Library {
 	    Block {
 	      BlockType		      From
 	      Name		      "From4"
-	      SID		      81
+	      SID		      60
 	      Position		      [535, 249, 565, 271]
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -45854,7 +47392,7 @@ Library {
 	    Block {
 	      BlockType		      From
 	      Name		      "From5"
-	      SID		      82
+	      SID		      61
 	      Position		      [495, 49, 525, 71]
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -45863,7 +47401,7 @@ Library {
 	    Block {
 	      BlockType		      From
 	      Name		      "From6"
-	      SID		      83
+	      SID		      62
 	      Position		      [495, 299, 525, 321]
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -45872,7 +47410,7 @@ Library {
 	    Block {
 	      BlockType		      From
 	      Name		      "From7"
-	      SID		      84
+	      SID		      63
 	      Position		      [780, 139, 810, 161]
 	      ShowName		      off
 	      CloseFcn		      "tagdialog Close"
@@ -45881,7 +47419,7 @@ Library {
 	    Block {
 	      BlockType		      Goto
 	      Name		      "Goto"
-	      SID		      85
+	      SID		      64
 	      Position		      [425, 99, 455, 121]
 	      ShowName		      off
 	      GotoTag		      "Az"
@@ -45890,7 +47428,7 @@ Library {
 	    Block {
 	      BlockType		      Goto
 	      Name		      "Goto1"
-	      SID		      86
+	      SID		      65
 	      Position		      [425, 49, 455, 71]
 	      ShowName		      off
 	      GotoTag		      "A"
@@ -45899,7 +47437,7 @@ Library {
 	    Block {
 	      BlockType		      Goto
 	      Name		      "Goto2"
-	      SID		      87
+	      SID		      66
 	      Position		      [370, 429, 400, 451]
 	      ShowName		      off
 	      GotoTag		      "R"
@@ -45908,7 +47446,7 @@ Library {
 	    Block {
 	      BlockType		      Goto
 	      Name		      "Goto3"
-	      SID		      88
+	      SID		      67
 	      Position		      [430, 299, 460, 321]
 	      ShowName		      off
 	      GotoTag		      "W"
@@ -45917,7 +47455,7 @@ Library {
 	    Block {
 	      BlockType		      Goto
 	      Name		      "Goto4"
-	      SID		      89
+	      SID		      68
 	      Position		      [205, 184, 235, 206]
 	      ShowName		      off
 	      GotoTag		      "D"
@@ -46142,7 +47680,7 @@ Library {
 	    Block {
 	      BlockType		      Terminator
 	      Name		      "Terminator"
-	      SID		      97
+	      SID		      76
 	      Position		      [110, 495, 130, 515]
 	      NamePlacement	      "alternate"
 	      ShowName		      off
@@ -46455,7 +47993,7 @@ Library {
 	    Block {
 	      BlockType		      Outport
 	      Name		      "data_out"
-	      SID		      107
+	      SID		      86
 	      Position		      [1095, 178, 1125, 192]
 	      IconDisplay	      "Port number"
 	    }
@@ -46725,7 +48263,7 @@ Library {
 	Block {
 	  BlockType		  Constant
 	  Name			  "ready_constant"
-	  SID			  108
+	  SID			  87
 	  Position		  [790, 725, 820, 755]
 	  ShowName		  off
 	  OutDataType		  "sfix(16)"
@@ -46734,7 +48272,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "data_out"
-	  SID			  109
+	  SID			  88
 	  Position		  [1120, 343, 1150, 357]
 	  IconDisplay		  "Port number"
 	  OutDataType		  "sfix(16)"
@@ -46743,7 +48281,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "data_valid"
-	  SID			  110
+	  SID			  89
 	  Position		  [1065, 153, 1095, 167]
 	  Port			  "2"
 	  IconDisplay		  "Port number"
@@ -46753,7 +48291,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "ack"
-	  SID			  111
+	  SID			  90
 	  Position		  [1095, 678, 1125, 692]
 	  Port			  "3"
 	  IconDisplay		  "Port number"
@@ -46763,7 +48301,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "phy_ready"
-	  SID			  112
+	  SID			  91
 	  Position		  [1095, 733, 1125, 747]
 	  Port			  "4"
 	  IconDisplay		  "Port number"
@@ -46773,7 +48311,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "cal_fail"
-	  SID			  113
+	  SID			  92
 	  Position		  [1095, 788, 1125, 802]
 	  Port			  "5"
 	  IconDisplay		  "Port number"
@@ -47068,7 +48606,7 @@ Library {
     Block {
       BlockType		      SubSystem
       Name		      "quadc"
-      SID		      288
+      SID		      289
       Tag		      "xps:quadc"
       Ports		      [6, 6]
       Position		      [740, 1006, 830, 1184]
@@ -47515,7 +49053,7 @@ Library {
     Block {
       BlockType		      SubSystem
       Name		      "software register"
-      SID		      289
+      SID		      290
       Tag		      "xps:sw_reg"
       Ports		      [1, 1]
       Position		      [20, 495, 120, 525]
@@ -47658,7 +49196,7 @@ Library {
     Block {
       BlockType		      SubSystem
       Name		      "sram"
-      SID		      290
+      SID		      291
       Tag		      "xps:sram"
       Ports		      [4, 2]
       Position		      [255, 598, 355, 762]
@@ -48630,10 +50168,10 @@ Library {
     Block {
       BlockType		      SubSystem
       Name		      "ten_GbE"
-      SID		      291
+      SID		      292
       Tag		      "xps:tengbe"
       Ports		      [8, 10]
-      Position		      [1090, 591, 1230, 854]
+      Position		      [1205, 346, 1345, 609]
       BackgroundColor	      "[1.000000, 1.000000, 0.000000]"
       MinAlgLoopOccurrences   off
       PropExecContextOutsideSubsystem off
@@ -50108,10 +51646,10 @@ Library {
     Block {
       BlockType		      SubSystem
       Name		      "ten_Gbe_v2"
-      SID		      292
+      SID		      293
       Tag		      "xps:tengbe_v2"
       Ports		      [8, 12]
-      Position		      [1075, 272, 1230, 538]
+      Position		      [1010, 22, 1150, 278]
       BackgroundColor	      "[1.000000, 1.000000, 0.000000]"
       MinAlgLoopOccurrences   off
       PropExecContextOutsideSubsystem off
@@ -50124,22 +51662,24 @@ Library {
       MaskDescription	      "This block sends and receives UDP frames (packets). It accepts a 64 bit wide data stream "
       "with user-determined frame breaks. The data stream is wrapped in a UDP frame for transmission. Incoming UDP pack"
       "ets are unwrapped and the data presented as a 64 bit wide stream."
-      MaskPromptString	      "Port|Shallow RX Fifo (Beware overruns!)|Enable Large TX Frames (8k+512)|----------------"
-      "------ Show Implementation Parameters --------------------------------------------------------------------------"
-      "---------|Pre-emphasis|Differential swing|Enable fabric on startup|Fabric MAC Address|Fabric IP Address|Fabric U"
-      "DP Port|Fabric Gateway|Enable CPU RX|Enable CPU TX"
-      MaskStyleString	      "popup(0|1|2|3),checkbox,checkbox,checkbox,popup(0|1|2|3),popup(400|500|600|700|800),check"
-      "box,edit,edit,edit,edit,checkbox,checkbox"
-      MaskTunableValueString  "on,on,on,off,on,on,on,on,on,on,on,on,on"
-      MaskCallbackString      "|||myname=gcb;\nif strcmp(get_param(myname, 'show_param'), 'on')\n    set_param(myname,"
-      " 'MaskVisibilities', {'on', 'on', 'on','on','on','on','on','on','on','on','on','on','on'});\nelse\n    set_param"
-      "(myname, 'MaskVisibilities', {'on', 'on', 'on','on','off','off','off','off','off','off','off','off','off'});\nen"
-      "d|||||||||"
-      MaskEnableString	      "on,on,on,on,on,on,on,on,on,on,on,on,on"
-      MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on,on,on,on"
-      MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on,on,on,on"
-      MaskVariables	      "port=@1;rx_dist_ram=@2;large_frames=@3;show_param=&4;pre_emph=@5;swing=@6;fab_en=@7;fab_mac"
-      "=@8;fab_ip=@9;fab_udp=@10;fab_gate=@11;cpu_rx_en=@12;cpu_tx_en=@13;"
+      MaskPromptString	      "Mezzanine card flavour|Card slot|Port|Port|Port|Shallow RX Fifo (Beware overruns!)|Enabl"
+      "e Large TX Frames (8k+512)|---------------------- Show Implementation Parameters -------------------------------"
+      "----------------------------------------------------|Pre-emphasis (dB)|Pre-emphasis|Post-emphasis (dB)|Receive e"
+      "qualisation|Driver Swing Control (mVppd)|Differential swing|Enable fabric on startup|Fabric MAC Address|Fabric I"
+      "P Address|Fabric UDP Port|Fabric Gateway|Enable CPU RX|Enable CPU TX"
+      MaskStyleString	      "popup(sfp+|cx4),popup(0|1),popup(0|1|2|3),popup(0|1|2),popup(0|1|2|3),checkbox,checkbox,c"
+      "heckbox,popup(0.15|0.3|0.45|0.61|0.74|0.91|1.07|1.25|1.36|1.55|1.74|1.94|2.11|2.32|2.54|2.77),popup(0|1|2|3),pop"
+      "up(0.18|0.19|0.2|0.39|0.63|0.82|1.07|1.32|1.6|1.65|1.94|2.21|2.52|2.76|3.08|3.41|3.77|3.97|4.36|4.73|5.16|5.47|5"
+      ".93|6.38|6.89),popup(0|1|2|3|4|5|6|7),popup(110|210|310|400|480|570|660|740|810|880|940|990|1040|1080|1110|1130)"
+      ",popup(400|500|600|700|800),checkbox,edit,edit,edit,edit,checkbox,checkbox"
+      MaskTunableValueString  "on,on,on,on,on,on,on,off,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "tengbe_v2_callback|||||||tengbe_v2_callback|||||||||||||"
+      MaskEnableString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "off,off,on,off,off,on,on,on,off,off,off,off,off,off,off,off,off,off,off,off,off"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskVariables	      "flavour=&1;slot=@2;port_r1=@3;port_r2_cx4=@4;port_r2_sfpp=@5;rx_dist_ram=@6;large_frames=@7"
+      ";show_param=&8;pre_emph_r2=&9;pre_emph=&10;post_emph_r2=&11;rxeqmix_r2=&12;swing_r2=&13;swing=&14;fab_en=&15;fab"
+      "_mac=@16;fab_ip=@17;fab_udp=@18;fab_gate=@19;cpu_rx_en=&20;cpu_tx_en=&21;"
       MaskInitialization      "tengbe_v2_mask;"
       MaskSelfModifiable      on
       MaskIconFrame	      on
@@ -50147,19 +51687,19 @@ Library {
       MaskIconRotate	      "none"
       MaskPortRotate	      "default"
       MaskIconUnits	      "autoscale"
-      MaskValueString	      "0|on|off|on|3|800|on|hex2dec('123456780000')|192*(2^24) + 168*(2^16) + 5*(2^8) + 20*(2^0)"
-      "|10000|1|on|on"
+      MaskValueString	      "cx4|1|0|0|0|on|off|off|0.74|3|0.18|7|940|800|on|hex2dec('123456780000')|192*(2^24) + 168*"
+      "(2^16) + 5*(2^8) + 20*(2^0)|10000|1|on|on"
       System {
 	Name			"ten_Gbe_v2"
-	Location		[86, 84, 1344, 927]
+	Location		[86, 87, 1344, 930]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
 	PaperOrientation	"landscape"
 	PaperPositionMode	"auto"
-	PaperType		"A4"
-	PaperUnits		"centimeters"
+	PaperType		"usletter"
+	PaperUnits		"inches"
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
@@ -50443,12 +51983,12 @@ Library {
 	  sggui_pos		  "-1,-1,-1,-1"
 	  block_type		  "convert"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "50,16,1,1,white,blue,0,74901e60,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 45 45 0 ],[0 0 30 30 ],[0.77 0.82 0.91]);\n"
-	  "patch([15 10 17 10 15 23 25 27 35 28 22 17 23 17 22 28 35 27 25 23 15 ],[3 8 15 22 27 27 25 27 27 20 26 21 15 9 4 1"
-	  "0 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 45 45 0 0 ],[0 0 30 30 0 ]);\nfprintf('','COMMENT: end icon graphics');\n"
-	  "fprintf('','COMMENT: begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end ic"
-	  "on text');\n"
+	  sg_icon_stat		  "50,16,1,1,white,blue,0,edca21da,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.77 0.82 0.91]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
@@ -50473,12 +52013,12 @@ Library {
 	  sggui_pos		  "-1,-1,-1,-1"
 	  block_type		  "convert"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "50,16,1,1,white,blue,0,74901e60,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 45 45 0 ],[0 0 30 30 ],[0.77 0.82 0.91]);\n"
-	  "patch([15 10 17 10 15 23 25 27 35 28 22 17 23 17 22 28 35 27 25 23 15 ],[3 8 15 22 27 27 25 27 27 20 26 21 15 9 4 1"
-	  "0 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 45 45 0 0 ],[0 0 30 30 0 ]);\nfprintf('','COMMENT: end icon graphics');\n"
-	  "fprintf('','COMMENT: begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end ic"
-	  "on text');\n"
+	  sg_icon_stat		  "50,16,1,1,white,blue,0,edca21da,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.77 0.82 0.91]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
@@ -50503,12 +52043,12 @@ Library {
 	  sggui_pos		  "-1,-1,-1,-1"
 	  block_type		  "convert"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "50,16,1,1,white,blue,0,74901e60,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 45 45 0 ],[0 0 30 30 ],[0.77 0.82 0.91]);\n"
-	  "patch([15 10 17 10 15 23 25 27 35 28 22 17 23 17 22 28 35 27 25 23 15 ],[3 8 15 22 27 27 25 27 27 20 26 21 15 9 4 1"
-	  "0 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 45 45 0 0 ],[0 0 30 30 0 ]);\nfprintf('','COMMENT: end icon graphics');\n"
-	  "fprintf('','COMMENT: begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end ic"
-	  "on text');\n"
+	  sg_icon_stat		  "50,16,1,1,white,blue,0,edca21da,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.77 0.82 0.91]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
@@ -50533,12 +52073,12 @@ Library {
 	  sggui_pos		  "20,20,374,375"
 	  block_type		  "convert"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "50,16,1,1,white,blue,0,74901e60,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 45 45 0 ],[0 0 30 30 ],[0.77 0.82 0.91]);\n"
-	  "patch([15 10 17 10 15 23 25 27 35 28 22 17 23 17 22 28 35 27 25 23 15 ],[3 8 15 22 27 27 25 27 27 20 26 21 15 9 4 1"
-	  "0 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 45 45 0 0 ],[0 0 30 30 0 ]);\nfprintf('','COMMENT: end icon graphics');\n"
-	  "fprintf('','COMMENT: begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end ic"
-	  "on text');\n"
+	  sg_icon_stat		  "50,16,1,1,white,blue,0,edca21da,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.77 0.82 0.91]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
@@ -50560,15 +52100,15 @@ Library {
 	  xl_use_area		  "off"
 	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
 	  has_advanced_control	  "0"
-	  sggui_pos		  "20,20,374,375"
+	  sggui_pos		  "20,30,538,429"
 	  block_type		  "convert"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "50,16,1,1,white,blue,0,74901e60,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 45 45 0 ],[0 0 30 30 ],[0.77 0.82 0.91]);\n"
-	  "patch([15 10 17 10 15 23 25 27 35 28 22 17 23 17 22 28 35 27 25 23 15 ],[3 8 15 22 27 27 25 27 27 20 26 21 15 9 4 1"
-	  "0 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 45 45 0 0 ],[0 0 30 30 0 ]);\nfprintf('','COMMENT: end icon graphics');\n"
-	  "fprintf('','COMMENT: begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end ic"
-	  "on text');\n"
+	  sg_icon_stat		  "50,16,1,1,white,blue,0,edca21da,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.77 0.82 0.91]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
@@ -50593,12 +52133,12 @@ Library {
 	  sggui_pos		  "-1,-1,-1,-1"
 	  block_type		  "convert"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "50,16,1,1,white,blue,0,74901e60,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 45 45 0 ],[0 0 30 30 ],[0.77 0.82 0.91]);\n"
-	  "patch([15 10 17 10 15 23 25 27 35 28 22 17 23 17 22 28 35 27 25 23 15 ],[3 8 15 22 27 27 25 27 27 20 26 21 15 9 4 1"
-	  "0 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 45 45 0 0 ],[0 0 30 30 0 ]);\nfprintf('','COMMENT: end icon graphics');\n"
-	  "fprintf('','COMMENT: begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end ic"
-	  "on text');\n"
+	  sg_icon_stat		  "50,16,1,1,white,blue,0,edca21da,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.77 0.82 0.91]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
@@ -50620,15 +52160,15 @@ Library {
 	  xl_use_area		  "off"
 	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
 	  has_advanced_control	  "0"
-	  sggui_pos		  "20,20,374,375"
+	  sggui_pos		  "20,30,538,429"
 	  block_type		  "convert"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "50,16,1,1,white,blue,0,74901e60,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 45 45 0 ],[0 0 30 30 ],[0.77 0.82 0.91]);\n"
-	  "patch([15 10 17 10 15 23 25 27 35 28 22 17 23 17 22 28 35 27 25 23 15 ],[3 8 15 22 27 27 25 27 27 20 26 21 15 9 4 1"
-	  "0 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 45 45 0 0 ],[0 0 30 30 0 ]);\nfprintf('','COMMENT: end icon graphics');\n"
-	  "fprintf('','COMMENT: begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end ic"
-	  "on text');\n"
+	  sg_icon_stat		  "50,16,1,1,white,blue,0,edca21da,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.77 0.82 0.91]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
@@ -50653,16 +52193,16 @@ Library {
 	  sggui_pos		  "20,20,374,375"
 	  block_type		  "convert"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "50,16,1,1,white,blue,0,74901e60,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 45 45 0 ],[0 0 30 30 ],[0.77 0.82 0.91]);\n"
-	  "patch([15 10 17 10 15 23 25 27 35 28 22 17 23 17 22 28 35 27 25 23 15 ],[3 8 15 22 27 27 25 27 27 20 26 21 15 9 4 1"
-	  "0 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 45 45 0 0 ],[0 0 30 30 0 ]);\nfprintf('','COMMENT: end icon graphics');\n"
-	  "fprintf('','COMMENT: begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end ic"
-	  "on text');\n"
+	  sg_icon_stat		  "50,16,1,1,white,blue,0,edca21da,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.77 0.82 0.91]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('output',1,'cast');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "xps_library_ten_Gbe_v2_led_rx"
+	  Name			  "roach2_10ge_port_ten_Gbe_v2_led_rx"
 	  SID			  37
 	  Ports			  [1, 1]
 	  Position		  [665, 692, 765, 708]
@@ -50682,20 +52222,22 @@ Library {
 	  LOCs			  "{}"
 	  xl_use_area		  "off"
 	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  hdl_port		  "on"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "-1,-1,-1,-1"
 	  block_type		  "gatewayin"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "100,16,1,1,white,yellow,0,bc55d28f,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 65 65 0 ],[0 0 20 20 ],[0.95 0.93 0.65]);\n"
-	  "patch([27 24 29 24 27 32 33 34 40 36 32 29 34 29 32 36 40 34 33 32 27 ],[2 5 10 15 18 18 17 18 18 14 18 15 10 5 2 6"
-	  " 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 65 65 0 0 ],[0 0 20 20 0 ]);\nfprintf('','COMMENT: end icon graphics');\nf"
-	  "printf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','o"
-	  "n');\ncolor('black');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
+	  sg_icon_stat		  "100,16,1,1,white,yellow,0,00d3666e,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.46 0.43 0.47 0.43 0.46 0.5 0.51 0.52 0.57 0.53 0.5 0.48 0.52 0.48 0.5 0.53 0.57 0.52 0.51 0.5 0.46 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black"
+	  "');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "xps_library_ten_Gbe_v2_led_tx"
+	  Name			  "roach2_10ge_port_ten_Gbe_v2_led_tx"
 	  SID			  38
 	  Ports			  [1, 1]
 	  Position		  [665, 737, 765, 753]
@@ -50715,20 +52257,22 @@ Library {
 	  LOCs			  "{}"
 	  xl_use_area		  "off"
 	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  hdl_port		  "on"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "-1,-1,-1,-1"
 	  block_type		  "gatewayin"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "100,16,1,1,white,yellow,0,bc55d28f,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 65 65 0 ],[0 0 20 20 ],[0.95 0.93 0.65]);\n"
-	  "patch([27 24 29 24 27 32 33 34 40 36 32 29 34 29 32 36 40 34 33 32 27 ],[2 5 10 15 18 18 17 18 18 14 18 15 10 5 2 6"
-	  " 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 65 65 0 0 ],[0 0 20 20 0 ]);\nfprintf('','COMMENT: end icon graphics');\nf"
-	  "printf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','o"
-	  "n');\ncolor('black');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
+	  sg_icon_stat		  "100,16,1,1,white,yellow,0,00d3666e,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.46 0.43 0.47 0.43 0.46 0.5 0.51 0.52 0.57 0.53 0.5 0.48 0.52 0.48 0.5 0.53 0.57 0.52 0.51 0.5 0.46 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black"
+	  "');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "xps_library_ten_Gbe_v2_led_up"
+	  Name			  "roach2_10ge_port_ten_Gbe_v2_led_up"
 	  SID			  39
 	  Ports			  [1, 1]
 	  Position		  [665, 647, 765, 663]
@@ -50748,20 +52292,22 @@ Library {
 	  LOCs			  "{}"
 	  xl_use_area		  "off"
 	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  hdl_port		  "on"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "-1,-1,-1,-1"
 	  block_type		  "gatewayin"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "100,16,1,1,white,yellow,0,bc55d28f,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 65 65 0 ],[0 0 20 20 ],[0.95 0.93 0.65]);\n"
-	  "patch([27 24 29 24 27 32 33 34 40 36 32 29 34 29 32 36 40 34 33 32 27 ],[2 5 10 15 18 18 17 18 18 14 18 15 10 5 2 6"
-	  " 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 65 65 0 0 ],[0 0 20 20 0 ]);\nfprintf('','COMMENT: end icon graphics');\nf"
-	  "printf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','o"
-	  "n');\ncolor('black');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
+	  sg_icon_stat		  "100,16,1,1,white,yellow,0,00d3666e,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.46 0.43 0.47 0.43 0.46 0.5 0.51 0.52 0.57 0.53 0.5 0.48 0.52 0.48 0.5 0.53 0.57 0.52 0.51 0.5 0.46 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black"
+	  "');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "xps_library_ten_Gbe_v2_rst"
+	  Name			  "roach2_10ge_port_ten_Gbe_v2_rst"
 	  SID			  40
 	  Ports			  [1, 1]
 	  Position		  [405, 82, 455, 98]
@@ -50780,16 +52326,17 @@ Library {
 	  sggui_pos		  "-1,-1,-1,-1"
 	  block_type		  "gatewayout"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "50,16,1,1,white,yellow,0,38220381,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 50 50 0 ],[0 0 16 16 ],[0.95 0.93 0.65]);\n"
-	  "patch([21 18 22 18 21 25 26 27 32 28 25 23 27 23 25 28 32 27 26 25 21 ],[2 5 9 13 16 16 15 16 16 12 15 13 9 5 3 6 2"
-	  " 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 50 50 0 0 ],[0 0 16 16 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfpr"
-	  "intf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output'"
-	  ",1,'\\fontsize{11pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	  sg_icon_stat		  "50,16,1,1,white,yellow,0,cc31b7ac,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output',1,'\\fontsize{1"
+	  "1pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "xps_library_ten_Gbe_v2_rx_ack"
+	  Name			  "roach2_10ge_port_ten_Gbe_v2_rx_ack"
 	  SID			  41
 	  Ports			  [1, 1]
 	  Position		  [405, 567, 455, 583]
@@ -50808,16 +52355,17 @@ Library {
 	  sggui_pos		  "-1,-1,-1,-1"
 	  block_type		  "gatewayout"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "50,16,1,1,white,yellow,0,38220381,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 50 50 0 ],[0 0 16 16 ],[0.95 0.93 0.65]);\n"
-	  "patch([21 18 22 18 21 25 26 27 32 28 25 23 27 23 25 28 32 27 26 25 21 ],[2 5 9 13 16 16 15 16 16 12 15 13 9 5 3 6 2"
-	  " 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 50 50 0 0 ],[0 0 16 16 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfpr"
-	  "intf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output'"
-	  ",1,'\\fontsize{11pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	  sg_icon_stat		  "50,16,1,1,white,yellow,0,cc31b7ac,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output',1,'\\fontsize{1"
+	  "1pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "xps_library_ten_Gbe_v2_rx_bad_frame"
+	  Name			  "roach2_10ge_port_ten_Gbe_v2_rx_bad_frame"
 	  SID			  42
 	  Ports			  [1, 1]
 	  Position		  [665, 537, 765, 553]
@@ -50837,20 +52385,22 @@ Library {
 	  LOCs			  "{}"
 	  xl_use_area		  "off"
 	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  hdl_port		  "on"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "-1,-1,-1,-1"
 	  block_type		  "gatewayin"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "100,16,1,1,white,yellow,0,bc55d28f,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 65 65 0 ],[0 0 20 20 ],[0.95 0.93 0.65]);\n"
-	  "patch([27 24 29 24 27 32 33 34 40 36 32 29 34 29 32 36 40 34 33 32 27 ],[2 5 10 15 18 18 17 18 18 14 18 15 10 5 2 6"
-	  " 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 65 65 0 0 ],[0 0 20 20 0 ]);\nfprintf('','COMMENT: end icon graphics');\nf"
-	  "printf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','o"
-	  "n');\ncolor('black');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
+	  sg_icon_stat		  "100,16,1,1,white,yellow,0,00d3666e,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.46 0.43 0.47 0.43 0.46 0.5 0.51 0.52 0.57 0.53 0.5 0.48 0.52 0.48 0.5 0.53 0.57 0.52 0.51 0.5 0.46 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black"
+	  "');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "xps_library_ten_Gbe_v2_rx_data"
+	  Name			  "roach2_10ge_port_ten_Gbe_v2_rx_data"
 	  SID			  43
 	  Ports			  [1, 1]
 	  Position		  [665, 322, 765, 338]
@@ -50870,20 +52420,22 @@ Library {
 	  LOCs			  "{}"
 	  xl_use_area		  "off"
 	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  hdl_port		  "on"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "-1,-1,-1,-1"
 	  block_type		  "gatewayin"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "100,16,1,1,white,yellow,0,bc55d28f,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 65 65 0 ],[0 0 20 20 ],[0.95 0.93 0.65]);\n"
-	  "patch([27 24 29 24 27 32 33 34 40 36 32 29 34 29 32 36 40 34 33 32 27 ],[2 5 10 15 18 18 17 18 18 14 18 15 10 5 2 6"
-	  " 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 65 65 0 0 ],[0 0 20 20 0 ]);\nfprintf('','COMMENT: end icon graphics');\nf"
-	  "printf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','o"
-	  "n');\ncolor('black');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
+	  sg_icon_stat		  "100,16,1,1,white,yellow,0,00d3666e,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.46 0.43 0.47 0.43 0.46 0.5 0.51 0.52 0.57 0.53 0.5 0.48 0.52 0.48 0.5 0.53 0.57 0.52 0.51 0.5 0.46 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black"
+	  "');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "xps_library_ten_Gbe_v2_rx_end_of_frame"
+	  Name			  "roach2_10ge_port_ten_Gbe_v2_rx_end_of_frame"
 	  SID			  44
 	  Ports			  [1, 1]
 	  Position		  [665, 502, 765, 518]
@@ -50903,20 +52455,22 @@ Library {
 	  LOCs			  "{}"
 	  xl_use_area		  "off"
 	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  hdl_port		  "on"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "-1,-1,-1,-1"
 	  block_type		  "gatewayin"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "100,16,1,1,white,yellow,0,bc55d28f,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 65 65 0 ],[0 0 20 20 ],[0.95 0.93 0.65]);\n"
-	  "patch([27 24 29 24 27 32 33 34 40 36 32 29 34 29 32 36 40 34 33 32 27 ],[2 5 10 15 18 18 17 18 18 14 18 15 10 5 2 6"
-	  " 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 65 65 0 0 ],[0 0 20 20 0 ]);\nfprintf('','COMMENT: end icon graphics');\nf"
-	  "printf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','o"
-	  "n');\ncolor('black');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
+	  sg_icon_stat		  "100,16,1,1,white,yellow,0,00d3666e,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.46 0.43 0.47 0.43 0.46 0.5 0.51 0.52 0.57 0.53 0.5 0.48 0.52 0.48 0.5 0.53 0.57 0.52 0.51 0.5 0.46 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black"
+	  "');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "xps_library_ten_Gbe_v2_rx_overrun"
+	  Name			  "roach2_10ge_port_ten_Gbe_v2_rx_overrun"
 	  SID			  45
 	  Ports			  [1, 1]
 	  Position		  [665, 572, 765, 588]
@@ -50936,20 +52490,22 @@ Library {
 	  LOCs			  "{}"
 	  xl_use_area		  "off"
 	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  hdl_port		  "on"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "-1,-1,-1,-1"
 	  block_type		  "gatewayin"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "100,16,1,1,white,yellow,0,bc55d28f,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 65 65 0 ],[0 0 20 20 ],[0.95 0.93 0.65]);\n"
-	  "patch([27 24 29 24 27 32 33 34 40 36 32 29 34 29 32 36 40 34 33 32 27 ],[2 5 10 15 18 18 17 18 18 14 18 15 10 5 2 6"
-	  " 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 65 65 0 0 ],[0 0 20 20 0 ]);\nfprintf('','COMMENT: end icon graphics');\nf"
-	  "printf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','o"
-	  "n');\ncolor('black');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
+	  sg_icon_stat		  "100,16,1,1,white,yellow,0,00d3666e,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.46 0.43 0.47 0.43 0.46 0.5 0.51 0.52 0.57 0.53 0.5 0.48 0.52 0.48 0.5 0.53 0.57 0.52 0.51 0.5 0.46 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black"
+	  "');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "xps_library_ten_Gbe_v2_rx_overrun_ack"
+	  Name			  "roach2_10ge_port_ten_Gbe_v2_rx_overrun_ack"
 	  SID			  46
 	  Ports			  [1, 1]
 	  Position		  [405, 607, 455, 623]
@@ -50968,16 +52524,17 @@ Library {
 	  sggui_pos		  "-1,-1,-1,-1"
 	  block_type		  "gatewayout"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "50,16,1,1,white,yellow,0,38220381,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 50 50 0 ],[0 0 16 16 ],[0.95 0.93 0.65]);\n"
-	  "patch([21 18 22 18 21 25 26 27 32 28 25 23 27 23 25 28 32 27 26 25 21 ],[2 5 9 13 16 16 15 16 16 12 15 13 9 5 3 6 2"
-	  " 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 50 50 0 0 ],[0 0 16 16 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfpr"
-	  "intf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output'"
-	  ",1,'\\fontsize{11pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	  sg_icon_stat		  "50,16,1,1,white,yellow,0,cc31b7ac,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output',1,'\\fontsize{1"
+	  "1pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "xps_library_ten_Gbe_v2_rx_source_ip"
+	  Name			  "roach2_10ge_port_ten_Gbe_v2_rx_source_ip"
 	  SID			  47
 	  Ports			  [1, 1]
 	  Position		  [665, 412, 765, 428]
@@ -50997,20 +52554,22 @@ Library {
 	  LOCs			  "{}"
 	  xl_use_area		  "off"
 	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  hdl_port		  "on"
 	  has_advanced_control	  "0"
-	  sggui_pos		  "-1,-1,-1,-1"
+	  sggui_pos		  "20,50,419,481"
 	  block_type		  "gatewayin"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "100,16,1,1,white,yellow,0,bc55d28f,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 65 65 0 ],[0 0 20 20 ],[0.95 0.93 0.65]);\n"
-	  "patch([27 24 29 24 27 32 33 34 40 36 32 29 34 29 32 36 40 34 33 32 27 ],[2 5 10 15 18 18 17 18 18 14 18 15 10 5 2 6"
-	  " 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 65 65 0 0 ],[0 0 20 20 0 ]);\nfprintf('','COMMENT: end icon graphics');\nf"
-	  "printf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','o"
-	  "n');\ncolor('black');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
+	  sg_icon_stat		  "100,16,1,1,white,yellow,0,00d3666e,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.46 0.43 0.47 0.43 0.46 0.5 0.51 0.52 0.57 0.53 0.5 0.48 0.52 0.48 0.5 0.53 0.57 0.52 0.51 0.5 0.46 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black"
+	  "');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "xps_library_ten_Gbe_v2_rx_source_port"
+	  Name			  "roach2_10ge_port_ten_Gbe_v2_rx_source_port"
 	  SID			  48
 	  Ports			  [1, 1]
 	  Position		  [665, 457, 765, 473]
@@ -51030,20 +52589,22 @@ Library {
 	  LOCs			  "{}"
 	  xl_use_area		  "off"
 	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  hdl_port		  "on"
 	  has_advanced_control	  "0"
-	  sggui_pos		  "-1,-1,-1,-1"
+	  sggui_pos		  "20,50,419,481"
 	  block_type		  "gatewayin"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "100,16,1,1,white,yellow,0,bc55d28f,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 65 65 0 ],[0 0 20 20 ],[0.95 0.93 0.65]);\n"
-	  "patch([27 24 29 24 27 32 33 34 40 36 32 29 34 29 32 36 40 34 33 32 27 ],[2 5 10 15 18 18 17 18 18 14 18 15 10 5 2 6"
-	  " 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 65 65 0 0 ],[0 0 20 20 0 ]);\nfprintf('','COMMENT: end icon graphics');\nf"
-	  "printf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','o"
-	  "n');\ncolor('black');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
+	  sg_icon_stat		  "100,16,1,1,white,yellow,0,00d3666e,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.46 0.43 0.47 0.43 0.46 0.5 0.51 0.52 0.57 0.53 0.5 0.48 0.52 0.48 0.5 0.53 0.57 0.52 0.51 0.5 0.46 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black"
+	  "');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "xps_library_ten_Gbe_v2_rx_valid"
+	  Name			  "roach2_10ge_port_ten_Gbe_v2_rx_valid"
 	  SID			  49
 	  Ports			  [1, 1]
 	  Position		  [665, 367, 765, 383]
@@ -51063,20 +52624,22 @@ Library {
 	  LOCs			  "{}"
 	  xl_use_area		  "off"
 	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  hdl_port		  "on"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "-1,-1,-1,-1"
 	  block_type		  "gatewayin"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "100,16,1,1,white,yellow,0,bc55d28f,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 65 65 0 ],[0 0 20 20 ],[0.95 0.93 0.65]);\n"
-	  "patch([27 24 29 24 27 32 33 34 40 36 32 29 34 29 32 36 40 34 33 32 27 ],[2 5 10 15 18 18 17 18 18 14 18 15 10 5 2 6"
-	  " 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 65 65 0 0 ],[0 0 20 20 0 ]);\nfprintf('','COMMENT: end icon graphics');\nf"
-	  "printf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','o"
-	  "n');\ncolor('black');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
+	  sg_icon_stat		  "100,16,1,1,white,yellow,0,00d3666e,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.46 0.43 0.47 0.43 0.46 0.5 0.51 0.52 0.57 0.53 0.5 0.48 0.52 0.48 0.5 0.53 0.57 0.52 0.51 0.5 0.46 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black"
+	  "');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "xps_library_ten_Gbe_v2_tx_afull"
+	  Name			  "roach2_10ge_port_ten_Gbe_v2_tx_afull"
 	  SID			  50
 	  Ports			  [1, 1]
 	  Position		  [665, 227, 765, 243]
@@ -51096,20 +52659,22 @@ Library {
 	  LOCs			  "{}"
 	  xl_use_area		  "off"
 	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  hdl_port		  "on"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "-1,-1,-1,-1"
 	  block_type		  "gatewayin"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "100,16,1,1,white,yellow,0,bc55d28f,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 65 65 0 ],[0 0 20 20 ],[0.95 0.93 0.65]);\n"
-	  "patch([27 24 29 24 27 32 33 34 40 36 32 29 34 29 32 36 40 34 33 32 27 ],[2 5 10 15 18 18 17 18 18 14 18 15 10 5 2 6"
-	  " 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 65 65 0 0 ],[0 0 20 20 0 ]);\nfprintf('','COMMENT: end icon graphics');\nf"
-	  "printf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','o"
-	  "n');\ncolor('black');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
+	  sg_icon_stat		  "100,16,1,1,white,yellow,0,00d3666e,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.46 0.43 0.47 0.43 0.46 0.5 0.51 0.52 0.57 0.53 0.5 0.48 0.52 0.48 0.5 0.53 0.57 0.52 0.51 0.5 0.46 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black"
+	  "');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "xps_library_ten_Gbe_v2_tx_data"
+	  Name			  "roach2_10ge_port_ten_Gbe_v2_tx_data"
 	  SID			  51
 	  Ports			  [1, 1]
 	  Position		  [405, 267, 455, 283]
@@ -51128,16 +52693,17 @@ Library {
 	  sggui_pos		  "-1,-1,-1,-1"
 	  block_type		  "gatewayout"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "50,16,1,1,white,yellow,0,38220381,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 50 50 0 ],[0 0 16 16 ],[0.95 0.93 0.65]);\n"
-	  "patch([21 18 22 18 21 25 26 27 32 28 25 23 27 23 25 28 32 27 26 25 21 ],[2 5 9 13 16 16 15 16 16 12 15 13 9 5 3 6 2"
-	  " 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 50 50 0 0 ],[0 0 16 16 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfpr"
-	  "intf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output'"
-	  ",1,'\\fontsize{11pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	  sg_icon_stat		  "50,16,1,1,white,yellow,0,cc31b7ac,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output',1,'\\fontsize{1"
+	  "1pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "xps_library_ten_Gbe_v2_tx_dest_ip"
+	  Name			  "roach2_10ge_port_ten_Gbe_v2_tx_dest_ip"
 	  SID			  52
 	  Ports			  [1, 1]
 	  Position		  [405, 307, 455, 323]
@@ -51156,16 +52722,17 @@ Library {
 	  sggui_pos		  "-1,-1,-1,-1"
 	  block_type		  "gatewayout"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "50,16,1,1,white,yellow,0,38220381,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 50 50 0 ],[0 0 16 16 ],[0.95 0.93 0.65]);\n"
-	  "patch([21 18 22 18 21 25 26 27 32 28 25 23 27 23 25 28 32 27 26 25 21 ],[2 5 9 13 16 16 15 16 16 12 15 13 9 5 3 6 2"
-	  " 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 50 50 0 0 ],[0 0 16 16 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfpr"
-	  "intf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output'"
-	  ",1,'\\fontsize{11pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	  sg_icon_stat		  "50,16,1,1,white,yellow,0,cc31b7ac,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output',1,'\\fontsize{1"
+	  "1pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "xps_library_ten_Gbe_v2_tx_dest_port"
+	  Name			  "roach2_10ge_port_ten_Gbe_v2_tx_dest_port"
 	  SID			  53
 	  Ports			  [1, 1]
 	  Position		  [405, 347, 455, 363]
@@ -51184,16 +52751,17 @@ Library {
 	  sggui_pos		  "-1,-1,-1,-1"
 	  block_type		  "gatewayout"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "50,16,1,1,white,yellow,0,38220381,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 50 50 0 ],[0 0 16 16 ],[0.95 0.93 0.65]);\n"
-	  "patch([21 18 22 18 21 25 26 27 32 28 25 23 27 23 25 28 32 27 26 25 21 ],[2 5 9 13 16 16 15 16 16 12 15 13 9 5 3 6 2"
-	  " 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 50 50 0 0 ],[0 0 16 16 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfpr"
-	  "intf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output'"
-	  ",1,'\\fontsize{11pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	  sg_icon_stat		  "50,16,1,1,white,yellow,0,cc31b7ac,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output',1,'\\fontsize{1"
+	  "1pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "xps_library_ten_Gbe_v2_tx_end_of_frame"
+	  Name			  "roach2_10ge_port_ten_Gbe_v2_tx_end_of_frame"
 	  SID			  54
 	  Ports			  [1, 1]
 	  Position		  [405, 387, 455, 403]
@@ -51212,16 +52780,17 @@ Library {
 	  sggui_pos		  "-1,-1,-1,-1"
 	  block_type		  "gatewayout"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "50,16,1,1,white,yellow,0,38220381,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 50 50 0 ],[0 0 16 16 ],[0.95 0.93 0.65]);\n"
-	  "patch([21 18 22 18 21 25 26 27 32 28 25 23 27 23 25 28 32 27 26 25 21 ],[2 5 9 13 16 16 15 16 16 12 15 13 9 5 3 6 2"
-	  " 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 50 50 0 0 ],[0 0 16 16 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfpr"
-	  "intf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output'"
-	  ",1,'\\fontsize{11pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	  sg_icon_stat		  "50,16,1,1,white,yellow,0,cc31b7ac,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output',1,'\\fontsize{1"
+	  "1pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "xps_library_ten_Gbe_v2_tx_overflow"
+	  Name			  "roach2_10ge_port_ten_Gbe_v2_tx_overflow"
 	  SID			  55
 	  Ports			  [1, 1]
 	  Position		  [665, 267, 765, 283]
@@ -51241,20 +52810,22 @@ Library {
 	  LOCs			  "{}"
 	  xl_use_area		  "off"
 	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
+	  hdl_port		  "on"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "-1,-1,-1,-1"
 	  block_type		  "gatewayin"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "100,16,1,1,white,yellow,0,bc55d28f,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 65 65 0 ],[0 0 20 20 ],[0.95 0.93 0.65]);\n"
-	  "patch([27 24 29 24 27 32 33 34 40 36 32 29 34 29 32 36 40 34 33 32 27 ],[2 5 10 15 18 18 17 18 18 14 18 15 10 5 2 6"
-	  " 2 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 65 65 0 0 ],[0 0 20 20 0 ]);\nfprintf('','COMMENT: end icon graphics');\nf"
-	  "printf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','o"
-	  "n');\ncolor('black');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
+	  sg_icon_stat		  "100,16,1,1,white,yellow,0,00d3666e,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.46 0.43 0.47 0.43 0.46 0.5 0.51 0.52 0.57 0.53 0.5 0.48 0.52 0.48 0.5 0.53 0.57 0.52 0.51 0.5 0.46 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,'\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black"
+	  "');port_label('output',1,' ');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "xps_library_ten_Gbe_v2_tx_valid"
+	  Name			  "roach2_10ge_port_ten_Gbe_v2_tx_valid"
 	  SID			  56
 	  Ports			  [1, 1]
 	  Position		  [405, 227, 455, 243]
@@ -51273,12 +52844,13 @@ Library {
 	  sggui_pos		  "-1,-1,-1,-1"
 	  block_type		  "gatewayout"
 	  block_version		  "9.1.01"
-	  sg_icon_stat		  "50,16,1,1,white,yellow,0,38220381,right"
-	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 50 50 0 ],[0 0 16 16 ],[0.95 0.93 0.65]);\n"
-	  "patch([21 18 22 18 21 25 26 27 32 28 25 23 27 23 25 28 32 27 26 25 21 ],[2 5 9 13 16 16 15 16 16 12 15 13 9 5 3 6 2"
-	  " 2 3 2 2 ],[0.98 0.96 0.92]);\nplot([0 50 50 0 0 ],[0 0 16 16 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfpr"
-	  "intf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output'"
-	  ",1,'\\fontsize{11pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	  sg_icon_stat		  "50,16,1,1,white,yellow,0,cc31b7ac,right,"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 1 1 0 ],[0 0 1 1 ],[0.95 0.93 0.65]);\npat"
+	  "ch([0.42 0.36 0.44 0.36 0.42 0.5 0.52 0.54 0.64 0.56 0.5 0.46 0.54 0.46 0.5 0.56 0.64 0.54 0.52 0.5 0.42 ],[0.125 0"
+	  ".3125 0.5625 0.8125 1 1 0.9375 1 1 0.75 0.9375 0.8125 0.5625 0.3125 0.1875 0.375 0.125 0.125 0.1875 0.125 0.125 ],["
+	  "0.98 0.96 0.92]);\nplot([0 1 1 0 0 ],[0 0 1 1 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT"
+	  ": begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output',1,'\\fontsize{1"
+	  "1pt}\\bf Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
 	}
 	Block {
 	  BlockType		  Outport
@@ -51400,213 +52972,88 @@ Library {
 	  OutScaling		  "2^0"
 	}
 	Line {
-	  SrcBlock		  "xps_library_ten_Gbe_v2_tx_overflow"
+	  SrcBlock		  "roach2_10ge_port_ten_Gbe_v2_led_tx"
 	  SrcPort		  1
-	  DstBlock		  "tx_overflow"
+	  DstBlock		  "led_tx"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "Constant12"
+	  SrcBlock		  "Constant4"
 	  SrcPort		  1
-	  DstBlock		  "xps_library_ten_Gbe_v2_tx_overflow"
+	  DstBlock		  "roach2_10ge_port_ten_Gbe_v2_led_tx"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "rx_overrun_ack"
+	  SrcBlock		  "roach2_10ge_port_ten_Gbe_v2_led_rx"
 	  SrcPort		  1
-	  DstBlock		  "convert_rx_overrun_ack"
+	  DstBlock		  "led_rx"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "convert_rx_overrun_ack"
+	  SrcBlock		  "Constant3"
 	  SrcPort		  1
-	  DstBlock		  "xps_library_ten_Gbe_v2_rx_overrun_ack"
+	  DstBlock		  "roach2_10ge_port_ten_Gbe_v2_led_rx"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "xps_library_ten_Gbe_v2_rx_overrun_ack"
+	  SrcBlock		  "roach2_10ge_port_ten_Gbe_v2_led_up"
 	  SrcPort		  1
-	  DstBlock		  "Terminator6"
+	  DstBlock		  "led_up"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "Constant11"
+	  SrcBlock		  "Constant1"
 	  SrcPort		  1
-	  DstBlock		  "xps_library_ten_Gbe_v2_rx_overrun"
+	  DstBlock		  "roach2_10ge_port_ten_Gbe_v2_led_up"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "xps_library_ten_Gbe_v2_rx_overrun"
+	  SrcBlock		  "roach2_10ge_port_ten_Gbe_v2_rx_end_of_frame"
 	  SrcPort		  1
-	  DstBlock		  "rx_overrun"
+	  DstBlock		  "rx_end_of_frame"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "Constant5"
+	  SrcBlock		  "Constant10"
 	  SrcPort		  1
-	  DstBlock		  "xps_library_ten_Gbe_v2_rx_bad_frame"
+	  DstBlock		  "roach2_10ge_port_ten_Gbe_v2_rx_end_of_frame"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "xps_library_ten_Gbe_v2_rx_bad_frame"
+	  SrcBlock		  "roach2_10ge_port_ten_Gbe_v2_rx_source_port"
 	  SrcPort		  1
-	  DstBlock		  "rx_bad_frame"
+	  DstBlock		  "rx_source_port"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "rx_ack"
+	  SrcBlock		  "Constant9"
+	  SrcPort		  1
+	  DstBlock		  "roach2_10ge_port_ten_Gbe_v2_rx_source_port"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant8"
+	  SrcPort		  1
+	  DstBlock		  "roach2_10ge_port_ten_Gbe_v2_rx_source_ip"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "roach2_10ge_port_ten_Gbe_v2_rx_source_ip"
+	  SrcPort		  1
+	  DstBlock		  "rx_source_ip"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "roach2_10ge_port_ten_Gbe_v2_tx_end_of_frame"
+	  SrcPort		  1
+	  DstBlock		  "Terminator8"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "convert_tx_end_of_frame"
 	  SrcPort		  1
 	  Points		  [0, 0]
-	  DstBlock		  "convert_rx_ack"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "convert_rx_ack"
-	  SrcPort		  1
-	  Points		  [0, 0]
-	  DstBlock		  "xps_library_ten_Gbe_v2_rx_ack"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "xps_library_ten_Gbe_v2_rx_data"
-	  SrcPort		  1
-	  DstBlock		  "rx_data"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "tx_data"
-	  SrcPort		  1
-	  Points		  [0, 0]
-	  DstBlock		  "convert_tx_data"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "convert_tx_data"
-	  SrcPort		  1
-	  Points		  [0, 0]
-	  DstBlock		  "xps_library_ten_Gbe_v2_tx_data"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "tx_dest_ip"
-	  SrcPort		  1
-	  Points		  [0, 0]
-	  DstBlock		  "convert_tx_dest_ip"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "convert_tx_dest_ip"
-	  SrcPort		  1
-	  Points		  [0, 0]
-	  DstBlock		  "xps_library_ten_Gbe_v2_tx_dest_ip"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "tx_valid"
-	  SrcPort		  1
-	  Points		  [0, 0]
-	  DstBlock		  "convert_tx_valid"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "convert_tx_valid"
-	  SrcPort		  1
-	  Points		  [0, 0]
-	  DstBlock		  "xps_library_ten_Gbe_v2_tx_valid"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "xps_library_ten_Gbe_v2_tx_afull"
-	  SrcPort		  1
-	  Points		  [0, 0]
-	  DstBlock		  "tx_afull"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "xps_library_ten_Gbe_v2_tx_data"
-	  SrcPort		  1
-	  DstBlock		  "Terminator"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "xps_library_ten_Gbe_v2_tx_dest_ip"
-	  SrcPort		  1
-	  DstBlock		  "Terminator1"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "xps_library_ten_Gbe_v2_tx_valid"
-	  SrcPort		  1
-	  DstBlock		  "Terminator2"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Constant2"
-	  SrcPort		  1
-	  Points		  [0, 0]
-	  DstBlock		  "xps_library_ten_Gbe_v2_tx_afull"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Constant6"
-	  SrcPort		  1
-	  DstBlock		  "xps_library_ten_Gbe_v2_rx_data"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "xps_library_ten_Gbe_v2_rx_ack"
-	  SrcPort		  1
-	  DstBlock		  "Terminator3"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Constant7"
-	  SrcPort		  1
-	  DstBlock		  "xps_library_ten_Gbe_v2_rx_valid"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "xps_library_ten_Gbe_v2_rx_valid"
-	  SrcPort		  1
-	  DstBlock		  "rx_valid"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "rst"
-	  SrcPort		  1
-	  DstBlock		  "convert_rst"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "convert_rst"
-	  SrcPort		  1
-	  DstBlock		  "xps_library_ten_Gbe_v2_rst"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "xps_library_ten_Gbe_v2_rst"
-	  SrcPort		  1
-	  DstBlock		  "Terminator5"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "tx_dest_port"
-	  SrcPort		  1
-	  Points		  [0, 0]
-	  DstBlock		  "convert_tx_port"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "convert_tx_port"
-	  SrcPort		  1
-	  Points		  [0, 0]
-	  DstBlock		  "xps_library_ten_Gbe_v2_tx_dest_port"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "xps_library_ten_Gbe_v2_tx_dest_port"
-	  SrcPort		  1
-	  DstBlock		  "Terminator7"
+	  DstBlock		  "roach2_10ge_port_ten_Gbe_v2_tx_end_of_frame"
 	  DstPort		  1
 	}
 	Line {
@@ -51617,88 +53064,213 @@ Library {
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "convert_tx_end_of_frame"
+	  SrcBlock		  "roach2_10ge_port_ten_Gbe_v2_tx_dest_port"
+	  SrcPort		  1
+	  DstBlock		  "Terminator7"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "convert_tx_port"
 	  SrcPort		  1
 	  Points		  [0, 0]
-	  DstBlock		  "xps_library_ten_Gbe_v2_tx_end_of_frame"
+	  DstBlock		  "roach2_10ge_port_ten_Gbe_v2_tx_dest_port"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "xps_library_ten_Gbe_v2_tx_end_of_frame"
+	  SrcBlock		  "tx_dest_port"
 	  SrcPort		  1
-	  DstBlock		  "Terminator8"
+	  Points		  [0, 0]
+	  DstBlock		  "convert_tx_port"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "xps_library_ten_Gbe_v2_rx_source_ip"
+	  SrcBlock		  "roach2_10ge_port_ten_Gbe_v2_rst"
 	  SrcPort		  1
-	  DstBlock		  "rx_source_ip"
+	  DstBlock		  "Terminator5"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "Constant8"
+	  SrcBlock		  "convert_rst"
 	  SrcPort		  1
-	  DstBlock		  "xps_library_ten_Gbe_v2_rx_source_ip"
+	  DstBlock		  "roach2_10ge_port_ten_Gbe_v2_rst"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "Constant9"
+	  SrcBlock		  "rst"
 	  SrcPort		  1
-	  DstBlock		  "xps_library_ten_Gbe_v2_rx_source_port"
+	  DstBlock		  "convert_rst"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "xps_library_ten_Gbe_v2_rx_source_port"
+	  SrcBlock		  "roach2_10ge_port_ten_Gbe_v2_rx_valid"
 	  SrcPort		  1
-	  DstBlock		  "rx_source_port"
+	  DstBlock		  "rx_valid"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "Constant10"
+	  SrcBlock		  "Constant7"
 	  SrcPort		  1
-	  DstBlock		  "xps_library_ten_Gbe_v2_rx_end_of_frame"
+	  DstBlock		  "roach2_10ge_port_ten_Gbe_v2_rx_valid"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "xps_library_ten_Gbe_v2_rx_end_of_frame"
+	  SrcBlock		  "roach2_10ge_port_ten_Gbe_v2_rx_ack"
 	  SrcPort		  1
-	  DstBlock		  "rx_end_of_frame"
+	  DstBlock		  "Terminator3"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "Constant1"
+	  SrcBlock		  "Constant6"
 	  SrcPort		  1
-	  DstBlock		  "xps_library_ten_Gbe_v2_led_up"
+	  DstBlock		  "roach2_10ge_port_ten_Gbe_v2_rx_data"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "xps_library_ten_Gbe_v2_led_up"
+	  SrcBlock		  "Constant2"
 	  SrcPort		  1
-	  DstBlock		  "led_up"
+	  Points		  [0, 0]
+	  DstBlock		  "roach2_10ge_port_ten_Gbe_v2_tx_afull"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "Constant3"
+	  SrcBlock		  "roach2_10ge_port_ten_Gbe_v2_tx_valid"
 	  SrcPort		  1
-	  DstBlock		  "xps_library_ten_Gbe_v2_led_rx"
+	  DstBlock		  "Terminator2"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "xps_library_ten_Gbe_v2_led_rx"
+	  SrcBlock		  "roach2_10ge_port_ten_Gbe_v2_tx_dest_ip"
 	  SrcPort		  1
-	  DstBlock		  "led_rx"
+	  DstBlock		  "Terminator1"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "Constant4"
+	  SrcBlock		  "roach2_10ge_port_ten_Gbe_v2_tx_data"
 	  SrcPort		  1
-	  DstBlock		  "xps_library_ten_Gbe_v2_led_tx"
+	  DstBlock		  "Terminator"
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "xps_library_ten_Gbe_v2_led_tx"
+	  SrcBlock		  "roach2_10ge_port_ten_Gbe_v2_tx_afull"
 	  SrcPort		  1
-	  DstBlock		  "led_tx"
+	  Points		  [0, 0]
+	  DstBlock		  "tx_afull"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "convert_tx_valid"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  DstBlock		  "roach2_10ge_port_ten_Gbe_v2_tx_valid"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "tx_valid"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  DstBlock		  "convert_tx_valid"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "convert_tx_dest_ip"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  DstBlock		  "roach2_10ge_port_ten_Gbe_v2_tx_dest_ip"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "tx_dest_ip"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  DstBlock		  "convert_tx_dest_ip"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "convert_tx_data"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  DstBlock		  "roach2_10ge_port_ten_Gbe_v2_tx_data"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "tx_data"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  DstBlock		  "convert_tx_data"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "roach2_10ge_port_ten_Gbe_v2_rx_data"
+	  SrcPort		  1
+	  DstBlock		  "rx_data"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "convert_rx_ack"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  DstBlock		  "roach2_10ge_port_ten_Gbe_v2_rx_ack"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "rx_ack"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  DstBlock		  "convert_rx_ack"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "roach2_10ge_port_ten_Gbe_v2_rx_bad_frame"
+	  SrcPort		  1
+	  DstBlock		  "rx_bad_frame"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant5"
+	  SrcPort		  1
+	  DstBlock		  "roach2_10ge_port_ten_Gbe_v2_rx_bad_frame"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "roach2_10ge_port_ten_Gbe_v2_rx_overrun"
+	  SrcPort		  1
+	  DstBlock		  "rx_overrun"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant11"
+	  SrcPort		  1
+	  DstBlock		  "roach2_10ge_port_ten_Gbe_v2_rx_overrun"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "roach2_10ge_port_ten_Gbe_v2_rx_overrun_ack"
+	  SrcPort		  1
+	  DstBlock		  "Terminator6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "convert_rx_overrun_ack"
+	  SrcPort		  1
+	  DstBlock		  "roach2_10ge_port_ten_Gbe_v2_rx_overrun_ack"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "rx_overrun_ack"
+	  SrcPort		  1
+	  DstBlock		  "convert_rx_overrun_ack"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant12"
+	  SrcPort		  1
+	  DstBlock		  "roach2_10ge_port_ten_Gbe_v2_tx_overflow"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "roach2_10ge_port_ten_Gbe_v2_tx_overflow"
+	  SrcPort		  1
+	  DstBlock		  "tx_overflow"
 	  DstPort		  1
 	}
       }
@@ -51706,7 +53278,7 @@ Library {
     Block {
       BlockType		      SubSystem
       Name		      "vsi"
-      SID		      293
+      SID		      294
       Tag		      "xps:vsi"
       Ports		      [8, 8]
       Position		      [20, 984, 120, 1146]
@@ -52532,10 +54104,10 @@ Library {
     Block {
       BlockType		      SubSystem
       Name		      "x64_adc"
-      SID		      357
+      SID		      295
       Tag		      "xps:x64_adc"
       Ports		      [18, 17]
-      Position		      [195, 948, 340, 1372]
+      Position		      [1405, 723, 1550, 1147]
       BackgroundColor	      "[1.000000, 1.000000, 0.000000]"
       MinAlgLoopOccurrences   off
       PropExecContextOutsideSubsystem off
@@ -52583,14 +54155,14 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "sim0"
-	  SID			  358
+	  SID			  296
 	  Position		  [30, 35, 60, 55]
 	  IconDisplay		  "Port number"
 	}
 	Block {
 	  BlockType		  Inport
 	  Name			  "sim1"
-	  SID			  359
+	  SID			  297
 	  Position		  [30, 80, 60, 100]
 	  Port			  "2"
 	  IconDisplay		  "Port number"
@@ -52598,7 +54170,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "sim2"
-	  SID			  360
+	  SID			  298
 	  Position		  [30, 130, 60, 150]
 	  Port			  "3"
 	  IconDisplay		  "Port number"
@@ -52606,7 +54178,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "sim3"
-	  SID			  361
+	  SID			  299
 	  Position		  [30, 190, 60, 210]
 	  Port			  "4"
 	  IconDisplay		  "Port number"
@@ -52614,7 +54186,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "sim4"
-	  SID			  362
+	  SID			  300
 	  Position		  [30, 245, 60, 265]
 	  Port			  "5"
 	  IconDisplay		  "Port number"
@@ -52622,7 +54194,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "sim5"
-	  SID			  363
+	  SID			  301
 	  Position		  [30, 300, 60, 320]
 	  Port			  "6"
 	  IconDisplay		  "Port number"
@@ -52630,7 +54202,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "sim6"
-	  SID			  364
+	  SID			  302
 	  Position		  [30, 355, 60, 375]
 	  Port			  "7"
 	  IconDisplay		  "Port number"
@@ -52638,7 +54210,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "sim7"
-	  SID			  365
+	  SID			  303
 	  Position		  [30, 410, 60, 430]
 	  Port			  "8"
 	  IconDisplay		  "Port number"
@@ -52646,7 +54218,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "sim8"
-	  SID			  366
+	  SID			  304
 	  Position		  [30, 465, 60, 485]
 	  Port			  "9"
 	  IconDisplay		  "Port number"
@@ -52654,7 +54226,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "sim9"
-	  SID			  367
+	  SID			  305
 	  Position		  [30, 520, 60, 540]
 	  Port			  "10"
 	  IconDisplay		  "Port number"
@@ -52662,7 +54234,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "sim10"
-	  SID			  368
+	  SID			  306
 	  Position		  [30, 580, 60, 600]
 	  Port			  "11"
 	  IconDisplay		  "Port number"
@@ -52670,7 +54242,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "sim11"
-	  SID			  369
+	  SID			  307
 	  Position		  [30, 640, 60, 660]
 	  Port			  "12"
 	  IconDisplay		  "Port number"
@@ -52678,7 +54250,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "sim12"
-	  SID			  370
+	  SID			  308
 	  Position		  [30, 695, 60, 715]
 	  Port			  "13"
 	  IconDisplay		  "Port number"
@@ -52686,7 +54258,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "sim13"
-	  SID			  371
+	  SID			  309
 	  Position		  [30, 750, 60, 770]
 	  Port			  "14"
 	  IconDisplay		  "Port number"
@@ -52694,7 +54266,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "sim14"
-	  SID			  372
+	  SID			  310
 	  Position		  [30, 805, 60, 825]
 	  Port			  "15"
 	  IconDisplay		  "Port number"
@@ -52702,7 +54274,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "sim15"
-	  SID			  373
+	  SID			  311
 	  Position		  [30, 860, 60, 880]
 	  Port			  "16"
 	  IconDisplay		  "Port number"
@@ -52710,7 +54282,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "sim_sync"
-	  SID			  374
+	  SID			  312
 	  Position		  [510, 40, 540, 60]
 	  Port			  "17"
 	  IconDisplay		  "Port number"
@@ -52718,7 +54290,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "adc_rst"
-	  SID			  375
+	  SID			  313
 	  Position		  [510, 110, 540, 130]
 	  Port			  "18"
 	  IconDisplay		  "Port number"
@@ -52726,10 +54298,9 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "Convert"
-	  SID			  376
+	  SID			  314
 	  Ports			  [1, 1]
 	  Position		  [595, 105, 640, 135]
-	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Convert"
 	  SourceType		  "Xilinx Type Converter Block"
 	  infoedit		  "Hardware notes: rounding and saturating require hardware resources; truncating and wrapping do not."
@@ -52758,17 +54329,16 @@ Library {
 	Block {
 	  BlockType		  Terminator
 	  Name			  "Terminator"
-	  SID			  377
+	  SID			  315
 	  Position		  [845, 110, 865, 130]
 	  ShowName		  off
 	}
 	Block {
 	  BlockType		  Reference
 	  Name			  "untitled_x64_adc_user_chan_sync"
-	  SID			  378
+	  SID			  316
 	  Ports			  [1, 1]
 	  Position		  [695, 40, 735, 60]
-	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
 	  SourceType		  "Xilinx Gateway In Block"
 	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
@@ -52801,10 +54371,9 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "untitled_x64_adc_user_data0"
-	  SID			  379
+	  SID			  317
 	  Ports			  [1, 1]
 	  Position		  [215, 35, 255, 55]
-	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
 	  SourceType		  "Xilinx Gateway In Block"
 	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
@@ -52837,10 +54406,9 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "untitled_x64_adc_user_data1"
-	  SID			  380
+	  SID			  318
 	  Ports			  [1, 1]
 	  Position		  [215, 80, 255, 100]
-	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
 	  SourceType		  "Xilinx Gateway In Block"
 	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
@@ -52873,10 +54441,9 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "untitled_x64_adc_user_data10"
-	  SID			  381
+	  SID			  319
 	  Ports			  [1, 1]
 	  Position		  [215, 580, 255, 600]
-	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
 	  SourceType		  "Xilinx Gateway In Block"
 	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
@@ -52909,10 +54476,9 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "untitled_x64_adc_user_data11"
-	  SID			  382
+	  SID			  320
 	  Ports			  [1, 1]
 	  Position		  [215, 640, 255, 660]
-	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
 	  SourceType		  "Xilinx Gateway In Block"
 	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
@@ -52945,10 +54511,9 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "untitled_x64_adc_user_data12"
-	  SID			  383
+	  SID			  321
 	  Ports			  [1, 1]
 	  Position		  [215, 695, 255, 715]
-	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
 	  SourceType		  "Xilinx Gateway In Block"
 	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
@@ -52981,10 +54546,9 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "untitled_x64_adc_user_data13"
-	  SID			  384
+	  SID			  322
 	  Ports			  [1, 1]
 	  Position		  [215, 750, 255, 770]
-	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
 	  SourceType		  "Xilinx Gateway In Block"
 	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
@@ -53017,10 +54581,9 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "untitled_x64_adc_user_data14"
-	  SID			  385
+	  SID			  323
 	  Ports			  [1, 1]
 	  Position		  [215, 805, 255, 825]
-	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
 	  SourceType		  "Xilinx Gateway In Block"
 	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
@@ -53053,10 +54616,9 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "untitled_x64_adc_user_data15"
-	  SID			  386
+	  SID			  324
 	  Ports			  [1, 1]
 	  Position		  [215, 860, 255, 880]
-	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
 	  SourceType		  "Xilinx Gateway In Block"
 	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
@@ -53089,10 +54651,9 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "untitled_x64_adc_user_data2"
-	  SID			  387
+	  SID			  325
 	  Ports			  [1, 1]
 	  Position		  [215, 130, 255, 150]
-	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
 	  SourceType		  "Xilinx Gateway In Block"
 	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
@@ -53125,10 +54686,9 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "untitled_x64_adc_user_data3"
-	  SID			  388
+	  SID			  326
 	  Ports			  [1, 1]
 	  Position		  [215, 190, 255, 210]
-	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
 	  SourceType		  "Xilinx Gateway In Block"
 	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
@@ -53161,10 +54721,9 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "untitled_x64_adc_user_data4"
-	  SID			  389
+	  SID			  327
 	  Ports			  [1, 1]
 	  Position		  [215, 245, 255, 265]
-	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
 	  SourceType		  "Xilinx Gateway In Block"
 	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
@@ -53197,10 +54756,9 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "untitled_x64_adc_user_data5"
-	  SID			  390
+	  SID			  328
 	  Ports			  [1, 1]
 	  Position		  [215, 300, 255, 320]
-	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
 	  SourceType		  "Xilinx Gateway In Block"
 	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
@@ -53233,10 +54791,9 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "untitled_x64_adc_user_data6"
-	  SID			  391
+	  SID			  329
 	  Ports			  [1, 1]
 	  Position		  [215, 355, 255, 375]
-	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
 	  SourceType		  "Xilinx Gateway In Block"
 	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
@@ -53269,10 +54826,9 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "untitled_x64_adc_user_data7"
-	  SID			  392
+	  SID			  330
 	  Ports			  [1, 1]
 	  Position		  [215, 410, 255, 430]
-	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
 	  SourceType		  "Xilinx Gateway In Block"
 	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
@@ -53305,10 +54861,9 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "untitled_x64_adc_user_data8"
-	  SID			  393
+	  SID			  331
 	  Ports			  [1, 1]
 	  Position		  [215, 465, 255, 485]
-	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
 	  SourceType		  "Xilinx Gateway In Block"
 	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
@@ -53341,10 +54896,9 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "untitled_x64_adc_user_data9"
-	  SID			  394
+	  SID			  332
 	  Ports			  [1, 1]
 	  Position		  [215, 520, 255, 540]
-	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Gateway In"
 	  SourceType		  "Xilinx Gateway In Block"
 	  infoedit		  "Gateway in block.  Converts inputs of type Simulink integer, double and fixed point to  Xilinx fixed p"
@@ -53377,10 +54931,9 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "untitled_x64_adc_user_rst"
-	  SID			  395
+	  SID			  333
 	  Ports			  [1, 1]
 	  Position		  [705, 110, 765, 130]
-	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Gateway Out"
 	  SourceType		  "Xilinx Gateway Out Block"
 	  infoedit		  "Gateway out block.  Converts Xilinx fixed point inputs into ouputs of type Simulink integer, double, o"
@@ -53407,14 +54960,14 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "dout0"
-	  SID			  396
+	  SID			  334
 	  Position		  [315, 35, 345, 55]
 	  IconDisplay		  "Port number"
 	}
 	Block {
 	  BlockType		  Outport
 	  Name			  "dout1"
-	  SID			  397
+	  SID			  335
 	  Position		  [315, 80, 345, 100]
 	  Port			  "2"
 	  IconDisplay		  "Port number"
@@ -53422,7 +54975,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "dout2"
-	  SID			  398
+	  SID			  336
 	  Position		  [315, 130, 345, 150]
 	  Port			  "3"
 	  IconDisplay		  "Port number"
@@ -53430,7 +54983,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "dout3"
-	  SID			  399
+	  SID			  337
 	  Position		  [315, 190, 345, 210]
 	  Port			  "4"
 	  IconDisplay		  "Port number"
@@ -53438,7 +54991,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "dout4"
-	  SID			  400
+	  SID			  338
 	  Position		  [315, 245, 345, 265]
 	  Port			  "5"
 	  IconDisplay		  "Port number"
@@ -53446,7 +54999,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "dout5"
-	  SID			  401
+	  SID			  339
 	  Position		  [315, 300, 345, 320]
 	  Port			  "6"
 	  IconDisplay		  "Port number"
@@ -53454,7 +55007,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "dout6"
-	  SID			  402
+	  SID			  340
 	  Position		  [315, 355, 345, 375]
 	  Port			  "7"
 	  IconDisplay		  "Port number"
@@ -53462,7 +55015,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "dout7"
-	  SID			  403
+	  SID			  341
 	  Position		  [315, 410, 345, 430]
 	  Port			  "8"
 	  IconDisplay		  "Port number"
@@ -53470,7 +55023,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "dout8"
-	  SID			  404
+	  SID			  342
 	  Position		  [315, 465, 345, 485]
 	  Port			  "9"
 	  IconDisplay		  "Port number"
@@ -53478,7 +55031,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "dout9"
-	  SID			  405
+	  SID			  343
 	  Position		  [315, 520, 345, 540]
 	  Port			  "10"
 	  IconDisplay		  "Port number"
@@ -53486,7 +55039,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "dout10"
-	  SID			  406
+	  SID			  344
 	  Position		  [315, 580, 345, 600]
 	  Port			  "11"
 	  IconDisplay		  "Port number"
@@ -53494,7 +55047,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "dout11"
-	  SID			  407
+	  SID			  345
 	  Position		  [315, 640, 345, 660]
 	  Port			  "12"
 	  IconDisplay		  "Port number"
@@ -53502,7 +55055,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "dout12"
-	  SID			  408
+	  SID			  346
 	  Position		  [315, 695, 345, 715]
 	  Port			  "13"
 	  IconDisplay		  "Port number"
@@ -53510,7 +55063,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "dout13"
-	  SID			  409
+	  SID			  347
 	  Position		  [315, 750, 345, 770]
 	  Port			  "14"
 	  IconDisplay		  "Port number"
@@ -53518,7 +55071,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "dout14"
-	  SID			  410
+	  SID			  348
 	  Position		  [315, 805, 345, 825]
 	  Port			  "15"
 	  IconDisplay		  "Port number"
@@ -53526,7 +55079,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "dout15"
-	  SID			  411
+	  SID			  349
 	  Position		  [315, 860, 345, 880]
 	  Port			  "16"
 	  IconDisplay		  "Port number"
@@ -53534,7 +55087,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "chan_sync"
-	  SID			  412
+	  SID			  350
 	  Position		  [820, 40, 850, 60]
 	  Port			  "17"
 	  IconDisplay		  "Port number"

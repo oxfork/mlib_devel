@@ -39,7 +39,7 @@ module comp_vacc(
     
     parameter INPUT_WIDTH = 4;
     parameter ACC_LEN_BITS = 8;
-    parameter VECTOR_LENGTH = 8;
+    parameter VECTOR_LENGTH = 32;
     
     localparam ACC_LEN = 1<<ACC_LEN_BITS;
     localparam VECTOR_LEN_BITS = `log2(VECTOR_LENGTH);
@@ -54,33 +54,28 @@ module comp_vacc(
     output [INPUT_WIDTH+ACC_LEN_BITS-1:0] dout_a;         //accumulated data out for ram A
     output [INPUT_WIDTH+ACC_LEN_BITS-1:0] dout_b;         //accumulated data out for ram B
     
-    reg [ACC_LEN_BITS + VECTOR_LEN_BITS + 1 -1:0] comp_ctr = {(ACC_LEN_BITS + VECTOR_LEN_BITS -1){1'b0}};
-    reg active_ram = 1'b0;
+    reg [ACC_LEN_BITS + VECTOR_LEN_BITS-1:0] comp_ctr = 0;
+    reg active_ram = 0;
     always @(posedge(clk)) begin
         if (sync) begin
-            comp_ctr <= {(ACC_LEN_BITS + VECTOR_LEN_BITS -1){1'b0}};
+            comp_ctr <= 0;
             active_ram <= 1'b0;
         end else begin
-            if (comp_ctr == ACC_LEN*VECTOR_LENGTH-1) begin
-                comp_ctr <= {(ACC_LEN_BITS + VECTOR_LEN_BITS -1){1'b0}};
-                active_ram <= ~active_ram;
-            end else begin
-                comp_ctr <= comp_ctr + 1'b1;
-            end
+            comp_ctr <= comp_ctr == ACC_LEN*VECTOR_LENGTH-1 ? 0 : comp_ctr + 1'b1;
+            active_ram <= comp_ctr == ACC_LEN*VECTOR_LENGTH-1 ? ~active_ram : active_ram; //change ram at the next round of antennas
         end 
     end
 
+    wire [ACC_LEN_BITS + VECTOR_LEN_BITS - 1:0] acc_ctr = comp_ctr;
     
     //sign extended input for summing
     wire din_sign_bit = din[INPUT_WIDTH-1];
     wire [ACC_WIDTH-1:0] din_ext = {{ACC_WIDTH-INPUT_WIDTH{din_sign_bit}}, din};
     
     //vector index line for bram
-    wire [VECTOR_LEN_BITS-1:0] vec_index = comp_ctr[ACC_LEN_BITS + VECTOR_LEN_BITS-1: ACC_LEN_BITS];
-    wire [VECTOR_LEN_BITS+1 - 1:0] write_addr = {active_ram,vec_index};
-    
+    wire [VECTOR_LEN_BITS-1:0] vec_index = acc_ctr[ACC_LEN_BITS + VECTOR_LEN_BITS-1: ACC_LEN_BITS];
     //accumulation sample counter
-    wire [ACC_LEN_BITS-1:0] sample_index = comp_ctr[ACC_LEN_BITS-1:0];
+    wire [ACC_LEN_BITS-1:0] sample_index = acc_ctr[ACC_LEN_BITS-1:0];
     
   
     reg [ACC_WIDTH-1:0] acc_reg = 0;
@@ -99,7 +94,6 @@ module comp_vacc(
     always @(posedge(clk)) begin
         if(acc_valid) begin
             $display("ACC_VALID: writing %d for antenna %d in ram %d", acc_wire, vec_index, active_ram);
-            $display("ACC_VALID: reading antennas %d,%d in ram %d", ant_sel_a, ant_sel_b, buf_sel);
         end
     end
 `endif
@@ -110,7 +104,7 @@ module comp_vacc(
     ) bram_tdp_inst [1:0] (
         .a_clk(clk),
         .a_wr(acc_valid),
-        .a_addr(write_addr),//debug{active_ram,vec_index}),
+        .a_addr({active_ram,vec_index}),
         .a_din(acc_wire),
         .a_dout({UNUSED0, UNUSED1}),
         .b_clk(clk),

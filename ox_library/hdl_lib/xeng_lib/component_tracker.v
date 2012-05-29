@@ -43,10 +43,10 @@ module component_tracker(
       end
     endfunction
 
-    parameter SERIAL_ACC_LEN_BITS = 8;  //Serial accumulation length (2^?)
-    parameter P_FACTOR_BITS = 0;        //Number of samples to accumulate in parallel (2^?)
+    parameter SERIAL_ACC_LEN_BITS = 7;  //Serial accumulation length (2^?)
+    parameter P_FACTOR_BITS = 2;        //Number of samples to accumulate in parallel (2^?)
     parameter BITWIDTH = 4;             //bitwidth of each real/imag part of a single sample
-    parameter N_ANTS = 8;               //number of (dual pol) antenna inputs
+    parameter N_ANTS = 32;              //number of (dual pol) antenna inputs
     parameter PLATFORM = "VIRTEX5";     // FPGA platform
     parameter VALID_DELAY = 1024;       //Number of clock cycles between valid data entering tap chain and valid data leaving
     
@@ -231,11 +231,11 @@ module component_tracker(
 
     assign gen_next_bl = (tap_out_vld_ctr < N_TAPS);
 
-    sync_delay #(
-        .DELAY_LENGTH(VALID_DELAY-2)
+    delay #(
+        .WIDTH(1),
+        .DELAY(VALID_DELAY-2)
     ) bl_order_gen_sync_del (
         .clk(clk),
-        .ce(1'b1),
         .din(sync),
         .dout(bl_order_gen_sync)
     );
