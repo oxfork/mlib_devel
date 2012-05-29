@@ -13,7 +13,7 @@ fprintf('starting variables processing\n');
 
 n_ants = get_var('n_ants', 'defaults', defaults, varargin{:});
 acc_len = get_var('acc_len', 'defaults', defaults, varargin{:});
-use_ded_mult = get_var('use_ded_mult', 'defaults', defaults, varargin{:});
+use_ded_mult = get_var('use_ded_mult', 'defaults', defaults, varargin{:})
 use_bram_delay = get_var('use_bram_delay', 'defaults', defaults, varargin{:});
 n_bits = get_var('n_bits', 'defaults', defaults, varargin{:});
 add_latency = get_var('add_latency', 'defaults', defaults, varargin{:});
@@ -22,6 +22,11 @@ bram_latency = get_var('bram_latency', 'defaults', defaults, varargin{:});
 demux_factor = eval(get_var('demux_factor', 'defaults', defaults, varargin{:}));
 use_dsp_acc = get_var('use_dsp_acc', 'defaults', defaults, varargin{:});
 
+if (use_ded_mult == 1) && (mult_latency+add_latency ~= 4),
+    errordlg('Using embedded multipliers, which have an intrinsic latency of 4. Change to multiplier latency=3, add latency=1');
+    mult_latency = 3;
+    add_latency=1;
+end
 
 fix_pnt_pos = (n_bits-1)*2;
 xeng_delay = add_latency + mult_latency + acc_len + floor(n_ants/2 + 1) + 1;
