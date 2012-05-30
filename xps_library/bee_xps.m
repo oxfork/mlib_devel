@@ -50,7 +50,11 @@ if nargin == 0  % LAUNCH GUI
     try
         xsg = strtok(xsg{1},' ');
     catch
-        xsg = get_xlVersion('full');
+        try
+            xsg = get_xlVersion('full');
+        catch
+            xsg = get_xlVersion();
+        end
     end
 
     switch xsg
@@ -70,6 +74,8 @@ if nargin == 0  % LAUNCH GUI
             set(handles.xsg_version,'String','11.4');
         case {'11.5.2275'}
             set(handles.xsg_version,'String','11.5');
+        case {'13.4'}
+            set(handles.xsg_version,'String','13.4');
         otherwise
             errordlg(['Unsupported Xilinx System Generator version: ',xsg]);
             return;
