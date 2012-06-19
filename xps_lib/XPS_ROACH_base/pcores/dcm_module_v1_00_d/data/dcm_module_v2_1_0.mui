@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+########################################################################
+##
+## Copyright (c) 2005 Xilinx, Inc.  All rights reserved.
+##
+########################################################################
+-->
+
+<!DOCTYPE doc SYSTEM "../../ipdialog.dtd" [
+	<!ENTITY C_DFS_FREQUENCY_MODE '
+	<widget id="C_DFS_FREQUENCY_MODE">
+		<key>C_DFS_FREQUENCY_MODE</key>
+		<label>Digital Frequency Synthesizer Clock Frequency Mode</label>
+		<tip><![CDATA[The DFS_FREQUENCY_MODE specifies the allowable input clock and output clock frequency ranges used by the Dedicated Frequency Synthesizer (DFS) CLKFX and CLKFX180 outputs.  Check the datasheet for your device to determine what this should be set to.]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_DLL_FREQUENCY_MODE '
+	<widget id="C_DLL_FREQUENCY_MODE">
+		<key>C_DLL_FREQUENCY_MODE</key>
+		<label>Delay Locked Loop Frequency Mode</label>
+		<tip><![CDATA[The DLL_FREQUENCY_MODE specifies the clock input and output frequency ranges used by the delay-locked loop (DLL).  When set to LOW the input clock frequency must be in the DLL_CLKIN_MIN_LF to DLL_CLKIN_MAX_LF frequency range, and when set HIGH must be in the DLL_CLKIN_MIN_HF to DLL_CLKIN_MAX_HF frequency range as specified in the device data sheet.  In High frequency mode, on some architectures only the CLK0, CLK180, CLKDV, and LOCKED outputs are available (CLK90, CLK270, CLK2X, and CLK2X180 are not available in high-frequency mode).]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_DUTY_CYCLE_CORRECTION '
+	<widget id="C_DUTY_CYCLE_CORRECTION">
+		<key>C_DUTY_CYCLE_CORRECTION</key>
+		<label>Duty Cycle Correction</label>
+		<tip><![CDATA[This parameter controls whether duty cycle correction is enabled for the 1x clock outputs, CLK0, CLK90, CLK180, and CLK270.  Setting this TRUE will correct the outputs such that they exhibit a 50/50 duty cycle.  Setting this parameter false deactivates duty cycle correction for the DCM outputs listed above.  It is strongly recommended to always set the DUTY_CYCLE_CORRECTION parameter to TRUE.  Note that setting this parameter to FALSE does not necessarily produce output clocks with the same duty cycle as the source clock.  Check the device user guide and datasheet for more information on your device.]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_CLKIN_DIVIDE_BY_2 '
+	<widget id="C_CLKIN_DIVIDE_BY_2">
+		<key>C_CLKIN_DIVIDE_BY_2</key>
+		<label>CLKIN Divide By 2</label>
+		<tip><![CDATA[This parameter allows for the input clock frequency to be divided in half when such a reduction is necessary to meet the DCM input clock frequency requirements.  For example, if a 100 MHz clock drives CLKIN, and CLKIN_DIVIDE_BY_2 is set to TRUE; then the effective CLKIN frequency is 50 MHz.  The effective CLKIN frequency must be used to evaluate any operation or specification derived from CLKIN frequency.  Check the user guide and datasheet for your device for more information.]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_CLK_FEEDBACK '
+	<widget id="C_CLK_FEEDBACK">
+		<key>C_CLK_FEEDBACK</key>
+		<label>Clock Feedback Input</label>
+		<tip><![CDATA[This parameter specifies whether there is feedback and if so whether the CLKFB feedback input to the DCM comes from either CLK0 or CLK2x.  If there is no clock feedback on architectures that support this functionality, specify NONE.  Specify 1X when CLKFB comes from CLK0.  Specify 2X when CLKFB comes from CLK2X on architectures that support this functionality.]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_CLKOUT_PHASE_SHIFT '
+	<widget id="C_CLKOUT_PHASE_SHIFT">
+		<key>C_CLKOUT_PHASE_SHIFT</key>
+		<label>Controls Use of Phase Shift</label>
+		<tip><![CDATA[This parameter controls how the phase shift is controlled.  Specifying NONE means that there is non phase shift and the C_PHASE_SHIFT parameter has no effect.  When this parameter is set to FIXED, the skew set by the C_PHASE_SHIFT parameter is used at configuration for shifting output clocks with respect to CLKIN and the skew remains constant.  When this parameter is set to VARIABLE, the skew set at configuration is used as a starting point and the skew value can be changed dynamically during operation using the PS signals.  When set to VARIABLE_POSITIVE, the DCM outputs can be phase-shifted in variable mode in the positive range with respect to CLKIN.  When set to VARIABLE_CENTER, the DCM outputs can be phase-shifted in variable mode, in the positive and negative range with respect to CLKIN.  When set to DIRECT, the DCM output can be phase-shifted in variable mode in the positive range with respect to CLKIN and each adjustment will be by one DCM_TAP.  All modes except DIRECT adjust the phase shift by a period of 1/256 or 1/512 x CLKIN period depending on the device architecture.  One should carefully read the device user guide and datasheet if this parameter is not set to NONE.  The allowable values depend on architecture.]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_DSS_MODE '
+	<widget id="C_DSS_MODE">
+		<key>C_DSS_MODE</key>
+		<label>DSS Mode</label>
+		<tip><![CDATA[This is an unsupported feature. Leave the value at default.]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_STARTUP_WAIT '
+	<widget id="C_STARTUP_WAIT">
+		<key>C_STARTUP_WAIT</key>
+		<label>Configuration Startup Wait</label>
+		<tip><![CDATA[When this parameter is set to TRUE, and the CLK_cycle BitGen options is used, then the configuration startup sequence waits in the startup cycle specified by CLK_cycle until the DCM is locked.]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_PHASE_SHIFT '
+	<widget id="C_PHASE_SHIFT">
+		<key>C_PHASE_SHIFT</key>
+		<label>Phase Shift</label>
+		<tip><![CDATA[This parameter specifies the phase-shift applied to the DCM outputs.  The value range depends on CLKOUT_PHASE_SHIFT and clock frequency.  For non-DIRECT mode, the allowable values are -255 to 255.  For DIRECT mode, the allowable values are 0 to 1023.  This parameter can be used in both FIXED and VARIABLE phase-shift mode.  For variable mode, this parameter sets the starting phase shift.  For non-DIRECT modes each phase-shift increment (or decrement) adjusts the phase shift by a period of 1/256 or 1/512 x CLKIN period depending on the device architecture.  For DIRECT mode each adjustment will be by one DCM_TAP.  The allowable values also depend on the architecture.]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_CLKFX_MULTIPLY '
+	<widget id="C_CLKFX_MULTIPLY">
+		<key>C_CLKFX_MULTIPLY</key>
+		<label>Multiply Value of the CLKFX Output</label>
+		<tip><![CDATA[This parameter sets the multiply value (M) of the CLKFX output.  The CLKFX_DIVIDE sets the divisor.]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_CLKFX_DIVIDE '
+	<widget id="C_CLKFX_DIVIDE">
+		<key>C_CLKFX_DIVIDE</key>
+		<label>Divisor for the CLKFX Output</label>
+		<tip>Divisor for the CLKFX output></tip>
+	</widget>
+	'>
+	<!ENTITY C_CLKDV_DIVIDE '
+	<widget id="C_CLKDV_DIVIDE">
+		<key>C_CLKDV_DIVIDE</key>
+		<label>CLKDV Divisor</label>
+		<tip><![CDATA[This parameter controls CLKDV such that the source clock is divided by N.  This feature provides automatic duty cycle correction such that the CLKDV output has a 50/50 duty cycle always in low-frequency mode, as well as for all integer values of the division factor N in high-frequency mode.  Consult the device user guide for non-integer duty cycles in high-frequency mode.]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_CLKIN_PERIOD '
+	<widget id="C_CLKIN_PERIOD">
+		<key>C_CLKIN_PERIOD</key>
+		<label>Input Clock Period</label>
+		<tip><![CDATA[This specifies the source clock period to help the DCM adjust for optimum CLKFX/CLKFX180 outputs.  This should be set to the period of the CLKIN input, or twice the period if CLKIN_DIVIDE_BY_2 is used.]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_DESKEW_ADJUST '
+	<widget id="C_DESKEW_ADJUST">
+		<key>C_DESKEW_ADJUST</key>
+		<label>Amount of Delay in the Feedback Path</label>
+		<tip><![CDATA[This parameter affects the amount of delay in the feedback path.  For most designs, the default value is appropriate.  In a source-synchronous design, set this to SOURCE_SYNCHRONOUS.  When set to SOURCE_SYNCHRONOUS the feedback delay element is set to zero which results in more positive hold time and a longer clock-to-out compared to SYSTEM_SYNCHRONOUS mode.  The remaining values should only be used after consulting with Xilinx.]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_CLKIN_BUF '
+	<widget id="C_CLKIN_BUF">
+		<key>C_CLKIN_BUF</key>
+		<label>Insert a BUFG for CLKIN</label>
+		<tip><![CDATA[It is recommended that this parameter be set to FALSE.  If the CLKIN is coming from an external pin, the external port should specify SIGIS = DCMCLK, which inserts an IBUFG.  It is not recommended to use SIGIS = CLK with a DCM as that uses a BUFGP (IBUFG followed by BUFG) and uses up a BUFG when it is not needed.  If one does not insert an IBUFG when coming from an external pin with SIGIS = DCMCLK, the clock skew between the FPGA and the board may be increased due to poor routing inside the FPGA between the pin and the DCM.  If the CLKIN is coming from another DCM, the BUFG should be inserted on that DCM output, otherwise general interconnect is used and skew is not compensated.  User logic may be required if using differential clocks.  See the FPGA device user guide for your device for more information and diagrams of proper DCM configurations.  If you are configuring this DCM for a particular Embedded Development Kit (EDK) IP, check the IP documentation for DCM configuration recommendations.]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_CLKFB_BUF '
+	<widget id="C_CLKFB_BUF">
+		<key>C_CLKFB_BUF</key>
+		<label>Insert a BUFG for CLKFB</label>
+		<tip><![CDATA[It is recommended that this parameter be set to FALSE.  If the CLKFB is coming from CLK0 or CLK2X, the CLK0_BUF or CLK2X_BUF should be used respectively.  If the CLKFB is coming from an external pin, the external port should specify SIGIS = DCMCLK, which inserts an IBUFG.  It is not recommended to use SIGIS = CLK with a DCM as that uses a BUFGP (IBUFG followed by BUFG) and uses up a BUFG when it is not needed.  If one does not insert an IBUFG when coming from an external pin with SIGIS = DCMCLK, the clock skew between the FPGA and the board may be increased due to poor routing inside the FPGA between the pin and the DCM.]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_CLK0_BUF '
+	<widget id="C_CLK0_BUF">
+		<key>C_CLK0_BUF</key>
+		<label>Insert a BUFG for CLK0</label>
+		<tip><![CDATA[If the CLK0 output is used inside the FPGA, it is recommended that this parameter be set to TRUE.  If this output goes directly to an external pin, this should be set FALSE.  If this output is not used, this should be left FALSE.]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_CLK90_BUF '
+	<widget id="C_CLK90_BUF">
+		<key>C_CLK90_BUF</key>
+		<label>Insert a BUFG for CLK90</label>
+		<tip><![CDATA[If the CLK90 output is used inside the FPGA, it is recommended that this parameter be set to TRUE.  If this output goes directly to an external pin, this should be set FALSE.  If this output is not used, this should be left FALSE.]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_CLK180_BUF '
+	<widget id="C_CLK180_BUF">
+		<key>C_CLK180_BUF</key>
+		<label>Insert a BUFG for CLK180</label>
+		<tip><![CDATA[If the CLK180 output is used inside the FPGA, it is recommended that this parameter be set to TRUE.  If this output goes directly to an external pin, this should be set FALSE.  If this output is not used, this should be left FALSE.]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_CLK270_BUF '
+	<widget id="C_CLK270_BUF">
+		<key>C_CLK270_BUF</key>
+		<label>Insert a BUFG for CLK270</label>
+		<tip><![CDATA[If the CLK270 output is used inside the FPGA, it is recommended that this parameter be set to TRUE.  If this output goes directly to an external pin, this should be set FALSE.  If this output is not used, this should be left FALSE.]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_CLKDV_BUF '
+	<widget id="C_CLKDV_BUF">
+		<key>C_CLKDV_BUF</key>
+		<label>Insert a BUFG for CLKDV</label>
+		<tip><![CDATA[If the CLKDV output is used inside the FPGA, it is recommended that this parameter be set to TRUE.  If this output goes directly to an external pin, this should be set FALSE.  If this output is not used, this should be left FALSE.]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_CLK2X_BUF '
+	<widget id="C_CLK2X_BUF">
+		<key>C_CLK2X_BUF</key>
+		<label>Insert a BUFG for CLK2X</label>
+		<tip><![CDATA[If the CLK2X output is used inside the FPGA, it is recommended that this parameter be set to TRUE.  If this output goes directly to an external pin, this should be set FALSE.  If this output is not used, this should be left FALSE.]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_CLK2X180_BUF '
+	<widget id="C_CLK2X180_BUF">
+		<key>C_CLK2X180_BUF</key>
+		<label>Insert a BUFG for CLK2X180</label>
+		<tip><![CDATA[If the CLK2X180 output is used inside the FPGA, it is recommended that this parameter be set to TRUE.  If this output goes directly to an external pin, this should be set FALSE.  If this output is not used, this should be left FALSE.]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_CLKFX_BUF '
+	<widget id="C_CLKFX_BUF">
+		<key>C_CLKFX_BUF</key>
+		<label>Insert a BUFG for CLKFX</label>
+		<tip><![CDATA[If the CLKFX output is used inside the FPGA, it is recommended that this parameter be set to TRUE.  If this output goes directly to an external pin, this should be set FALSE.  If this output is not used, this should be left FALSE.]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_CLKFX180_BUF '
+	<widget id="C_CLKFX180_BUF">
+		<key>C_CLKFX180_BUF</key>
+		<label>Insert a BUFG for CLKFX180</label>
+		<tip><![CDATA[If the CLKFX180 output is used inside the FPGA, it is recommended that this parameter be set to TRUE.  If this output goes directly to an external pin, this should be set FALSE.  If this output is not used, this should be left FALSE.]]></tip>
+	</widget>
+	'>
+	<!ENTITY C_EXT_RESET_HIGH '
+	<widget id="C_EXT_RESET_HIGH">
+		<key>C_EXT_RESET_HIGH</key>
+		<label>Reset Polarity</label>
+		<tip><![CDATA[If this parameter is 0 then an inverter is inserted for the RST pin of the DCM; otherwise, the RST is connected to the DCM directly.]]></tip>
+	</widget>
+	'>
+]>
+
+<doc>
+	<view id="User">
+		<display>User</display>
+		<group id="DCM">
+			<display>DCM</display>
+			<item>&C_DFS_FREQUENCY_MODE;</item>
+			<item>&C_DLL_FREQUENCY_MODE;</item>
+			<item>&C_DUTY_CYCLE_CORRECTION;</item>
+			<item>&C_CLKIN_DIVIDE_BY_2;</item>
+			<item>&C_CLK_FEEDBACK;</item>
+			<item>&C_CLKOUT_PHASE_SHIFT;</item>
+			<item>&C_DSS_MODE;</item>
+			<item>&C_STARTUP_WAIT;</item>
+			<item>&C_PHASE_SHIFT;</item>
+			<item>&C_CLKFX_MULTIPLY;</item>
+			<item>&C_CLKFX_DIVIDE;</item>
+			<item>&C_CLKDV_DIVIDE;</item>
+			<item>&C_CLKIN_PERIOD;</item>
+			<item>&C_DESKEW_ADJUST;</item>
+			<item>&C_EXT_RESET_HIGH;</item>
+		</group>
+		<group id="Buffers">
+			<display>Buffers</display>
+			<item>&C_CLKIN_BUF;</item>
+			<item>&C_CLKFB_BUF;</item>
+			<item>&C_CLK0_BUF;</item>
+			<item>&C_CLK90_BUF;</item>
+			<item>&C_CLK180_BUF;</item>
+			<item>&C_CLK270_BUF;</item>
+			<item>&C_CLKDV_BUF;</item>
+			<item>&C_CLK2X_BUF;</item>
+			<item>&C_CLK2X180_BUF;</item>
+			<item>&C_CLKFX_BUF;</item>
+			<item>&C_CLKFX180_BUF;</item>
+		</group>
+		<group id="Hidden">
+			<display>Hidden</display>
+			<item>&C_FAMILY;</item>
+		</group>
+	</view>
+</doc>
