@@ -2,7 +2,11 @@
 -- adc2x14_400_interface : ADC board with two ADS5474 for I and Q signals
 ----------------------------------------------------------------------------------
 
+<<<<<<< HEAD
 -- Authors:             Bruno Serfass, Guy Kenfack, Sean McHugh, Ran Duan     
+=======
+-- Authors:             Bruno Serfass, Sean McHugh, Ran Duan     
+>>>>>>> casper_vanilla
 -- Create Date: 	01/22/2011
 
 
@@ -355,7 +359,11 @@ begin
       CLKFX_DIVIDE          => 1,
       CLKFX_MULTIPLY        => 4,
       CLKIN_DIVIDE_BY_2     => FALSE,
+<<<<<<< HEAD
       CLKIN_PERIOD          => 0.000000,
+=======
+      CLKIN_PERIOD          => 5.000000,
+>>>>>>> casper_vanilla
       CLKOUT_PHASE_SHIFT    => "NONE",
       DESKEW_ADJUST         => "SYSTEM_SYNCHRONOUS",
       DFS_FREQUENCY_MODE    => "HIGH",

@@ -3,7 +3,13 @@
 --                         Clock divided by 4
 ----------------------------------------------------------------------------------
 
+<<<<<<< HEAD
 -- Authors:             Bruno Serfass, Guy Kenfack, Sean McHugh, Ran Duan     
+=======
+-- Authors:             Bruno Serfass, Sean McHugh, Ran Duan  
+-- Test & validation: 	Guy Kenfack  
+-- 						we obtain good adc perf when the dcm is configured with 45degr capture mode
+>>>>>>> casper_vanilla
 -- Create Date: 	5/2/2011
 
 

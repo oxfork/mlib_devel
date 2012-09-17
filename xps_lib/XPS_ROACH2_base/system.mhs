@@ -286,14 +286,18 @@
 #IF# (strcmp(get(b,'type'),'xps_adc5g')) && get(b,'use_adc0')## control wires for adc0
 #IF# (strcmp(get(b,'type'),'xps_adc5g')) && get(b,'use_adc0')#PORT adc0_adc3wire_clk = adc0_adc3wire_clk, DIR = O
 #IF# (strcmp(get(b,'type'),'xps_adc5g')) && get(b,'use_adc0')#PORT adc0_adc3wire_data = adc0_adc3wire_data, DIR = O
+#IF# (strcmp(get(b,'type'),'xps_adc5g')) && get(b,'use_adc0')#PORT adc0_adc3wire_data_o = adc0_adc3wire_data_o, DIR = I
 #IF# (strcmp(get(b,'type'),'xps_adc5g')) && get(b,'use_adc0')#PORT adc0_adc3wire_spi_rst= adc0_adc3wire_spi_rst, DIR = O
 #IF# (strcmp(get(b,'type'),'xps_adc5g')) && get(b,'use_adc0')#PORT adc0_modepin = adc0_modepin, DIR = O
+#IF# (strcmp(get(b,'type'),'xps_adc5g')) && get(b,'use_adc0')#PORT adc0_reset = adc0_reset, DIR = O
 #IF# (strcmp(get(b,'type'),'xps_adc5g')) && get(b,'use_adc1')##
 #IF# (strcmp(get(b,'type'),'xps_adc5g')) && get(b,'use_adc1')## control wires for adc1
 #IF# (strcmp(get(b,'type'),'xps_adc5g')) && get(b,'use_adc1')#PORT adc1_adc3wire_clk = adc1_adc3wire_clk, DIR = O
 #IF# (strcmp(get(b,'type'),'xps_adc5g')) && get(b,'use_adc1')#PORT adc1_adc3wire_data = adc1_adc3wire_data, DIR = O
+#IF# (strcmp(get(b,'type'),'xps_adc5g')) && get(b,'use_adc1')#PORT adc1_adc3wire_data_o = adc1_adc3wire_data_o, DIR = I
 #IF# (strcmp(get(b,'type'),'xps_adc5g')) && get(b,'use_adc1')#PORT adc1_adc3wire_spi_rst= adc1_adc3wire_spi_rst, DIR = O
 #IF# (strcmp(get(b,'type'),'xps_adc5g')) && get(b,'use_adc1')#PORT adc1_modepin = adc1_modepin, DIR = O
+#IF# (strcmp(get(b,'type'),'xps_adc5g')) && get(b,'use_adc1')#PORT adc1_reset = adc1_reset, DIR = O
 #IF# (strcmp(get(b,'type'),'xps_adc5g'))  #### added 2011-05-05 kim.guzzino same interface as adc_5g
 #IF# (strcmp(get(b,'type'),'xps_adc5g'))  #### changed 2011-08-04 rurik to adc5g
 #IF# (strcmp(get(b,'type'),'xps_adc5g'))  ##
@@ -325,9 +329,14 @@
 #IF# (strcmp(get(b,'type'),'xps_adc5g'))  # # control signals for adc0
 #IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc0')# PORT adc0_adc3wire_clk     = adc0_adc3wire_clk
 #IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc0')# PORT adc0_adc3wire_data    = adc0_adc3wire_data
+#IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc0')# PORT adc0_adc3wire_data_o  = adc0_adc3wire_data_o
 #IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc0')# PORT adc0_adc3wire_spi_rst = adc0_adc3wire_spi_rst
 #IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc0')# PORT adc0_modepin          = adc0_modepin
+#IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc0')# PORT adc0_reset            = adc0_reset
 #IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc0')# PORT adc0_dcm_reset        = adc0_dcm_reset
+#IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc0')# PORT adc0_dcm_locked       = adc0_dcm_locked
+#IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc0')# PORT adc0_fifo_full_cnt    = adc0_fifo_full_cnt
+#IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc0')# PORT adc0_fifo_empty_cnt   = adc0_fifo_empty_cnt
 #IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc0')# PORT adc0_psclk            = adc0_psclk
 #IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc0')# PORT adc0_psen             = adc0_psen
 #IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc0')# PORT adc0_psincdec         = adc0_psincdec
@@ -337,9 +346,14 @@
 #IF# (strcmp(get(b,'type'),'xps_adc5g'))  # # control signals for adc1
 #IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc1')# PORT adc1_adc3wire_clk     = adc1_adc3wire_clk
 #IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc1')# PORT adc1_adc3wire_data    = adc1_adc3wire_data
+#IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc1')# PORT adc1_adc3wire_data_o  = adc1_adc3wire_data_o
 #IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc1')# PORT adc1_adc3wire_spi_rst = adc1_adc3wire_spi_rst
 #IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc1')# PORT adc1_modepin          = adc1_modepin
+#IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc1')# PORT adc1_reset            = adc1_reset  
 #IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc1')# PORT adc1_dcm_reset        = adc1_dcm_reset
+#IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc1')# PORT adc1_dcm_locked       = adc1_dcm_locked
+#IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc1')# PORT adc1_fifo_full_cnt    = adc1_fifo_full_cnt
+#IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc1')# PORT adc1_fifo_empty_cnt   = adc1_fifo_empty_cnt
 #IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc1')# PORT adc1_psclk            = adc1_psclk
 #IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc1')# PORT adc1_psen             = adc1_psen
 #IF# (strcmp(get(b,'type'),'xps_adc5g'))  && get(b,'use_adc1')# PORT adc1_psincdec         = adc1_psincdec
@@ -351,12 +365,16 @@
 BEGIN roach_infrastructure
  PARAMETER INSTANCE = infrastructure_inst
  PARAMETER HW_VER = 1.00.a
-#IF# 1 # ['  PARAMETER CLK_FREQ = ', num2str(app_clk_rate), '\n']
+#IF# 1 # ['  PARAMETER CLK_FREQ     = ', num2str(app_clk_rate), '\n']
+#IF# 1 # ['  PARAMETER CLK_HIGH_LOW = ', num2str(clk_high_low), '\n']
+#IF# 1 # ['  PARAMETER CLK_SOURCE   = ', num2str(clk_source),   '\n']
+#IF# 1 # ['  PARAMETER MULTIPLY     = ', num2str(multiply),     '\n']
+#IF# 1 # ['  PARAMETER DIVIDE       = ', num2str(divide),       '\n']
  #PARAMETER CLK_FREQ = 100
  PORT sys_clk_n = sys_clk_n
  PORT sys_clk_p = sys_clk_p
-# PORT aux_clk_n = aux_clk_n
-# PORT aux_clk_p = aux_clk_p
+ PORT aux_clk_n = aux_clk_n
+ PORT aux_clk_p = aux_clk_p
 # PORT aux_synci_n   = aux1_clk_n
 # PORT aux_synci_p   = aux1_clk_p
 # PORT aux_synco_n   = aux1_clk_n
@@ -371,14 +389,14 @@ BEGIN roach_infrastructure
  PORT sys_clk2x90 = sys_clk2x90
  PORT sys_clk2x180 = sys_clk2x180
  PORT sys_clk2x270 = sys_clk2x270
-# PORT aux_clk       = aux_clk
-# PORT aux_clk90     = aux_clk90
-# PORT aux_clk180    = aux_clk180
-# PORT aux_clk270    = aux_clk270
-# PORT aux_clk2x     = aux_clk2x
-# PORT aux_clk2x90   = aux_clk2x90
-# PORT aux_clk2x180  = aux_clk2x180
-# PORT aux_clk2x270  = aux_clk2x270
+ PORT aux_clk       = aux_clk
+ PORT aux_clk90     = aux_clk90
+ PORT aux_clk180    = aux_clk180
+ PORT aux_clk270    = aux_clk270
+ PORT aux_clk2x     = aux_clk2x
+ PORT aux_clk2x90   = aux_clk2x90
+ PORT aux_clk2x180  = aux_clk2x180
+ PORT aux_clk2x270  = aux_clk2x270
  PORT epb_clk = epb_clk
  PORT idelay_rst = power_on_rst
  PORT idelay_rdy = idelay_rdy
@@ -450,3 +468,15 @@ BEGIN sys_block
 END
 
 
+#IF# (strcmp(get(b,'type'),'xps_xaui') || strncmp(get(b,'type'),'xps_tengbe',10)) && strcmp(get(b, 'flavour'), 'sfp+')#
+#IF# (strcmp(get(b,'type'),'xps_xaui') || strncmp(get(b,'type'),'xps_tengbe',10)) && strcmp(get(b, 'flavour'), 'sfp+')#BEGIN sfp_mdio_controller
+#IF# (strcmp(get(b,'type'),'xps_xaui') || strncmp(get(b,'type'),'xps_tengbe',10)) && strcmp(get(b, 'flavour'), 'sfp+')# PARAMETER HW_VER = 1.00.a                    
+#IF# (strcmp(get(b,'type'),'xps_xaui') || strncmp(get(b,'type'),'xps_tengbe',10)) && strcmp(get(b, 'flavour'), 'sfp+')# PARAMETER INSTANCE = sfp_mdio_controller_inst                
+#IF# (strcmp(get(b,'type'),'xps_xaui') || strncmp(get(b,'type'),'xps_tengbe',10)) && strcmp(get(b, 'flavour'), 'sfp+')# PARAMETER C_BASEADDR = 0x00060000           
+#IF# (strcmp(get(b,'type'),'xps_xaui') || strncmp(get(b,'type'),'xps_tengbe',10)) && strcmp(get(b, 'flavour'), 'sfp+')# PARAMETER C_HIGHADDR = 0x0006FFFF          
+#IF# (strcmp(get(b,'type'),'xps_xaui') || strncmp(get(b,'type'),'xps_tengbe',10)) && strcmp(get(b, 'flavour'), 'sfp+')# BUS_INTERFACE SOPB = opb0                    
+#IF# (strcmp(get(b,'type'),'xps_xaui') || strncmp(get(b,'type'),'xps_tengbe',10)) && strcmp(get(b, 'flavour'), 'sfp+')# PORT OPB_Clk = epb_clk                        
+#IF# (strcmp(get(b,'type'),'xps_xaui') || strncmp(get(b,'type'),'xps_tengbe',10)) && strcmp(get(b, 'flavour'), 'sfp+')# PORT mgt_gpio = mgt_gpio             
+#IF# (strcmp(get(b,'type'),'xps_xaui') || strncmp(get(b,'type'),'xps_tengbe',10)) && strcmp(get(b, 'flavour'), 'sfp+')#END 
+#IF# (strcmp(get(b,'type'),'xps_xaui') || strncmp(get(b,'type'),'xps_tengbe',10)) && strcmp(get(b, 'flavour'), 'sfp+')#PORT mgt_gpio = mgt_gpio, VEC = [11:0], DIR = IO  
+#IF# (strcmp(get(b,'type'),'xps_xaui') || strncmp(get(b,'type'),'xps_tengbe',10)) && strcmp(get(b, 'flavour'), 'sfp+')#
