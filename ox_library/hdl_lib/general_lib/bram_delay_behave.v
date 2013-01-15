@@ -33,7 +33,7 @@ module bram_delay_behave(
     endfunction
 
     parameter WIDTH = 32;
-    parameter DELAY = 1024;              //Delay to implement in clocks.
+    parameter DELAY = 512;               //Delay to implement in clocks.
     parameter LATENCY = 2;               //Can be either 2 or 1
     
     localparam ADDR_BITS = `log2(DELAY-LATENCY);
@@ -51,17 +51,67 @@ module bram_delay_behave(
         ctr <= ctr ==  (DELAY-LATENCY-1) ? 0 : ctr + 1'b1;
     end
     
-    sp_ram #(
+    // Compiler doesn't seem to figure out that it can use simple dual port
+    // rams. Explicitly instruct it here.
+    
+
+    /*
+
+    localparam USE_DP = ((WIDTH<=36)&&(WIDTH>18)&&(ADDR_BITS<=9)) ? 1'b1 : 1'b0;
+
+    generate
+        wire [17:0] dout_b_padded;
+        wire [17:0] dout_a_padded;
+
+        if (USE_DP) begin : use_dp_ram
+            bram_tdp #(
+                .ADDR(ADDR_BITS+1),
+                .DATA(18),
+                .LATENCY(LATENCY)
+            ) ram_delay_inst (
+                .a_clk(clk),
+                .a_wr(1'b1),
+                .a_addr({1'b1,ctr}),
+                .a_din(din[17:0]),
+                .a_dout(dout_a_padded[17:0]),
+                .b_clk(clk),
+                .b_wr(1'b1),
+                .b_addr({1'b0,ctr}),
+                .b_din({{(36-WIDTH){1'b0}},din[WIDTH-1:18]}),
+                .b_dout(dout_b_padded[17:0])
+            );
+            assign dout[17:0] = dout_a_padded;
+            assign dout[WIDTH-1:18] = dout_b_padded[WIDTH-1-18:0];
+
+        end else begin : use_sp_ram
+            sp_ram #(
+                .A_WIDTH(ADDR_BITS),
+                .D_WIDTH(WIDTH),
+                .LATENCY(LATENCY)
+            ) ram_delay_inst (
+                .clk(clk),
+                .we(1'b1),
+                .addr(ctr),
+                .din(din),
+                .dout(dout)
+            );
+        end
+    endgenerate
+
+    */
+    sdp_ram #(
         .A_WIDTH(ADDR_BITS),
         .D_WIDTH(WIDTH),
         .LATENCY(LATENCY)
     ) ram_delay_inst (
         .clk(clk),
         .we(1'b1),
-        .addr(ctr),
+        .r_addr(ctr),
+        .w_addr(ctr),
         .din(din),
         .dout(dout)
     );
+
   
 endmodule
 

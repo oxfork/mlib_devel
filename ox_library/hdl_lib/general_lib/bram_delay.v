@@ -33,7 +33,7 @@ module bram_delay(
     endfunction
 
     parameter WIDTH = 32;                //interface width (<37 for 18Kb bram, <73 for 36Kb)
-    parameter DELAY = 1024;               //Delay to implement in clocks.
+    parameter DELAY = 512;               //Delay to implement in clocks.
     parameter TARGET_BRAM = "36Kb";      //Target bram block size. Either "18Kb" or "36Kb"
     parameter TARGET_DEVICE = "VIRTEX5"; //VIRTEX5, VIRTEX6 or SPARTAN6
     parameter LATENCY = 2;               //Can be either 2 or 1

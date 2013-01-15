@@ -26,7 +26,7 @@ module xeng_top(
     parameter ACC_MUX_LATENCY = 2;      //Latency of the mux to place the accumulation result on the xeng shift reg
     parameter FIRST_DSP_REGISTERS = 2;  //number of registers on the input of the first DSP slice in the chain
     parameter DSP_REGISTERS = 2;        //number of registers on the input of all others DSP slices in the chain
-    parameter N_ANTS = 32;              //number of (dual pol) antenna inputs
+    parameter N_ANTS = 64;              //number of (dual pol) antenna inputs
     parameter BRAM_LATENCY = 2;         //Latency of brams in delay chain
     //parameter DEMUX_FACTOR = 1;         //Demux Factor -- NOT YET IMPLEMENTED
     parameter MCNT_WIDTH = 48;          //MCNT bus width
