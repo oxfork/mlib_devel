@@ -1,6 +1,6 @@
 Library {
   Name			  "casper_library_ffts_twiddle"
-  Version		  7.2
+  Version		  7.4
   MdlSubVersion		  0
   SavedCharacterEncoding  "windows-1252"
   LibraryType		  "BlockLibrary"
@@ -8,15 +8,16 @@ Library {
   ScopeRefreshTime	  0.035000
   OverrideScopeRefreshTime on
   DisableAllScopes	  off
+  MaxMDLFileLineLength	  120
   Created		  "Thu Sep 02 12:37:18 2010"
   Creator		  "mdexter"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "root"
+  LastModifiedBy	  "jack"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Jun 15 14:53:46 2012"
-  RTWModifiedTimeStamp	  261672825
-  ModelVersionFormat	  "1.%<AutoIncrement:9>"
+  LastModifiedDate	  "Wed Feb  6 18:42:59 2013"
+  RTWModifiedTimeStamp	  282076969
+  ModelVersionFormat	  "1.%<AutoIncrement:10>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -48,11 +49,13 @@ Library {
   CovMetricSettings	  "dw"
   CovNameIncrementing	  off
   CovHtmlReporting	  on
+  CovForceBlockReductionOff on
   covSaveCumulativeToWorkspaceVar on
   CovSaveSingleToWorkspaceVar on
   CovCumulativeReport	  off
   CovReportOnPause	  on
   CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
   ExtModeBatchMode	  off
   ExtModeEnableFloating	  on
   ExtModeTrigType	  "manual"
@@ -81,13 +84,13 @@ Library {
     Dimension		    1
     Simulink.ConfigSet {
       $ObjectID		      1
-      Version		      "1.5.1"
+      Version		      "1.6.0"
       Array {
 	Type			"Handle"
 	Dimension		8
 	Simulink.SolverCC {
 	  $ObjectID		  2
-	  Version		  "1.5.1"
+	  Version		  "1.6.0"
 	  StartTime		  "0.0"
 	  StopTime		  "10.0"
 	  AbsTol		  "auto"
@@ -116,11 +119,10 @@ Library {
 	  AutoInsertRateTranBlk	  off
 	  SampleTimeConstraint	  "Unconstrained"
 	  InsertRTBMode		  "Whenever possible"
-	  SignalSizeVariationType "Allow only fixed size"
 	}
 	Simulink.DataIOCC {
 	  $ObjectID		  3
-	  Version		  "1.5.1"
+	  Version		  "1.6.0"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
 	  FinalStateName	  "xFinal"
@@ -130,23 +132,26 @@ Library {
 	  LoadExternalInput	  off
 	  LoadInitialState	  off
 	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
 	  SaveFormat		  "Array"
 	  SaveOutput		  on
 	  SaveState		  off
 	  SignalLogging		  on
 	  InspectSignalLogs	  off
 	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
 	  StateSaveName		  "xout"
 	  TimeSaveName		  "tout"
 	  OutputSaveName	  "yout"
 	  SignalLoggingName	  "logsout"
 	  OutputOption		  "RefineOutputTimes"
 	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
 	  Refine		  "1"
 	}
 	Simulink.OptimizationCC {
 	  $ObjectID		  4
-	  Version		  "1.5.1"
+	  Version		  "1.6.0"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    7
@@ -163,14 +168,18 @@ Library {
 	  BooleanDataType	  off
 	  ConditionallyExecuteInputs on
 	  InlineParams		  off
+	  UseIntDivNetSlope	  off
 	  InlineInvariantSignals  off
 	  OptimizeBlockIOStorage  on
 	  BufferReuse		  on
 	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
 	  EnforceIntegerDowncast  on
 	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
 	  EnableMemcpy		  on
 	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
 	  ExpressionDepthLimit	  2147483647
 	  FoldNonRolledExpr	  on
 	  LocalBlockOutputs	  on
@@ -193,7 +202,7 @@ Library {
 	}
 	Simulink.DebuggingCC {
 	  $ObjectID		  5
-	  Version		  "1.5.1"
+	  Version		  "1.6.0"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
 	  ArrayBoundsChecking	  "none"
@@ -233,6 +242,9 @@ Library {
 	  ParameterUnderflowMsg	  "none"
 	  ParameterPrecisionLossMsg "warning"
 	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
 	  UnderSpecifiedDataTypeMsg "none"
 	  UnnecessaryDatatypeConvMsg "none"
 	  VectorMatrixConversionMsg "none"
@@ -257,13 +269,14 @@ Library {
 	  ModelReferenceSymbolNameMessage "warning"
 	  ModelReferenceExtraNoncontSigs "error"
 	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
 	  StrictBusMsg		  "Warning"
 	  LoggingUnavailableSignals "error"
 	  BlockIODiagnostic	  "none"
 	}
 	Simulink.HardwareCC {
 	  $ObjectID		  6
-	  Version		  "1.5.1"
+	  Version		  "1.6.0"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
 	  ProdBitPerInt		  32
@@ -290,7 +303,7 @@ Library {
 	}
 	Simulink.ModelReferenceCC {
 	  $ObjectID		  7
-	  Version		  "1.5.1"
+	  Version		  "1.6.0"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
 	  ModelReferenceNumInstancesAllowed "Multi"
@@ -299,17 +312,21 @@ Library {
 	}
 	Simulink.SFSimCC {
 	  $ObjectID		  8
-	  Version		  "1.5.1"
+	  Version		  "1.6.0"
 	  SFSimEnableDebug	  on
 	  SFSimOverflowDetection  on
 	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
 	  SimUseLocalCustomCode	  off
 	  SimBuildMode		  "sf_incremental_build"
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
 	  $ObjectID		  9
-	  Version		  "1.5.1"
+	  Version		  "1.6.0"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    6
@@ -351,12 +368,13 @@ Library {
 	  GenerateTraceReportEml  off
 	  GenerateCodeInfo	  off
 	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
 	  Array {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
 	      $ObjectID		      10
-	      Version		      "1.5.1"
+	      Version		      "1.6.0"
 	      Array {
 		Type			"Cell"
 		Dimension		19
@@ -399,6 +417,7 @@ Library {
 	      CustomSymbolStrType     "$N$R$M"
 	      CustomSymbolStrField    "$N$M"
 	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
 	      CustomSymbolStrBlkIO    "rtb_$N$M"
 	      CustomSymbolStrTmpVar   "$N$M"
 	      CustomSymbolStrMacro    "$R$N$M"
@@ -415,7 +434,7 @@ Library {
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
 	      $ObjectID		      11
-	      Version		      "1.5.1"
+	      Version		      "1.6.0"
 	      Array {
 		Type			"Cell"
 		Dimension		17
@@ -451,8 +470,10 @@ Library {
 	      GenerateTestInterfaces  off
 	      IsPILTarget	      off
 	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
 	      CompOptLevelCompliant   on
 	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
 	      CombineOutputUpdateFcns off
 	      SuppressErrorStatus     off
 	      ERTFirstTimeCompliant   off
@@ -467,6 +488,7 @@ Library {
 	      PurelyIntegerCode	      off
 	      SupportContinuousTime   on
 	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
 	      EnableShiftOperators    on
 	      ParenthesesLevel	      "Nominal"
 	      PortableWordSizes	      off
@@ -498,7 +520,6 @@ Library {
     PropName		    "ConfigurationSets"
   }
   BlockDefaults {
-    Orientation		    "right"
     ForegroundColor	    "black"
     BackgroundColor	    "white"
     DropShadow		    off
@@ -508,6 +529,8 @@ Library {
     FontWeight		    "normal"
     FontAngle		    "normal"
     ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
   }
   AnnotationDefaults {
     HorizontalAlignment	    "center"
@@ -535,6 +558,7 @@ Library {
       BusObject		      "BusObject"
       BusOutputAsStruct	      off
       PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
       SampleTime	      "-1"
       OutMin		      "[]"
       OutMax		      "[]"
@@ -556,6 +580,7 @@ Library {
       BusObject		      "BusObject"
       BusOutputAsStruct	      off
       PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
       SampleTime	      "-1"
       OutMin		      "[]"
       OutMax		      "[]"
@@ -606,9 +631,11 @@ Library {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    8
     Block {
       BlockType		      SubSystem
       Name		      "coeff_gen"
+      SID		      1
       Ports		      []
       Position		      [430, 25, 480, 75]
       OpenFcn		      "casper_library_ffts_twiddle_coeff_gen"
@@ -623,6 +650,7 @@ Library {
       MaskIconFrame	      on
       MaskIconOpaque	      on
       MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
       MaskIconUnits	      "autoscale"
       System {
 	Name			"coeff_gen"
@@ -644,6 +672,7 @@ Library {
     Block {
       BlockType		      SubSystem
       Name		      "twiddle_coeff_0"
+      SID		      2
       Ports		      [3, 5]
       Position		      [20, 24, 110, 116]
       BackgroundColor	      "gray"
@@ -665,7 +694,6 @@ Library {
       MaskEnableString	      "on,on,on,on,on,on,on"
       MaskVisibilityString    "on,on,on,on,on,on,on"
       MaskToolTipString	      "on,on,on,on,on,on,on"
-      MaskVarAliasString      ",,,,,,"
       MaskVariables	      "FFTSize=@1;input_bit_width=@2;add_latency=@3;mult_latency=@4;bram_latency=@5;conv_latency=@"
       "6;opt_target=&7;"
       MaskInitialization      "set_param(gcb,'LinkStatus','inactive');\nif(strcmp(opt_target, 'logic')), \n    latency"
@@ -676,12 +704,12 @@ Library {
       MaskIconFrame	      on
       MaskIconOpaque	      on
       MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
       MaskIconUnits	      "autoscale"
       MaskValueString	      "0|18|1|2|2|0|logic"
-      MaskTabNameString	      ",,,,,,"
       System {
 	Name			"twiddle_coeff_0"
-	Location		[481, 475, 1176, 1042]
+	Location		[481, 469, 1176, 1036]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -694,9 +722,11 @@ Library {
 	TiledPageScale		1
 	ShowPageBoundaries	off
 	ZoomFactor		"100"
+	SIDHighWatermark	13
 	Block {
 	  BlockType		  Inport
 	  Name			  "a"
+	  SID			  1
 	  Position		  [145, 28, 175, 42]
 	  IconDisplay		  "Port number"
 	  OutDataType		  "sfix(16)"
@@ -705,6 +735,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "b"
+	  SID			  2
 	  Position		  [145, 98, 175, 112]
 	  Port			  "2"
 	  IconDisplay		  "Port number"
@@ -714,6 +745,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "sync"
+	  SID			  3
 	  Position		  [145, 163, 175, 177]
 	  Port			  "3"
 	  IconDisplay		  "Port number"
@@ -723,16 +755,18 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "c_to_ri"
+	  SID			  4
 	  Ports			  [1, 2]
 	  Position		  [255, 14, 295, 56]
 	  AttributesFormatString  "18_17 r/i"
+	  LibraryVersion	  "1.19"
 	  UserDataPersistent	  on
 	  UserData		  "DataTag0"
 	  SourceBlock		  "casper_library_misc/c_to_ri"
 	  SourceType		  "c_to_ri"
 	  ShowPortLabels	  "FromPortIcon"
 	  SystemSampleTime	  "-1"
-	  FunctionWithSeparateData "off"
+	  FunctionWithSeparateData off
 	  RTWMemSecFuncInitTerm	  "Inherit from model"
 	  RTWMemSecFuncExecute	  "Inherit from model"
 	  RTWMemSecDataConstants  "Inherit from model"
@@ -744,16 +778,18 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "c_to_ri1"
+	  SID			  5
 	  Ports			  [1, 2]
 	  Position		  [255, 84, 295, 126]
 	  AttributesFormatString  "18_17 r/i"
+	  LibraryVersion	  "1.19"
 	  UserDataPersistent	  on
 	  UserData		  "DataTag1"
 	  SourceBlock		  "casper_library_misc/c_to_ri"
 	  SourceType		  "c_to_ri"
 	  ShowPortLabels	  "FromPortIcon"
 	  SystemSampleTime	  "-1"
-	  FunctionWithSeparateData "off"
+	  FunctionWithSeparateData off
 	  RTWMemSecFuncInitTerm	  "Inherit from model"
 	  RTWMemSecFuncExecute	  "Inherit from model"
 	  RTWMemSecDataConstants  "Inherit from model"
@@ -765,16 +801,18 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "delay0"
+	  SID			  6
 	  Ports			  [1, 1]
 	  Position		  [195, 14, 235, 56]
+	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Delay"
 	  SourceType		  "Xilinx Delay Block"
 	  infoedit		  "Hardware notes: A delay line is a chain, each link of which is an SRL16 followed by a flip-flop."
-	  en			  "off"
+	  en			  off
 	  latency		  "mult_latency+add_latency+bram_latency+conv_latency"
-	  dbl_ovrd		  "off"
-	  reg_retiming		  "on"
-	  xl_use_area		  "off"
+	  dbl_ovrd		  off
+	  reg_retiming		  on
+	  xl_use_area		  off
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "31,321,419,315"
@@ -791,16 +829,18 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "delay1"
+	  SID			  7
 	  Ports			  [1, 1]
 	  Position		  [195, 84, 235, 126]
+	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Delay"
 	  SourceType		  "Xilinx Delay Block"
 	  infoedit		  "Hardware notes: A delay line is a chain, each link of which is an SRL16 followed by a flip-flop."
-	  en			  "off"
+	  en			  off
 	  latency		  "mult_latency+add_latency+bram_latency+conv_latency"
-	  dbl_ovrd		  "off"
-	  reg_retiming		  "on"
-	  xl_use_area		  "off"
+	  dbl_ovrd		  off
+	  reg_retiming		  on
+	  xl_use_area		  off
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "24,132,419,315"
@@ -817,16 +857,18 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "delay2"
+	  SID			  8
 	  Ports			  [1, 1]
 	  Position		  [195, 149, 235, 191]
+	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Delay"
 	  SourceType		  "Xilinx Delay Block"
 	  infoedit		  "Hardware notes: A delay line is a chain, each link of which is an SRL16 followed by a flip-flop."
-	  en			  "off"
+	  en			  off
 	  latency		  "mult_latency+add_latency+bram_latency+conv_latency"
-	  dbl_ovrd		  "off"
-	  reg_retiming		  "on"
-	  xl_use_area		  "off"
+	  dbl_ovrd		  off
+	  reg_retiming		  on
+	  xl_use_area		  off
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "21,51,419,315"
@@ -843,6 +885,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "a_re"
+	  SID			  9
 	  Position		  [320, 13, 350, 27]
 	  IconDisplay		  "Port number"
 	  OutDataType		  "sfix(16)"
@@ -851,6 +894,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "a_im"
+	  SID			  10
 	  Position		  [320, 43, 350, 57]
 	  Port			  "2"
 	  IconDisplay		  "Port number"
@@ -860,6 +904,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "bw_re"
+	  SID			  11
 	  Position		  [320, 83, 350, 97]
 	  Port			  "3"
 	  IconDisplay		  "Port number"
@@ -869,6 +914,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "bw_im"
+	  SID			  12
 	  Position		  [320, 113, 350, 127]
 	  Port			  "4"
 	  IconDisplay		  "Port number"
@@ -878,6 +924,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "sync_out"
+	  SID			  13
 	  Position		  [255, 163, 285, 177]
 	  Port			  "5"
 	  IconDisplay		  "Port number"
@@ -953,6 +1000,7 @@ Library {
     Block {
       BlockType		      SubSystem
       Name		      "twiddle_coeff_1"
+      SID		      3
       Ports		      [3, 5]
       Position		      [140, 24, 230, 116]
       BackgroundColor	      "gray"
@@ -973,21 +1021,20 @@ Library {
       MaskEnableString	      "on,on,on,on,on,on,on"
       MaskVisibilityString    "on,on,on,on,on,on,on"
       MaskToolTipString	      "on,on,on,on,on,on,on"
-      MaskVarAliasString      ",,,,,,"
       MaskVariables	      "FFTSize=@1;input_bit_width=@2;add_latency=@3;mult_latency=@4;bram_latency=@5;conv_latency=@"
       "6;opt_target=&7;"
       MaskInitialization      "set_param(gcb,'LinkStatus','inactive');\nif(strcmp(opt_target, 'logic')), \n    latency"
       " = 'mult_latency+add_latency+bram_latency+conv_latency';\nelse,\n    latency = 'mult_latency+add_latency*2+bram_"
       "latency+conv_latency';\nend\nset_param([gcb,'/delay0'], 'latency', latency);\nset_param([gcb,'/delay1'], 'latenc"
       "y', latency);\nset_param([gcb,'/delay2'], 'latency', latency);\nset_param([gcb,'/delay3'], 'latency', latency);\n"
-      "set_param([gcb,'/negate'], 'latency', latency);"
+      "set_param([gcb,'/negate_real'], 'latency', latency);"
       MaskSelfModifiable      on
       MaskIconFrame	      on
       MaskIconOpaque	      on
       MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
       MaskIconUnits	      "autoscale"
       MaskValueString	      "0|18|1|2|2|0|logic"
-      MaskTabNameString	      ",,,,,,"
       System {
 	Name			"twiddle_coeff_1"
 	Location		[539, 261, 1236, 827]
@@ -1003,9 +1050,11 @@ Library {
 	TiledPageScale		1
 	ShowPageBoundaries	off
 	ZoomFactor		"100"
+	SIDHighWatermark	15
 	Block {
 	  BlockType		  Inport
 	  Name			  "a"
+	  SID			  1
 	  Position		  [45, 108, 75, 122]
 	  IconDisplay		  "Port number"
 	  OutDataType		  "sfix(16)"
@@ -1014,6 +1063,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "b"
+	  SID			  2
 	  Position		  [45, 223, 75, 237]
 	  Port			  "2"
 	  IconDisplay		  "Port number"
@@ -1023,6 +1073,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "sync"
+	  SID			  3
 	  Position		  [50, 333, 80, 347]
 	  Port			  "3"
 	  IconDisplay		  "Port number"
@@ -1032,9 +1083,11 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "c_to_ri"
+	  SID			  4
 	  Ports			  [1, 2]
 	  Position		  [105, 74, 175, 156]
 	  AttributesFormatString  "18_17 r/i"
+	  LibraryVersion	  "1.19"
 	  LinkData {
 	    BlockName		    "force_im"
 	    DialogParameters {
@@ -1085,7 +1138,7 @@ Library {
 	  SourceType		  "c_to_ri"
 	  ShowPortLabels	  "FromPortIcon"
 	  SystemSampleTime	  "-1"
-	  FunctionWithSeparateData "off"
+	  FunctionWithSeparateData off
 	  RTWMemSecFuncInitTerm	  "Inherit from model"
 	  RTWMemSecFuncExecute	  "Inherit from model"
 	  RTWMemSecDataConstants  "Inherit from model"
@@ -1097,9 +1150,11 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "c_to_ri1"
+	  SID			  5
 	  Ports			  [1, 2]
 	  Position		  [105, 189, 175, 271]
 	  AttributesFormatString  "18_17 r/i"
+	  LibraryVersion	  "1.19"
 	  LinkData {
 	    BlockName		    "force_im"
 	    DialogParameters {
@@ -1150,7 +1205,7 @@ Library {
 	  SourceType		  "c_to_ri"
 	  ShowPortLabels	  "FromPortIcon"
 	  SystemSampleTime	  "-1"
-	  FunctionWithSeparateData "off"
+	  FunctionWithSeparateData off
 	  RTWMemSecFuncInitTerm	  "Inherit from model"
 	  RTWMemSecFuncExecute	  "Inherit from model"
 	  RTWMemSecDataConstants  "Inherit from model"
@@ -1162,16 +1217,18 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "delay0"
+	  SID			  6
 	  Ports			  [1, 1]
 	  Position		  [220, 86, 255, 104]
+	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Delay"
 	  SourceType		  "Xilinx Delay Block"
 	  infoedit		  "Hardware notes: A delay line is a chain, each link of which is an SRL16 followed by a flip-flop."
-	  en			  "off"
+	  en			  off
 	  latency		  "mult_latency+add_latency+bram_latency+conv_latency"
-	  dbl_ovrd		  "off"
-	  reg_retiming		  "on"
-	  xl_use_area		  "off"
+	  dbl_ovrd		  off
+	  reg_retiming		  on
+	  xl_use_area		  off
 	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "23,105,419,315"
@@ -1188,16 +1245,18 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "delay1"
+	  SID			  7
 	  Ports			  [1, 1]
 	  Position		  [220, 126, 255, 144]
+	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Delay"
 	  SourceType		  "Xilinx Delay Block"
 	  infoedit		  "Hardware notes: A delay line is a chain, each link of which is an SRL16 followed by a flip-flop."
-	  en			  "off"
+	  en			  off
 	  latency		  "mult_latency+add_latency+bram_latency+conv_latency"
-	  dbl_ovrd		  "off"
-	  reg_retiming		  "on"
-	  xl_use_area		  "off"
+	  dbl_ovrd		  off
+	  reg_retiming		  on
+	  xl_use_area		  off
 	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "22,78,419,315"
@@ -1214,16 +1273,18 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "delay2"
+	  SID			  8
 	  Ports			  [1, 1]
 	  Position		  [220, 241, 255, 259]
+	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Delay"
 	  SourceType		  "Xilinx Delay Block"
 	  infoedit		  "Hardware notes: A delay line is a chain, each link of which is an SRL16 followed by a flip-flop."
-	  en			  "off"
+	  en			  off
 	  latency		  "mult_latency+add_latency+bram_latency+conv_latency"
-	  dbl_ovrd		  "off"
-	  reg_retiming		  "on"
-	  xl_use_area		  "off"
+	  dbl_ovrd		  off
+	  reg_retiming		  on
+	  xl_use_area		  off
 	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "22,78,419,315"
@@ -1240,16 +1301,18 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "delay3"
+	  SID			  9
 	  Ports			  [1, 1]
 	  Position		  [220, 331, 255, 349]
+	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Delay"
 	  SourceType		  "Xilinx Delay Block"
 	  infoedit		  "Hardware notes: A delay line is a chain, each link of which is an SRL16 followed by a flip-flop."
-	  en			  "off"
+	  en			  off
 	  latency		  "mult_latency+add_latency+bram_latency+conv_latency"
-	  dbl_ovrd		  "off"
-	  reg_retiming		  "on"
-	  xl_use_area		  "off"
+	  dbl_ovrd		  off
+	  reg_retiming		  on
+	  xl_use_area		  off
 	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "22,78,419,315"
@@ -1266,8 +1329,10 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "negate_real"
+	  SID			  10
 	  Ports			  [1, 1]
 	  Position		  [205, 198, 270, 222]
+	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Negate"
 	  SourceType		  "Xilinx Negate Block Block"
 	  precision		  "User Defined"
@@ -1276,10 +1341,10 @@ Library {
 	  bin_pt		  "input_bit_width-1"
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
-	  en			  "off"
+	  en			  off
 	  latency		  "mult_latency+add_latency+bram_latency+conv_latency"
-	  dbl_ovrd		  "off"
-	  xl_use_area		  "off"
+	  dbl_ovrd		  off
+	  xl_use_area		  off
 	  xl_area		  "[0, 0, 0, 0, 0, 0, 0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "21,51,419,441"
@@ -1297,6 +1362,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "a_re"
+	  SID			  11
 	  Position		  [360, 88, 390, 102]
 	  IconDisplay		  "Port number"
 	  OutDataType		  "sfix(16)"
@@ -1305,6 +1371,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "a_im"
+	  SID			  12
 	  Position		  [360, 128, 390, 142]
 	  Port			  "2"
 	  IconDisplay		  "Port number"
@@ -1314,6 +1381,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "bw_re"
+	  SID			  13
 	  Position		  [360, 203, 390, 217]
 	  Port			  "3"
 	  IconDisplay		  "Port number"
@@ -1323,6 +1391,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "bw_im"
+	  SID			  14
 	  Position		  [360, 258, 390, 272]
 	  Port			  "4"
 	  IconDisplay		  "Port number"
@@ -1332,6 +1401,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "sync_out"
+	  SID			  15
 	  Position		  [365, 333, 395, 347]
 	  Port			  "5"
 	  IconDisplay		  "Port number"
@@ -1425,6 +1495,7 @@ Library {
     Block {
       BlockType		      SubSystem
       Name		      "twiddle_general_3mult"
+      SID		      4
       Ports		      []
       Position		      [140, 146, 230, 244]
       BackgroundColor	      "gray"
@@ -1452,7 +1523,6 @@ Library {
       MaskEnableString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on"
       MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on,on,off,on,on"
       MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on"
-      MaskVarAliasString      ",,,,,,,,,,,,,"
       MaskVariables	      "Coeffs=@1;StepPeriod=@2;coeff_bit_width=@3;input_bit_width=@4;add_latency=@5;mult_latency=@"
       "6;bram_latency=@7;conv_latency=@8;arch=&9;coeffs_bram=&10;use_hdl=&11;use_embedded=&12;quantization=&13;overflow"
       "=&14;"
@@ -1465,6 +1535,7 @@ Library {
       MaskIconFrame	      on
       MaskIconOpaque	      on
       MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
       MaskIconUnits	      "autoscale"
       MaskValueString	      "|0|18|18|1|2|2|1|Virtex5|off|on|off|Round  (unbiased: +/- Inf)|Wrap"
       MaskTabNameString	      "Basic,Basic,Basic,Basic,Latency,Latency,Latency,Latency,Implementation,Implementation,I"
@@ -1489,6 +1560,7 @@ Library {
     Block {
       BlockType		      SubSystem
       Name		      "twiddle_general_4mult"
+      SID		      5
       Ports		      []
       Position		      [265, 147, 355, 243]
       BackgroundColor	      "gray"
@@ -1516,7 +1588,6 @@ Library {
       MaskEnableString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on"
       MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on,on,off,on,on"
       MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on"
-      MaskVarAliasString      ",,,,,,,,,,,,,"
       MaskVariables	      "Coeffs=@1;StepPeriod=@2;coeff_bit_width=@3;input_bit_width=@4;add_latency=@5;mult_latency=@"
       "6;bram_latency=@7;conv_latency=@8;arch=&9;coeffs_bram=&10;use_hdl=&11;use_embedded=&12;quantization=&13;overflow"
       "=&14;"
@@ -1529,6 +1600,7 @@ Library {
       MaskIconFrame	      on
       MaskIconOpaque	      on
       MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
       MaskIconUnits	      "autoscale"
       MaskValueString	      "|0|18|18|1|2|2|1|Virtex5|off|on|off|Round  (unbiased: +/- Inf)|Wrap"
       MaskTabNameString	      "Basic,Basic,Basic,Basic,Latency,Latency,Latency,Latency,Implementation,Implementation,I"
@@ -1553,6 +1625,7 @@ Library {
     Block {
       BlockType		      SubSystem
       Name		      "twiddle_general_dsp48e"
+      SID		      6
       Ports		      []
       Position		      [20, 290, 110, 390]
       BackgroundColor	      "gray"
@@ -1576,7 +1649,6 @@ Library {
       MaskEnableString	      "on,on,on,on,on,on,on,on,on,on"
       MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on"
       MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on"
-      MaskVarAliasString      ",,,,,,,,,"
       MaskVariables	      "Coeffs=@1;StepPeriod=@2;coeff_bit_width=@3;input_bit_width=@4;bram_latency=@5;conv_latency="
       "@6;quantization=&7;overflow=&8;arch=&9;coeffs_bram=&10;"
       MaskInitialization      "twiddle_general_dsp48e_init(gcb, ...\n    'Coeffs', Coeffs, ...\n    'StepPeriod', Step"
@@ -1587,6 +1659,7 @@ Library {
       MaskIconFrame	      on
       MaskIconOpaque	      on
       MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
       MaskIconUnits	      "autoscale"
       MaskValueString	      "|0|18|18|2|1|Round  (unbiased: +/- Inf)|Wrap|Virtex5|off"
       MaskTabNameString	      "Basic,Basic,Basic,Basic,Latency,Latency,Implementation,Implementation,Implementation,Im"
@@ -1611,6 +1684,7 @@ Library {
     Block {
       BlockType		      SubSystem
       Name		      "twiddle_pass_through"
+      SID		      7
       Ports		      [3, 5]
       Position		      [20, 148, 110, 242]
       BackgroundColor	      "gray"
@@ -1632,16 +1706,15 @@ Library {
       MaskEnableString	      "on,on,on,on,on,on,on"
       MaskVisibilityString    "on,on,on,on,on,on,on"
       MaskToolTipString	      "on,on,on,on,on,on,on"
-      MaskVarAliasString      ",,,,,,"
       MaskVariables	      "FFTSize=@1;input_bit_width=@2;add_latency=@3;mult_latency=@4;bram_latency=@5;conv_latency=@"
       "6;opt_target=&7;"
       MaskSelfModifiable      on
       MaskIconFrame	      on
       MaskIconOpaque	      on
       MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
       MaskIconUnits	      "autoscale"
       MaskValueString	      "0|18|3|4|4|0|logic"
-      MaskTabNameString	      ",,,,,,"
       System {
 	Name			"twiddle_pass_through"
 	Location		[424, 100, 1119, 667]
@@ -1657,9 +1730,11 @@ Library {
 	TiledPageScale		1
 	ShowPageBoundaries	off
 	ZoomFactor		"100"
+	SIDHighWatermark	10
 	Block {
 	  BlockType		  Inport
 	  Name			  "a"
+	  SID			  1
 	  Position		  [145, 28, 175, 42]
 	  IconDisplay		  "Port number"
 	  OutDataType		  "sfix(16)"
@@ -1668,6 +1743,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "b"
+	  SID			  2
 	  Position		  [145, 98, 175, 112]
 	  Port			  "2"
 	  IconDisplay		  "Port number"
@@ -1677,6 +1753,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "sync"
+	  SID			  3
 	  Position		  [145, 158, 175, 172]
 	  Port			  "3"
 	  IconDisplay		  "Port number"
@@ -1686,6 +1763,7 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "c_to_ri"
+	  SID			  4
 	  Ports			  [1, 2]
 	  Position		  [255, 14, 295, 56]
 	  AttributesFormatString  "18_17 r/i"
@@ -1707,6 +1785,7 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "c_to_ri1"
+	  SID			  5
 	  Ports			  [1, 2]
 	  Position		  [255, 84, 295, 126]
 	  AttributesFormatString  "18_17 r/i"
@@ -1728,6 +1807,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "a_re"
+	  SID			  6
 	  Position		  [320, 13, 350, 27]
 	  IconDisplay		  "Port number"
 	  OutDataType		  "sfix(16)"
@@ -1736,6 +1816,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "a_im"
+	  SID			  7
 	  Position		  [320, 43, 350, 57]
 	  Port			  "2"
 	  IconDisplay		  "Port number"
@@ -1745,6 +1826,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "bw_re"
+	  SID			  8
 	  Position		  [320, 83, 350, 97]
 	  Port			  "3"
 	  IconDisplay		  "Port number"
@@ -1754,6 +1836,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "bw_im"
+	  SID			  9
 	  Position		  [320, 113, 350, 127]
 	  Port			  "4"
 	  IconDisplay		  "Port number"
@@ -1763,6 +1846,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "sync_out"
+	  SID			  10
 	  Position		  [255, 158, 285, 172]
 	  Port			  "5"
 	  IconDisplay		  "Port number"
@@ -1820,6 +1904,7 @@ Library {
     Block {
       BlockType		      SubSystem
       Name		      "twiddle_stage_2"
+      SID		      8
       Ports		      [3, 5]
       Position		      [265, 23, 355, 117]
       BackgroundColor	      "gray"
@@ -1841,7 +1926,6 @@ Library {
       MaskEnableString	      "on,on,on,on,on,on,on"
       MaskVisibilityString    "on,on,on,on,on,on,on"
       MaskToolTipString	      "on,on,on,on,on,on,on"
-      MaskVarAliasString      ",,,,,,"
       MaskVariables	      "FFTSize=@1;input_bit_width=@2;add_latency=@3;mult_latency=@4;bram_latency=@5;conv_latency=@"
       "6;opt_target=&7;"
       MaskInitialization      "set_param(gcb,'LinkStatus','inactive');\nif(strcmp(opt_target, 'logic')), \n    lat = a"
@@ -1857,13 +1941,13 @@ Library {
       MaskIconFrame	      on
       MaskIconOpaque	      on
       MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
       MaskIconUnits	      "autoscale"
       MaskValueString	      "5|18|1|2|2|1|multipliers"
-      MaskTabNameString	      ",,,,,,"
       System {
 	Name			"twiddle_stage_2"
-	Location		[1032, 222, 1702, 726]
-	Open			off
+	Location		[1281, 222, 1951, 726]
+	Open			on
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -1875,9 +1959,11 @@ Library {
 	TiledPageScale		1
 	ShowPageBoundaries	off
 	ZoomFactor		"100"
+	SIDHighWatermark	25
 	Block {
 	  BlockType		  Inport
 	  Name			  "a"
+	  SID			  1
 	  Position		  [190, 73, 220, 87]
 	  IconDisplay		  "Port number"
 	  OutDataType		  "sfix(16)"
@@ -1886,6 +1972,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "b"
+	  SID			  2
 	  Position		  [15, 208, 45, 222]
 	  Port			  "2"
 	  IconDisplay		  "Port number"
@@ -1895,6 +1982,7 @@ Library {
 	Block {
 	  BlockType		  Inport
 	  Name			  "sync"
+	  SID			  3
 	  Position		  [130, 403, 160, 417]
 	  Port			  "3"
 	  IconDisplay		  "Port number"
@@ -1904,9 +1992,11 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "c_to_ri"
+	  SID			  4
 	  Ports			  [1, 2]
 	  Position		  [255, 59, 295, 101]
 	  AttributesFormatString  "18_17 r/i"
+	  LibraryVersion	  "1.19"
 	  LinkData {
 	    BlockName		    "force_im"
 	    DialogParameters {
@@ -1957,7 +2047,7 @@ Library {
 	  SourceType		  "c_to_ri"
 	  ShowPortLabels	  "FromPortIcon"
 	  SystemSampleTime	  "-1"
-	  FunctionWithSeparateData "off"
+	  FunctionWithSeparateData off
 	  RTWMemSecFuncInitTerm	  "Inherit from model"
 	  RTWMemSecFuncExecute	  "Inherit from model"
 	  RTWMemSecDataConstants  "Inherit from model"
@@ -1969,9 +2059,11 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "c_to_ri1"
+	  SID			  5
 	  Ports			  [1, 2]
 	  Position		  [70, 194, 110, 236]
 	  AttributesFormatString  "18_17 r/i"
+	  LibraryVersion	  "1.19"
 	  LinkData {
 	    BlockName		    "force_im"
 	    DialogParameters {
@@ -2022,7 +2114,7 @@ Library {
 	  SourceType		  "c_to_ri"
 	  ShowPortLabels	  "FromPortIcon"
 	  SystemSampleTime	  "-1"
-	  FunctionWithSeparateData "off"
+	  FunctionWithSeparateData off
 	  RTWMemSecFuncInitTerm	  "Inherit from model"
 	  RTWMemSecFuncExecute	  "Inherit from model"
 	  RTWMemSecDataConstants  "Inherit from model"
@@ -2034,8 +2126,10 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "convert"
+	  SID			  6
 	  Ports			  [1, 1]
 	  Position		  [370, 330, 415, 360]
+	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Convert"
 	  SourceType		  "Xilinx Type Converter Block"
 	  infoedit		  "Hardware notes: rounding and saturating require hardware resources; truncating and wrapping do not."
@@ -2045,9 +2139,9 @@ Library {
 	  quantization		  "Truncate"
 	  overflow		  "Saturate"
 	  latency		  "conv_latency"
-	  dbl_ovrd		  "off"
-	  pipeline		  "on"
-	  xl_use_area		  "off"
+	  dbl_ovrd		  off
+	  pipeline		  on
+	  xl_use_area		  off
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "1034,236,532,429"
@@ -2065,8 +2159,10 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "counter"
+	  SID			  7
 	  Ports			  [1, 1]
 	  Position		  [275, 223, 315, 267]
+	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Counter"
 	  SourceType		  "Xilinx Counter Block"
 	  infoedit		  "Hardware notes: Free running counters are the least expensive in hardware.  A count limited counter is"
@@ -2079,15 +2175,15 @@ Library {
 	  arith_type		  "Unsigned"
 	  n_bits		  "FFTSize - 1 "
 	  bin_pt		  "0"
-	  load_pin		  "off"
-	  rst			  "on"
-	  en			  "off"
+	  load_pin		  off
+	  rst			  on
+	  en			  off
 	  explicit_period	  "on"
 	  period		  "1"
-	  dbl_ovrd		  "off"
-	  use_behavioral_HDL	  "on"
+	  dbl_ovrd		  off
+	  use_behavioral_HDL	  on
 	  implementation	  "Fabric"
-	  xl_use_area		  "off"
+	  xl_use_area		  off
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "1212,281,419,748"
@@ -2104,16 +2200,18 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "delay0"
+	  SID			  8
 	  Ports			  [1, 1]
 	  Position		  [335, 37, 370, 63]
+	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Delay"
 	  SourceType		  "Xilinx Delay Block"
 	  infoedit		  "Hardware notes: A delay line is a chain, each link of which is an SRL16 followed by a flip-flop."
-	  en			  "off"
+	  en			  off
 	  latency		  "bram_latency+mult_latency+conv_latency+add_latency*2"
-	  dbl_ovrd		  "off"
-	  reg_retiming		  "on"
-	  xl_use_area		  "off"
+	  dbl_ovrd		  off
+	  reg_retiming		  on
+	  xl_use_area		  off
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "554,317,419,315"
@@ -2131,16 +2229,18 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "delay1"
+	  SID			  9
 	  Ports			  [1, 1]
 	  Position		  [335, 97, 370, 123]
+	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Delay"
 	  SourceType		  "Xilinx Delay Block"
 	  infoedit		  "Hardware notes: A delay line is a chain, each link of which is an SRL16 followed by a flip-flop."
-	  en			  "off"
+	  en			  off
 	  latency		  "bram_latency+mult_latency+conv_latency+add_latency*2"
-	  dbl_ovrd		  "off"
-	  reg_retiming		  "on"
-	  xl_use_area		  "off"
+	  dbl_ovrd		  off
+	  reg_retiming		  on
+	  xl_use_area		  off
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "535,406,419,315"
@@ -2158,17 +2258,19 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "delay2"
+	  SID			  10
 	  Ports			  [1, 1]
 	  Position		  [450, 296, 490, 314]
 	  ShowName		  off
+	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Delay"
 	  SourceType		  "Xilinx Delay Block"
 	  infoedit		  "Hardware notes: A delay line is a chain, each link of which is an SRL16 followed by a flip-flop."
-	  en			  "off"
+	  en			  off
 	  latency		  "mult_latency+conv_latency+add_latency*2-1"
-	  dbl_ovrd		  "off"
-	  reg_retiming		  "on"
-	  xl_use_area		  "off"
+	  dbl_ovrd		  off
+	  reg_retiming		  on
+	  xl_use_area		  off
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "754,289,419,315"
@@ -2185,17 +2287,19 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "delay3"
+	  SID			  11
 	  Ports			  [1, 1]
 	  Position		  [450, 316, 490, 334]
 	  ShowName		  off
+	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Delay"
 	  SourceType		  "Xilinx Delay Block"
 	  infoedit		  "Hardware notes: A delay line is a chain, each link of which is an SRL16 followed by a flip-flop."
-	  en			  "off"
+	  en			  off
 	  latency		  "mult_latency+conv_latency+add_latency*2-1"
-	  dbl_ovrd		  "off"
-	  reg_retiming		  "on"
-	  xl_use_area		  "off"
+	  dbl_ovrd		  off
+	  reg_retiming		  on
+	  xl_use_area		  off
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "754,289,419,315"
@@ -2212,17 +2316,19 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "delay4"
+	  SID			  12
 	  Ports			  [1, 1]
 	  Position		  [450, 336, 490, 354]
 	  ShowName		  off
+	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Delay"
 	  SourceType		  "Xilinx Delay Block"
 	  infoedit		  "Hardware notes: A delay line is a chain, each link of which is an SRL16 followed by a flip-flop."
-	  en			  "off"
+	  en			  off
 	  latency		  "bram_latency+mult_latency+add_latency*2-2"
-	  dbl_ovrd		  "off"
-	  reg_retiming		  "on"
-	  xl_use_area		  "off"
+	  dbl_ovrd		  off
+	  reg_retiming		  on
+	  xl_use_area		  off
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "714,571,419,315"
@@ -2239,16 +2345,18 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "delay5"
+	  SID			  13
 	  Ports			  [1, 1]
 	  Position		  [180, 192, 215, 218]
+	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Delay"
 	  SourceType		  "Xilinx Delay Block"
 	  infoedit		  "Hardware notes: A delay line is a chain, each link of which is an SRL16 followed by a flip-flop."
-	  en			  "off"
+	  en			  off
 	  latency		  "bram_latency"
-	  dbl_ovrd		  "off"
-	  reg_retiming		  "on"
-	  xl_use_area		  "off"
+	  dbl_ovrd		  off
+	  reg_retiming		  on
+	  xl_use_area		  off
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "755,316,419,315"
@@ -2266,16 +2374,18 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "delay6"
+	  SID			  14
 	  Ports			  [1, 1]
 	  Position		  [180, 282, 215, 308]
+	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Delay"
 	  SourceType		  "Xilinx Delay Block"
 	  infoedit		  "Hardware notes: A delay line is a chain, each link of which is an SRL16 followed by a flip-flop."
-	  en			  "off"
+	  en			  off
 	  latency		  "bram_latency"
-	  dbl_ovrd		  "off"
-	  reg_retiming		  "on"
-	  xl_use_area		  "off"
+	  dbl_ovrd		  off
+	  reg_retiming		  on
+	  xl_use_area		  off
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "754,289,419,315"
@@ -2293,16 +2403,18 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "delay7"
+	  SID			  15
 	  Ports			  [1, 1]
 	  Position		  [185, 397, 220, 423]
+	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Delay"
 	  SourceType		  "Xilinx Delay Block"
 	  infoedit		  "Hardware notes: A delay line is a chain, each link of which is an SRL16 followed by a flip-flop."
-	  en			  "off"
+	  en			  off
 	  latency		  "bram_latency"
-	  dbl_ovrd		  "off"
-	  reg_retiming		  "on"
-	  xl_use_area		  "off"
+	  dbl_ovrd		  off
+	  reg_retiming		  on
+	  xl_use_area		  off
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "757,370,419,315"
@@ -2320,16 +2432,18 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "delay8"
+	  SID			  16
 	  Ports			  [1, 1]
 	  Position		  [280, 397, 315, 423]
+	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Delay"
 	  SourceType		  "Xilinx Delay Block"
 	  infoedit		  "Hardware notes: A delay line is a chain, each link of which is an SRL16 followed by a flip-flop."
-	  en			  "off"
+	  en			  off
 	  latency		  "mult_latency+conv_latency+add_latency*2"
-	  dbl_ovrd		  "off"
-	  reg_retiming		  "on"
-	  xl_use_area		  "off"
+	  dbl_ovrd		  off
+	  reg_retiming		  on
+	  xl_use_area		  off
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "758,397,419,315"
@@ -2347,12 +2461,14 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "mux0"
+	  SID			  17
 	  Ports			  [3, 1]
 	  Position		  [520, 175, 545, 235]
+	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Mux"
 	  SourceType		  "Xilinx Bus Multiplexer Block"
 	  inputs		  "2"
-	  en			  "off"
+	  en			  off
 	  latency		  "5"
 	  precision		  "Full"
 	  arith_type		  "Unsigned"
@@ -2360,8 +2476,8 @@ Library {
 	  bin_pt		  "14"
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
-	  dbl_ovrd		  "off"
-	  xl_use_area		  "off"
+	  dbl_ovrd		  off
+	  xl_use_area		  off
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "26,206,419,344"
@@ -2381,12 +2497,14 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "mux1"
+	  SID			  18
 	  Ports			  [3, 1]
 	  Position		  [520, 295, 545, 355]
+	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Mux"
 	  SourceType		  "Xilinx Bus Multiplexer Block"
 	  inputs		  "2"
-	  en			  "off"
+	  en			  off
 	  latency		  "1"
 	  precision		  "Full"
 	  arith_type		  "Unsigned"
@@ -2394,8 +2512,8 @@ Library {
 	  bin_pt		  "14"
 	  quantization		  "Truncate"
 	  overflow		  "Wrap"
-	  dbl_ovrd		  "off"
-	  xl_use_area		  "off"
+	  dbl_ovrd		  off
+	  xl_use_area		  off
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "23,125,419,344"
@@ -2415,8 +2533,10 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "negate"
+	  SID			  19
 	  Ports			  [1, 1]
 	  Position		  [270, 333, 335, 357]
+	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Negate"
 	  SourceType		  "Xilinx Negate Block Block"
 	  precision		  "Full"
@@ -2425,10 +2545,10 @@ Library {
 	  bin_pt		  "input_bit_width-1"
 	  quantization		  "Truncate"
 	  overflow		  "Saturate"
-	  en			  "off"
+	  en			  off
 	  latency		  "1"
-	  dbl_ovrd		  "off"
-	  xl_use_area		  "off"
+	  dbl_ovrd		  off
+	  xl_use_area		  off
 	  xl_area		  "[0,0,0,0,0,0,0]"
 	  has_advanced_control	  "0"
 	  sggui_pos		  "593,221,419,441"
@@ -2446,21 +2566,23 @@ Library {
 	Block {
 	  BlockType		  Reference
 	  Name			  "slice"
+	  SID			  20
 	  Ports			  [1, 1]
 	  Position		  [335, 234, 370, 256]
+	  LibraryVersion	  "1.2"
 	  SourceBlock		  "xbsIndex_r4/Slice"
 	  SourceType		  "Xilinx Bit Slice Extractor Block"
 	  infoedit		  "Extracts a given range of bits from each input sample and presents it at the output.  The output type "
 	  "is ordinarily unsigned with binary point at zero, but can be Boolean when the slice is one bit wide.<br><br>Hardwar"
 	  "e notes: In hardware this block costs nothing."
 	  nbits			  "1"
-	  boolean_output	  "off"
+	  boolean_output	  off
 	  mode			  "Upper Bit Location + Width"
 	  bit1			  "0"
 	  base1			  "MSB of Input"
 	  bit0			  "0"
 	  base0			  "LSB of Input"
-	  dbl_ovrd		  "off"
+	  dbl_ovrd		  off
 	  has_advanced_control	  "0"
 	  sggui_pos		  "716,207,540,482"
 	  block_type		  "slice"
@@ -2477,6 +2599,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "a_re"
+	  SID			  21
 	  Position		  [400, 43, 430, 57]
 	  IconDisplay		  "Port number"
 	  OutDataType		  "sfix(16)"
@@ -2485,6 +2608,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "a_im"
+	  SID			  22
 	  Position		  [400, 103, 430, 117]
 	  Port			  "2"
 	  IconDisplay		  "Port number"
@@ -2494,6 +2618,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "bw_re"
+	  SID			  23
 	  Position		  [570, 198, 600, 212]
 	  Port			  "3"
 	  IconDisplay		  "Port number"
@@ -2503,6 +2628,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "bw_im"
+	  SID			  24
 	  Position		  [575, 318, 605, 332]
 	  Port			  "4"
 	  IconDisplay		  "Port number"
@@ -2512,6 +2638,7 @@ Library {
 	Block {
 	  BlockType		  Outport
 	  Name			  "sync_out"
+	  SID			  25
 	  Position		  [345, 403, 375, 417]
 	  Port			  "5"
 	  IconDisplay		  "Port number"
